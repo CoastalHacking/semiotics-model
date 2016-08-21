@@ -1,0 +1,47 @@
+@GenModel(editDirectory="/us.coastalhacking.semiotics.model.base.edit/src-gen",
+	forceOverwrite="true"
+)
+@GenModel(modelDirectory="/us.coastalhacking.semiotics.model.base/src-gen")  // for maven
+package us.coastalhacking.semiotics.model.base
+
+/**
+ * Something that can be identified or named
+ */
+interface Nameable
+{
+	String name
+}
+
+/**
+ * Something suitable for further examination or analysis
+ */
+interface Reviewable extends Nameable
+{
+	/**
+	 * Evidence identifying why this element should be reviewed
+	 */
+	refers Provable[] evidence opposite reviewers
+
+	/**
+	 * Traces identifying attributes or information related to this element 
+	 */
+	refers Traceable[] traces opposite reviewers	
+}
+
+/**
+ * Something factual or objective in nature
+ */
+interface Provable extends Nameable
+{
+	refers Reviewable[] reviewers opposite evidence
+	refers Traceable[] traces opposite evidence
+}
+
+/**
+ * Something that associates, connects, or relates evidence to reviewers  
+ */
+interface Traceable extends Nameable
+{
+	refers Provable[] evidence opposite traces
+	refers Reviewable[] reviewers opposite traces
+}

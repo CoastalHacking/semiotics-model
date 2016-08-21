@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmi:id="_LXD2sGc-EeaszN8WV7-RDg" name="Control Group" ecorePath="/us.coastalhacking.semiotics.model.control/model/control.ecore">
+  <rootEClass href="us.coastalhacking.semiotics.model.control#//ControlGroup"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_LXEdwGc-EeaszN8WV7-RDg" name="name">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_LXEdwWc-EeaszN8WV7-RDg">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="../../us.coastalhacking.semiotics.model.base/model/base.ecore#//Nameable/name"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_LXEdwmc-EeaszN8WV7-RDg" name="controls">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_LXEdw2c-EeaszN8WV7-RDg">
+      <domainModelEFeature xsi:type="ecore:EReference" href="us.coastalhacking.semiotics.model.control#//ControlGroup/controls"/>
+    </domainModelReference>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>

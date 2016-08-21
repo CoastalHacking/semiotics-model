@@ -1,0 +1,19 @@
+@GenModel(editDirectory="/us.coastalhacking.semiotics.model.surfacearea.edit/src-gen",
+	forceOverwrite="true"
+)
+package us.coastalhacking.semiotics.model.surfacearea
+
+import us.coastalhacking.semiotics.model.base.Reviewable
+import us.coastalhacking.semiotics.model.base.Nameable
+import us.coastalhacking.semiotics.model.control.Control
+
+class SurfaceAreaGroup extends Nameable
+{
+	contains SurfaceArea[] surfaceAreas opposite surfaceAreaGroup
+}
+
+class SurfaceArea extends Reviewable
+{
+	container SurfaceAreaGroup surfaceAreaGroup opposite surfaceAreas
+	refers Control[] controls
+}

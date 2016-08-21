@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="application" nsURI="us.coastalhacking.semiotics.model.application"
+    nsPrefix="application">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="editDirectory" value="/us.coastalhacking.semiotics.model.application.edit/src-gen"/>
+    <details key="forceOverwrite" value="true"/>
+    <details key="basePackage" value="us.coastalhacking.semiotics.model"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="ApplicationGroup" eSuperTypes="../../us.coastalhacking.semiotics.model.base/model/base.ecore#//Nameable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applications" upperBound="-1"
+        eType="#//Application" containment="true" resolveProxies="false" eOpposite="#//Application/applicationGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Application" eSuperTypes="../../us.coastalhacking.semiotics.model.base/model/base.ecore#//Nameable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applicationGroup" eType="#//ApplicationGroup"
+        eOpposite="#//ApplicationGroup/applications"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowGroups" upperBound="-1"
+        eType="ecore:EClass ../../us.coastalhacking.semiotics.model.flow/model/flow.ecore#//FlowGroup"
+        containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controlGroups" upperBound="-1"
+        eType="ecore:EClass ../../us.coastalhacking.semiotics.model.control/model/control.ecore#//ControlGroup"
+        containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="surfaceAreaGroups" upperBound="-1"
+        eType="ecore:EClass ../../us.coastalhacking.semiotics.model.surfacearea/model/surfacearea.ecore#//SurfaceAreaGroup"
+        containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataGroups" upperBound="-1"
+        eType="ecore:EClass ../../us.coastalhacking.semiotics.model.data/model/data.ecore#//DataGroup"
+        containment="true" resolveProxies="false"/>
+  </eClassifiers>
+</ecore:EPackage>

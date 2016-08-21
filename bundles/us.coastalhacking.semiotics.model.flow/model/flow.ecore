@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="flow" nsURI="us.coastalhacking.semiotics.model.flow" nsPrefix="flow">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="editDirectory" value="/us.coastalhacking.semiotics.model.flow.edit/src-gen"/>
+    <details key="forceOverwrite" value="true"/>
+    <details key="basePackage" value="us.coastalhacking.semiotics.model"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Flow" eSuperTypes="../../us.coastalhacking.semiotics.model.base/model/base.ecore#//Traceable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowFrom" eType="#//Flow"
+        eOpposite="#//Flow/flowTo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowTo" upperBound="-1"
+        eType="#//Flow" containment="true" resolveProxies="false" eOpposite="#//Flow/flowFrom"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowSource" eSuperTypes="#//Flow">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowGroup" eType="#//FlowGroup"
+        eOpposite="#//FlowGroup/flowSources"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowSink" eSuperTypes="#//Flow"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowGroup" eSuperTypes="../../us.coastalhacking.semiotics.model.base/model/base.ecore#//Nameable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowSources" upperBound="-1"
+        eType="#//FlowSource" containment="true" resolveProxies="false" eOpposite="#//FlowSource/flowGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataFlow" eSuperTypes="#//Flow"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="DataSourceType">
+    <eLiterals name="HTTP"/>
+    <eLiterals name="HTTPS"/>
+    <eLiterals name="GENERIC_NETWORK"/>
+    <eLiterals name="FILE"/>
+    <eLiterals name="CONSOLE"/>
+    <eLiterals name="OTHER"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataFlowSource" eSuperTypes="#//DataFlow #//FlowSource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceType" unique="false"
+        eType="#//DataSourceType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataFlowSink" eSuperTypes="#//DataFlow #//FlowSink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowConstraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataFlowConstraint" abstract="true"
+      eSuperTypes="#//DataFlow #//FlowConstraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EndsWith" eSuperTypes="#//DataFlowConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="suffix" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StartsWith" eSuperTypes="#//DataFlowConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefix" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Matches" eSuperTypes="#//DataFlowConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pattern" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="regexType" unique="false"
+        eType="#//MatcherRegex"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MatcherRegex">
+    <eLiterals name="JAVA"/>
+    <eLiterals name="OTHER"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Contains" eSuperTypes="#//DataFlowConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contents" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CastedTo" eSuperTypes="#//DataFlowConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ControlFlow" eSuperTypes="#//Flow">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ControlFlowSource" eSuperTypes="#//ControlFlow #//FlowSource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ControlFlowSink" eSuperTypes="#//ControlFlow #//FlowSink"/>
+</ecore:EPackage>

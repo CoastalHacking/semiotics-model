@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="base" nsURI="us.coastalhacking.semiotics.model.base" nsPrefix="base">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="editDirectory" value="/us.coastalhacking.semiotics.model.base.edit/src-gen"/>
+    <details key="forceOverwrite" value="true"/>
+    <details key="modelDirectory" value="/us.coastalhacking.semiotics.model.base/src-gen"/>
+    <details key="basePackage" value="us.coastalhacking.semiotics.model"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Nameable" abstract="true" interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="*&#xA;Something that can be identified or named"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reviewable" abstract="true" interface="true"
+      eSuperTypes="#//Nameable">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="*&#xA;Something suitable for further examination or analysis"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="evidence" upperBound="-1"
+        eType="#//Provable" eOpposite="#//Provable/reviewers">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="*&#xA;Evidence identifying why this element should be reviewed"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="traces" upperBound="-1"
+        eType="#//Traceable" eOpposite="#//Traceable/reviewers">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="*&#xA;Traces identifying attributes or information related to this element"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Provable" abstract="true" interface="true"
+      eSuperTypes="#//Nameable">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="*&#xA;Something factual or objective in nature"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reviewers" upperBound="-1"
+        eType="#//Reviewable" eOpposite="#//Reviewable/evidence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="traces" upperBound="-1"
+        eType="#//Traceable" eOpposite="#//Traceable/evidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Traceable" abstract="true" interface="true"
+      eSuperTypes="#//Nameable">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="*&#xA;Something that associates, connects, or relates evidence to reviewers"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="evidence" upperBound="-1"
+        eType="#//Provable" eOpposite="#//Provable/traces"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reviewers" upperBound="-1"
+        eType="#//Reviewable" eOpposite="#//Reviewable/traces"/>
+  </eClassifiers>
+</ecore:EPackage>

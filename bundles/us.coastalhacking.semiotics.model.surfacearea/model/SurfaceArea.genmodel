@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/us.coastalhacking.semiotics.model.surfacearea/src"
+    editDirectory="/us.coastalhacking.semiotics.model.surfacearea.edit/src-gen" editorDirectory="/us.coastalhacking.semiotics.model.control.editor/src-gen"
+    modelPluginID="us.coastalhacking.semiotics.model.surfacearea" runtimeJar="true"
+    forceOverwrite="true" modelName="SurfaceArea" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="" booleanFlagsField="eFlags" booleanFlagsReservedBits="8" importerID="org.eclipse.emf.ecore.xcore.importer"
+    containmentProxies="true" complianceLevel="8.0" language="en" usedGenPackages="../../us.coastalhacking.semiotics.model.base/model/Base.genmodel#//base ../../us.coastalhacking.semiotics.model.control/model/Control.genmodel#//control ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    operationReflection="true" importOrganizing="true" decoration="Live" oSGiCompatible="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter">
+    <genAnnotations source="selectedPackages">
+      <details key="http://www.eclipse.org/emf/2002/Ecore" value="Ecore.xsd"/>
+    </genAnnotations>
+    <details key="directoryURI" value="."/>
+  </genAnnotations>
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter.xmi">
+    <genAnnotations source="selectedPackages">
+      <details key="http://www.eclipse.org/emf/2002/Ecore" value="EcoreXMI.xsd"/>
+    </genAnnotations>
+    <details key="directoryURI" value="."/>
+  </genAnnotations>
+  <foreignModel>SurfaceArea.xcore</foreignModel>
+  <modelPluginVariables>org.eclipse.xtext.xbase.lib</modelPluginVariables>
+  <modelPluginVariables>org.eclipse.emf.ecore.xcore.lib</modelPluginVariables>
+  <genPackages prefix="Surfacearea" basePackage="us.coastalhacking.semiotics.model"
+      disposableProviderFactory="true" ecorePackage="surfacearea.ecore#/">
+    <genClasses ecoreClass="surfacearea.ecore#//SurfaceAreaGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference surfacearea.ecore#//SurfaceAreaGroup/surfaceAreas"/>
+    </genClasses>
+    <genClasses ecoreClass="surfacearea.ecore#//SurfaceArea">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference surfacearea.ecore#//SurfaceArea/surfaceAreaGroup"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference surfacearea.ecore#//SurfaceArea/controls"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
