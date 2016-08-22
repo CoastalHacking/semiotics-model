@@ -1,0 +1,318 @@
+@GenModel(editDirectory="/us.coastalhacking.semiotics.model.assessment.edit/src-gen",
+	forceOverwrite="true"
+)
+package us.coastalhacking.semiotics.model.assessment
+
+// Due to EMFForms bugs and Xcore workflow, it's best
+// to keep everything in one large file
+
+
+// BASE
+
+/**
+ * Something that can be identified or named
+ */
+interface Nameable
+{
+	String name
+}
+
+/**
+ * Something suitable for further examination or analysis
+ */
+interface Reviewable extends Nameable
+{
+	/**
+	 * Evidence identifying why this element should be reviewed
+	 */
+	refers Provable[] evidence opposite reviewers
+
+	/**
+	 * Traces identifying attributes or information related to this element 
+	 */
+	refers Traceable[] traces opposite reviewers
+	
+	/**
+	 * Searches related to this element
+	 */
+	refers Searchable[] searches opposite reviewers
+}
+
+/**
+ * Something factual or objective in nature
+ */
+interface Provable extends Nameable
+{
+	refers Reviewable[] reviewers opposite evidence
+	refers Traceable[] traces opposite evidence
+}
+
+/**
+ * Something that associates, connects, or relates evidence to reviewers  
+ */
+interface Traceable extends Nameable
+{
+	refers Provable[] evidence opposite traces
+	refers Reviewable[] reviewers opposite traces
+}
+
+interface Searchable extends Nameable
+{
+	refers Reviewable reviewers opposite searches
+}
+
+// CONTROL
+class ControlGroup extends Nameable
+{
+	contains Control[] controls opposite controlGroup
+}
+
+class Control extends Reviewable
+{
+	container ControlGroup controlGroup opposite controls
+	refers CWE[] cwes opposite controls
+}
+
+class CWEGroup
+{
+	contains CWE[] cwes opposite cweGroup
+}
+
+class CWE
+{
+	container CWEGroup cweGroup opposite cwes
+	int ^id
+	String title
+	String url
+	refers Control[] controls opposite cwes
+}
+
+// DATA
+class Data extends Nameable
+{
+	contains Snippet[] snippets opposite data
+	container DataGroup dataGroup opposite data
+}
+
+class DataGroup extends Nameable
+{
+	contains Data[] data opposite dataGroup
+}
+
+class Snippet extends Provable
+{
+	container Data data opposite snippets
+	int row
+	int column
+	int length
+}
+
+class File extends Data
+{
+	String fullPath
+ @GenModel(propertyMultiLine="true")
+	String contents
+}
+
+class Request extends Data
+{
+	refers Response[0..1] response opposite request
+}
+
+class Response extends Data
+{
+	refers Request[0..1] request opposite response
+}
+
+// FLOW
+
+class Flow extends Traceable
+{
+	container Flow flowFrom opposite flowTo
+	contains Flow[] flowTo opposite flowFrom 
+}
+
+class FlowSource extends Flow
+{
+	container FlowGroup flowGroup opposite flowSources
+}
+
+class FlowSink extends Flow
+{
+}
+
+class FlowGroup extends Nameable
+{
+	contains FlowSource[] flowSources opposite flowGroup
+}
+
+
+class DataFlow extends Flow
+{
+}
+
+enum DataSourceType
+{
+	HTTP
+	HTTPS
+	GENERIC_NETWORK
+	FILE
+	CONSOLE
+	OTHER
+}
+
+class DataFlowSource extends DataFlow, FlowSource
+{	
+	String value
+	DataSourceType sourceType
+}
+
+class DataFlowSink extends DataFlow, FlowSink
+{	
+}
+
+class FlowConstraint
+{
+}
+
+abstract class DataFlowConstraint extends DataFlow, FlowConstraint
+{
+}
+
+class EndsWith extends DataFlowConstraint
+{
+	String suffix
+}
+
+class StartsWith extends DataFlowConstraint
+{
+	String prefix
+}
+
+class Matches extends DataFlowConstraint
+{
+	String pattern
+	MatcherRegex regexType
+}
+
+enum MatcherRegex
+{
+	JAVA,
+	OTHER
+}
+
+class Contains extends DataFlowConstraint
+{
+	String contents
+}
+
+class CastedTo extends DataFlowConstraint
+{
+	String ^type
+}
+
+class ControlFlow extends Flow
+{
+	String description
+}
+
+class ControlFlowSource extends ControlFlow, FlowSource
+{ 	
+}
+
+class ControlFlowSink extends ControlFlow, FlowSink
+{
+}
+
+// ASSESSMENT
+
+class Assessment
+{
+	contains ApplicationGroup[] applicationGroups opposite assessment
+	contains Property[] properties
+}
+
+class Property
+{
+	String key
+	String value
+}
+
+class ApplicationGroup extends Nameable
+{
+	contains Application[] applications opposite applicationGroup
+	container Assessment assessment opposite applicationGroups
+}
+
+class Application extends Nameable
+{
+	container ApplicationGroup applicationGroup opposite applications
+	contains FlowGroup[] flowGroups
+	contains ControlGroup[] controlGroups
+	contains DataGroup[] dataGroups
+}
+
+// SEARCH
+
+class SearchGroup extends Nameable
+{
+	contains Search[] searches opposite searchGroup
+	String searchResultDescription
+	refers CWE[] searchResultCWEs
+}
+
+class Search extends Searchable
+{
+	container SearchGroup searchGroup opposite searches
+	contains SearchPattern pattern
+}
+
+interface SearchPattern
+{
+	String pattern
+}
+
+class JavaSearchPattern extends SearchPattern
+{
+	JavaSearchPatternType patternType
+	JavaSearchFor searchFor
+	JavaLimitTo limitTo
+	JavaMatchRule matchRule
+	JavaMatchCaseSensitivity caseSensitivity
+}
+
+enum JavaSearchPatternType
+{
+	Eclipse
+}
+
+enum JavaSearchFor
+{
+	ClassOrInterface,
+	Class,
+	Interface,
+	Annotation,
+	Method,
+	Package
+}
+
+enum JavaLimitTo
+{
+	AnyOccurrences,
+	Declaration,
+	References,
+	AnyExtendersOrImplementors
+}
+
+enum JavaMatchRule
+{
+	Wildcard,
+	Exact
+}
+
+enum JavaMatchCaseSensitivity
+{
+	CaseInsensitive,
+	CaseSensitive
+}
+

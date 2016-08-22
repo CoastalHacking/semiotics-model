@@ -7,18 +7,6 @@
 <setEntry value="org.eclipse.xtend.lib:2.10.0.v201605250459:default:false"/>
 <setEntry value="org.eclipse.xtend:2.2.0.v201605260315:default:false"/>
 <setEntry value="org.eclipse.xtext.ecore:2.10.0.v201605250459:default:false"/>
-<setEntry value="us.coastalhacking.semiotics.model.application.edit:1.0.0.qualifier:default:true"/>
-<setEntry value="us.coastalhacking.semiotics.model.application:0.1.0.qualifier:default:true"/>
-<setEntry value="us.coastalhacking.semiotics.model.base.edit:1.0.0.qualifier:default:true"/>
-<setEntry value="us.coastalhacking.semiotics.model.base:0.1.0.qualifier:default:true"/>
-<setEntry value="us.coastalhacking.semiotics.model.control.edit:1.0.0.qualifier:default:true"/>
-<setEntry value="us.coastalhacking.semiotics.model.control:0.1.0.qualifier:default:true"/>
-<setEntry value="us.coastalhacking.semiotics.model.data.edit:1.0.0.qualifier:default:true"/>
-<setEntry value="us.coastalhacking.semiotics.model.data:0.1.0.qualifier:default:true"/>
-<setEntry value="us.coastalhacking.semiotics.model.flow.edit:1.0.0.qualifier:default:true"/>
-<setEntry value="us.coastalhacking.semiotics.model.flow:0.1.0.qualifier:default:true"/>
-<setEntry value="us.coastalhacking.semiotics.model.surfacearea.edit:1.0.0.qualifier:default:true"/>
-<setEntry value="us.coastalhacking.semiotics.model.surfacearea:0.1.0.qualifier:default:true"/>
 <setEntry value="us.coastalhacking.semiotics.model.ui.ecp:1.0.0.qualifier:default:false"/>
 </setAttribute>
 <booleanAttribute key="append.args" value="true"/>
@@ -42,7 +30,7 @@
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
 <stringAttribute key="pde.version" value="3.3"/>
-<stringAttribute key="product" value="org.eclipse.platform.ide"/>
+<stringAttribute key="product" value="org.eclipse.emf.ecp.application.e4.product"/>
 <setAttribute key="selected_features">
 <setEntry value="org.eclipse.emf.codegen.ecore.ui:default"/>
 <setEntry value="org.eclipse.emf.codegen.ecore:default"/>
@@ -59,8 +47,8 @@
 <setEntry value="org.eclipse.emf.ecore.xcore.ui:default"/>
 <setEntry value="org.eclipse.emf.ecore.xcore:default"/>
 <setEntry value="org.eclipse.emf.ecore:default"/>
-<setEntry value="org.eclipse.emf.ecp.demo.e3.feature:default"/>
-<setEntry value="org.eclipse.emf.ecp.e3.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.demo.e4.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.e4.feature:default"/>
 <setEntry value="org.eclipse.emf.ecp.emfforms.idetooling.feature:default"/>
 <setEntry value="org.eclipse.emf.ecp.emfforms.runtime.feature:default"/>
 <setEntry value="org.eclipse.emf.ecp.emfstore.feature:default"/>
@@ -112,5 +100,5 @@
 <booleanAttribute key="useCustomFeatures" value="true"/>
 <booleanAttribute key="useDefaultConfig" value="true"/>
 <booleanAttribute key="useDefaultConfigArea" value="true"/>
-<booleanAttribute key="useProduct" value="false"/>
+<booleanAttribute key="useProduct" value="true"/>
 </launchConfiguration>

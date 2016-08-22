@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
+<setAttribute key="additional_plugins">
+<setEntry value="org.antlr.runtime:3.2.0.v201101311130:default:false"/>
+<setEntry value="org.antlr.runtime:4.3.0.v201502022030:default:false"/>
+<setEntry value="org.eclipse.equinox.console:1.1.200.v20150929-1405:default:true"/>
+<setEntry value="org.eclipse.xtend.lib:2.10.0.v201605250459:default:false"/>
+<setEntry value="org.eclipse.xtend:2.2.0.v201605260315:default:false"/>
+<setEntry value="org.eclipse.xtext.ecore:2.10.0.v201605250459:default:false"/>
+<setEntry value="us.coastalhacking.semiotics.model.ui.ecp:1.0.0.qualifier:default:false"/>
+</setAttribute>
+<booleanAttribute key="append.args" value="true"/>
+<stringAttribute key="application" value="org.eclipse.emf.ecp.application.e3.application"/>
+<booleanAttribute key="askclear" value="false"/>
+<booleanAttribute key="automaticAdd" value="true"/>
+<booleanAttribute key="automaticValidate" value="false"/>
+<stringAttribute key="bootstrap" value=""/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearConfig" value="true"/>
+<booleanAttribute key="clearws" value="true"/>
+<booleanAttribute key="clearwslog" value="false"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/ECP Eclipse"/>
+<booleanAttribute key="default" value="false"/>
+<stringAttribute key="featureDefaultLocation" value="workspace"/>
+<stringAttribute key="featurePluginResolution" value="workspace"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<stringAttribute key="location" value="${workspace_loc}/../runtime-ECPSampleApp"/>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<stringAttribute key="product" value="org.eclipse.platform.ide"/>
+<setAttribute key="selected_features">
+<setEntry value="org.eclipse.e4.rcp:default"/>
+<setEntry value="org.eclipse.ecf.core.feature:default"/>
+<setEntry value="org.eclipse.ecf.core.ssl.feature:default"/>
+<setEntry value="org.eclipse.ecf.filetransfer.feature:default"/>
+<setEntry value="org.eclipse.ecf.filetransfer.httpclient4.feature:default"/>
+<setEntry value="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature:default"/>
+<setEntry value="org.eclipse.ecf.filetransfer.ssl.feature:default"/>
+<setEntry value="org.eclipse.emf.codegen.ecore.ui:default"/>
+<setEntry value="org.eclipse.emf.codegen.ecore:default"/>
+<setEntry value="org.eclipse.emf.codegen.ui:default"/>
+<setEntry value="org.eclipse.emf.codegen:default"/>
+<setEntry value="org.eclipse.emf.common.ui:default"/>
+<setEntry value="org.eclipse.emf.common:default"/>
+<setEntry value="org.eclipse.emf.converter:default"/>
+<setEntry value="org.eclipse.emf.databinding.edit:default"/>
+<setEntry value="org.eclipse.emf.databinding:default"/>
+<setEntry value="org.eclipse.emf.ecore.edit:default"/>
+<setEntry value="org.eclipse.emf.ecore.editor:default"/>
+<setEntry value="org.eclipse.emf.ecore.xcore.lib:default"/>
+<setEntry value="org.eclipse.emf.ecore.xcore.ui:default"/>
+<setEntry value="org.eclipse.emf.ecore.xcore:default"/>
+<setEntry value="org.eclipse.emf.ecore:default"/>
+<setEntry value="org.eclipse.emf.ecp.e4.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.emfforms.idetooling.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.emfforms.runtime.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.emfstore.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.categorization.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.compoundcontrol.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.custom.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.group.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.horizontal.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.label.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.model.controls.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.model.editor.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.rule.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.stack.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.table.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.template.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.treemasterdetail.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.unset.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.validation.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.validation.initial.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.vertical.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.view.viewproxy.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.viewmodel.feature:default"/>
+<setEntry value="org.eclipse.emf.ecp.workspace.feature:default"/>
+<setEntry value="org.eclipse.emf.edit.ui:default"/>
+<setEntry value="org.eclipse.emf.edit:default"/>
+<setEntry value="org.eclipse.emf.emfstore.client.feature:default"/>
+<setEntry value="org.eclipse.emf.emfstore.common.feature:default"/>
+<setEntry value="org.eclipse.emf.emfstore.ecore.feature:default"/>
+<setEntry value="org.eclipse.emf.emfstore.server.feature:default"/>
+<setEntry value="org.eclipse.emf.mapping.ecore.editor:default"/>
+<setEntry value="org.eclipse.emf.mapping.ecore:default"/>
+<setEntry value="org.eclipse.emf.mapping.ui:default"/>
+<setEntry value="org.eclipse.emf.mapping:default"/>
+<setEntry value="org.eclipse.emf.validation.doc:default"/>
+<setEntry value="org.eclipse.emf.workspace:default"/>
+<setEntry value="org.eclipse.emf:default"/>
+<setEntry value="org.eclipse.equinox.p2.core.feature:default"/>
+<setEntry value="org.eclipse.equinox.p2.extras.feature:default"/>
+<setEntry value="org.eclipse.equinox.p2.rcp.feature:default"/>
+<setEntry value="org.eclipse.equinox.p2.user.ui:default"/>
+<setEntry value="org.eclipse.help:default"/>
+<setEntry value="org.eclipse.platform:default"/>
+<setEntry value="org.eclipse.rcp:default"/>
+<setEntry value="org.eclipse.xtext.runtime:default"/>
+<setEntry value="org.eclipse.xtext.ui:default"/>
+<setEntry value="org.eclipse.xtext.xbase.lib:default"/>
+<setEntry value="org.eclipse.xtext.xbase:default"/>
+<setEntry value="us.coastalhacking.semiotics.model.ecp.feature:default"/>
+<setEntry value="us.coastalhacking.semiotics.model.feature:default"/>
+<setEntry value="us.coastalhacking.semiotics.model.ui.feature:default"/>
+</setAttribute>
+<booleanAttribute key="show_selected_only" value="false"/>
+<stringAttribute key="templateConfig" value="${target_home}/configuration/config.ini"/>
+<booleanAttribute key="tracing" value="false"/>
+<booleanAttribute key="useCustomFeatures" value="true"/>
+<booleanAttribute key="useDefaultConfig" value="true"/>
+<booleanAttribute key="useDefaultConfigArea" value="true"/>
+<booleanAttribute key="useProduct" value="true"/>
+</launchConfiguration>

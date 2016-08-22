@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="assessment" nsURI="us.coastalhacking.semiotics.model.assessment"
+    nsPrefix="assessment">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="editDirectory" value="/us.coastalhacking.semiotics.model.assessment.edit/src-gen"/>
+    <details key="forceOverwrite" value="true"/>
+    <details key="basePackage" value="us.coastalhacking.semiotics.model"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Nameable" abstract="true" interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="*&#xA;Something that can be identified or named"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reviewable" abstract="true" interface="true"
+      eSuperTypes="#//Nameable">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="*&#xA;Something suitable for further examination or analysis"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="evidence" upperBound="-1"
+        eType="#//Provable" eOpposite="#//Provable/reviewers">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="*&#xA;Evidence identifying why this element should be reviewed"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="traces" upperBound="-1"
+        eType="#//Traceable" eOpposite="#//Traceable/reviewers">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="*&#xA;Traces identifying attributes or information related to this element"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="searches" upperBound="-1"
+        eType="#//Searchable" eOpposite="#//Searchable/reviewers">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="*&#xA;Searches related to this element"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Provable" abstract="true" interface="true"
+      eSuperTypes="#//Nameable">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="*&#xA;Something factual or objective in nature"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reviewers" upperBound="-1"
+        eType="#//Reviewable" eOpposite="#//Reviewable/evidence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="traces" upperBound="-1"
+        eType="#//Traceable" eOpposite="#//Traceable/evidence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Traceable" abstract="true" interface="true"
+      eSuperTypes="#//Nameable">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="*&#xA;Something that associates, connects, or relates evidence to reviewers"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="evidence" upperBound="-1"
+        eType="#//Provable" eOpposite="#//Provable/traces"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reviewers" upperBound="-1"
+        eType="#//Reviewable" eOpposite="#//Reviewable/traces"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Searchable" abstract="true" interface="true"
+      eSuperTypes="#//Nameable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reviewers" eType="#//Reviewable"
+        eOpposite="#//Reviewable/searches"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ControlGroup" eSuperTypes="#//Nameable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controls" upperBound="-1"
+        eType="#//Control" containment="true" resolveProxies="false" eOpposite="#//Control/controlGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Control" eSuperTypes="#//Reviewable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controlGroup" eType="#//ControlGroup"
+        eOpposite="#//ControlGroup/controls"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cwes" upperBound="-1" eType="#//CWE"
+        eOpposite="#//CWE/controls"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CWEGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cwes" upperBound="-1" eType="#//CWE"
+        containment="true" resolveProxies="false" eOpposite="#//CWE/cweGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CWE">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cweGroup" eType="#//CWEGroup"
+        eOpposite="#//CWEGroup/cwes"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controls" upperBound="-1"
+        eType="#//Control" eOpposite="#//Control/cwes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//Nameable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="snippets" upperBound="-1"
+        eType="#//Snippet" containment="true" resolveProxies="false" eOpposite="#//Snippet/data"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataGroup" eType="#//DataGroup"
+        eOpposite="#//DataGroup/data"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataGroup" eSuperTypes="#//Nameable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" upperBound="-1" eType="#//Data"
+        containment="true" resolveProxies="false" eOpposite="#//Data/dataGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Snippet" eSuperTypes="#//Provable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" eType="#//Data" eOpposite="#//Data/snippets"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="row" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="column" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="File" eSuperTypes="#//Data">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fullPath" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contents" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="propertyMultiLine" value="true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Request" eSuperTypes="#//Data">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="response" eType="#//Response"
+        eOpposite="#//Response/request"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Response" eSuperTypes="#//Data">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="request" eType="#//Request"
+        eOpposite="#//Request/response"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Flow" eSuperTypes="#//Traceable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowFrom" eType="#//Flow"
+        eOpposite="#//Flow/flowTo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowTo" upperBound="-1"
+        eType="#//Flow" containment="true" resolveProxies="false" eOpposite="#//Flow/flowFrom"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowSource" eSuperTypes="#//Flow">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowGroup" eType="#//FlowGroup"
+        eOpposite="#//FlowGroup/flowSources"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowSink" eSuperTypes="#//Flow"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowGroup" eSuperTypes="#//Nameable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowSources" upperBound="-1"
+        eType="#//FlowSource" containment="true" resolveProxies="false" eOpposite="#//FlowSource/flowGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataFlow" eSuperTypes="#//Flow"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="DataSourceType">
+    <eLiterals name="HTTP"/>
+    <eLiterals name="HTTPS"/>
+    <eLiterals name="GENERIC_NETWORK"/>
+    <eLiterals name="FILE"/>
+    <eLiterals name="CONSOLE"/>
+    <eLiterals name="OTHER"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataFlowSource" eSuperTypes="#//DataFlow #//FlowSource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceType" unique="false"
+        eType="#//DataSourceType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataFlowSink" eSuperTypes="#//DataFlow #//FlowSink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowConstraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataFlowConstraint" abstract="true"
+      eSuperTypes="#//DataFlow #//FlowConstraint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EndsWith" eSuperTypes="#//DataFlowConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="suffix" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StartsWith" eSuperTypes="#//DataFlowConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefix" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Matches" eSuperTypes="#//DataFlowConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pattern" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="regexType" unique="false"
+        eType="#//MatcherRegex"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MatcherRegex">
+    <eLiterals name="JAVA"/>
+    <eLiterals name="OTHER"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Contains" eSuperTypes="#//DataFlowConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contents" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CastedTo" eSuperTypes="#//DataFlowConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ControlFlow" eSuperTypes="#//Flow">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ControlFlowSource" eSuperTypes="#//ControlFlow #//FlowSource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ControlFlowSink" eSuperTypes="#//ControlFlow #//FlowSink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Assessment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applicationGroups" upperBound="-1"
+        eType="#//ApplicationGroup" containment="true" resolveProxies="false" eOpposite="#//ApplicationGroup/assessment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Property" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Property">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ApplicationGroup" eSuperTypes="#//Nameable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applications" upperBound="-1"
+        eType="#//Application" containment="true" resolveProxies="false" eOpposite="#//Application/applicationGroup"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assessment" eType="#//Assessment"
+        eOpposite="#//Assessment/applicationGroups"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Application" eSuperTypes="#//Nameable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applicationGroup" eType="#//ApplicationGroup"
+        eOpposite="#//ApplicationGroup/applications"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowGroups" upperBound="-1"
+        eType="#//FlowGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controlGroups" upperBound="-1"
+        eType="#//ControlGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataGroups" upperBound="-1"
+        eType="#//DataGroup" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SearchGroup" eSuperTypes="#//Nameable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="searches" upperBound="-1"
+        eType="#//Search" containment="true" resolveProxies="false" eOpposite="#//Search/searchGroup"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="searchResultDescription"
+        unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="searchResultCWEs" upperBound="-1"
+        eType="#//CWE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Search" eSuperTypes="#//Searchable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="searchGroup" eType="#//SearchGroup"
+        eOpposite="#//SearchGroup/searches"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pattern" eType="#//SearchPattern"
+        containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SearchPattern" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pattern" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaSearchPattern" eSuperTypes="#//SearchPattern">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="patternType" unique="false"
+        eType="#//JavaSearchPatternType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="searchFor" unique="false"
+        eType="#//JavaSearchFor"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="limitTo" unique="false"
+        eType="#//JavaLimitTo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="matchRule" unique="false"
+        eType="#//JavaMatchRule"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="caseSensitivity" unique="false"
+        eType="#//JavaMatchCaseSensitivity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="JavaSearchPatternType">
+    <eLiterals name="Eclipse"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="JavaSearchFor">
+    <eLiterals name="ClassOrInterface"/>
+    <eLiterals name="Class"/>
+    <eLiterals name="Interface"/>
+    <eLiterals name="Annotation"/>
+    <eLiterals name="Method"/>
+    <eLiterals name="Package"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="JavaLimitTo">
+    <eLiterals name="AnyOccurrences"/>
+    <eLiterals name="Declaration"/>
+    <eLiterals name="References"/>
+    <eLiterals name="AnyExtendersOrImplementors"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="JavaMatchRule">
+    <eLiterals name="Wildcard"/>
+    <eLiterals name="Exact"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="JavaMatchCaseSensitivity">
+    <eLiterals name="CaseInsensitive"/>
+    <eLiterals name="CaseSensitive"/>
+  </eClassifiers>
+</ecore:EPackage>

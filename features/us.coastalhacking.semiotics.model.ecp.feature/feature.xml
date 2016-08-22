@@ -129,15 +129,15 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecp.demo.e3.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.ecp.e3.feature"
-         version="0.0.0"/>
-
-   <includes
          id="us.coastalhacking.semiotics.model.ui.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.demo.e4.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.e4.feature"
          version="0.0.0"/>
 
    <plugin
@@ -152,5 +152,12 @@
          download-size="0"
          install-size="0"
          version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.equinox.console"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

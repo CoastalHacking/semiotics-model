@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/us.coastalhacking.semiotics.model.assessment/src"
+    editDirectory="/us.coastalhacking.semiotics.model.assessment.edit/src-gen" modelPluginID="us.coastalhacking.semiotics.model.assessment"
+    runtimeJar="true" forceOverwrite="true" modelName="Assessment" updateClasspath="false"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" testsDirectory=""
+    booleanFlagsField="eFlags" booleanFlagsReservedBits="8" importerID="org.eclipse.emf.ecore.xcore.importer"
+    containmentProxies="true" complianceLevel="8.0" language="en" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    operationReflection="true" importOrganizing="true" decoration="Live" oSGiCompatible="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter">
+    <genAnnotations source="selectedPackages">
+      <details key="http://www.eclipse.org/emf/2002/Ecore" value="Ecore.xsd"/>
+    </genAnnotations>
+    <details key="directoryURI" value="."/>
+  </genAnnotations>
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter.xmi">
+    <genAnnotations source="selectedPackages">
+      <details key="http://www.eclipse.org/emf/2002/Ecore" value="EcoreXMI.xsd"/>
+    </genAnnotations>
+    <details key="directoryURI" value="."/>
+  </genAnnotations>
+  <foreignModel>Assessment.xcore</foreignModel>
+  <modelPluginVariables>org.eclipse.xtext.xbase.lib</modelPluginVariables>
+  <modelPluginVariables>org.eclipse.emf.ecore.xcore.lib</modelPluginVariables>
+  <genPackages prefix="Assessment" basePackage="us.coastalhacking.semiotics.model"
+      disposableProviderFactory="true" ecorePackage="assessment.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="assessment.ecore#//DataSourceType">
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//DataSourceType/HTTP"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//DataSourceType/HTTPS"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//DataSourceType/GENERIC_NETWORK"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//DataSourceType/FILE"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//DataSourceType/CONSOLE"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//DataSourceType/OTHER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="assessment.ecore#//MatcherRegex">
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//MatcherRegex/JAVA"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//MatcherRegex/OTHER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="assessment.ecore#//JavaSearchPatternType">
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaSearchPatternType/Eclipse"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="assessment.ecore#//JavaSearchFor">
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaSearchFor/ClassOrInterface"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaSearchFor/Class"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaSearchFor/Interface"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaSearchFor/Annotation"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaSearchFor/Method"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaSearchFor/Package"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="assessment.ecore#//JavaLimitTo">
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaLimitTo/AnyOccurrences"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaLimitTo/Declaration"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaLimitTo/References"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaLimitTo/AnyExtendersOrImplementors"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="assessment.ecore#//JavaMatchRule">
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaMatchRule/Wildcard"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaMatchRule/Exact"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="assessment.ecore#//JavaMatchCaseSensitivity">
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaMatchCaseSensitivity/CaseInsensitive"/>
+      <genEnumLiterals ecoreEnumLiteral="assessment.ecore#//JavaMatchCaseSensitivity/CaseSensitive"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="assessment.ecore#//Nameable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Nameable/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="assessment.ecore#//Reviewable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Reviewable/evidence"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Reviewable/traces"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Reviewable/searches"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="assessment.ecore#//Provable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Provable/reviewers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Provable/traces"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="assessment.ecore#//Traceable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Traceable/evidence"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Traceable/reviewers"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="assessment.ecore#//Searchable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Searchable/reviewers"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//ControlGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//ControlGroup/controls"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//Control">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Control/controlGroup"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Control/cwes"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//CWEGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//CWEGroup/cwes"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//CWE">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//CWE/cweGroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//CWE/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//CWE/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//CWE/url"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//CWE/controls"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//Data">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Data/snippets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Data/dataGroup"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//DataGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//DataGroup/data"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//Snippet">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Snippet/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Snippet/row"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Snippet/column"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Snippet/length"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//File">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//File/fullPath"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute assessment.ecore#//File/contents"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//Request">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Request/response"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//Response">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Response/request"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//Flow">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Flow/flowFrom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Flow/flowTo"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//FlowSource">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//FlowSource/flowGroup"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//FlowSink"/>
+    <genClasses ecoreClass="assessment.ecore#//FlowGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//FlowGroup/flowSources"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//DataFlow"/>
+    <genClasses ecoreClass="assessment.ecore#//DataFlowSource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//DataFlowSource/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//DataFlowSource/sourceType"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//DataFlowSink"/>
+    <genClasses ecoreClass="assessment.ecore#//FlowConstraint"/>
+    <genClasses image="false" ecoreClass="assessment.ecore#//DataFlowConstraint"/>
+    <genClasses ecoreClass="assessment.ecore#//EndsWith">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//EndsWith/suffix"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//StartsWith">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//StartsWith/prefix"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//Matches">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Matches/pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Matches/regexType"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//Contains">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Contains/contents"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//CastedTo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//CastedTo/type"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//ControlFlow">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//ControlFlow/description"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//ControlFlowSource"/>
+    <genClasses ecoreClass="assessment.ecore#//ControlFlowSink"/>
+    <genClasses ecoreClass="assessment.ecore#//Assessment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Assessment/applicationGroups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Assessment/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Property/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Property/value"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//ApplicationGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//ApplicationGroup/applications"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//ApplicationGroup/assessment"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//Application">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Application/applicationGroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Application/flowGroups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Application/controlGroups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Application/dataGroups"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//SearchGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//SearchGroup/searches"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//SearchGroup/searchResultDescription"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//SearchGroup/searchResultCWEs"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//Search">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Search/searchGroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Search/pattern"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="assessment.ecore#//SearchPattern">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//SearchPattern/pattern"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//JavaSearchPattern">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//JavaSearchPattern/patternType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//JavaSearchPattern/searchFor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//JavaSearchPattern/limitTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//JavaSearchPattern/matchRule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//JavaSearchPattern/caseSensitivity"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

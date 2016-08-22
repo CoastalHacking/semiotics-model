@@ -72,84 +72,14 @@
          unpack="false"/>
 
    <plugin
-         id="us.coastalhacking.semiotics.model.base"
+         id="us.coastalhacking.semiotics.model.assessment"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="us.coastalhacking.semiotics.model.base.edit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="us.coastalhacking.semiotics.model.flow"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="us.coastalhacking.semiotics.model.flow.edit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="us.coastalhacking.semiotics.model.control"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="us.coastalhacking.semiotics.model.control.edit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="us.coastalhacking.semiotics.model.surfacearea"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="us.coastalhacking.semiotics.model.surfacearea.edit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="us.coastalhacking.semiotics.model.data"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="us.coastalhacking.semiotics.model.data.edit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="us.coastalhacking.semiotics.model.application"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="us.coastalhacking.semiotics.model.application.edit"
+         id="us.coastalhacking.semiotics.model.assessment.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
