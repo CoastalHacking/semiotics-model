@@ -1,4 +1,9 @@
 /**
+ * Copyright (c) 2016 Coastal Hacking
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License
+ * v1.0 which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
  */
 package us.coastalhacking.semiotics.model.assessment;
 
@@ -22,7 +27,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see us.coastalhacking.semiotics.model.assessment.AssessmentFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel editDirectory='/us.coastalhacking.semiotics.model.assessment.edit/src-gen' forceOverwrite='true' basePackage='us.coastalhacking.semiotics.model'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel editDirectory='/us.coastalhacking.semiotics.model.assessment.edit/src-gen' forceOverwrite='true' copyrightText='Copyright (c) 2016 Coastal Hacking\nAll rights reserved. This program and the accompanying materials\nare made available under the terms of the Eclipse Public License\nv1.0 which accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v10.html' basePackage='us.coastalhacking.semiotics.model'"
  * @generated
  */
 public interface AssessmentPackage extends EPackage {
