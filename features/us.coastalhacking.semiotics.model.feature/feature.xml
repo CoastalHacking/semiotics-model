@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="us.coastalhacking.semiotics.model.feature"
-      label="Feature"
+      label="Semiotics Model Feature"
       version="1.0.0.qualifier"
       license-feature="us.coastalhacking.semiotics.license.feature"
       license-feature-version="1.0.0.qualifier">
