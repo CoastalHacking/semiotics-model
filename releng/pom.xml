@@ -12,7 +12,6 @@
 
   <modules>
     <module>us.coastalhacking.semiotics.model.target</module>
-    <module>us.coastalhacking.semiotics.model.update</module>
     <module>us.coastalhacking.semiotics.model.update.source</module>
   </modules>
 </project>
