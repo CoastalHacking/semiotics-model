@@ -1,4 +1,18 @@
+sudo: false
 language: java
 jdk:
 - oraclejdk8
+# http://binkley.blogspot.com/2015/10/struggling-with-travis-ci-and-maven-33.html
+# LOL!
+before_install:
+  - wget http://apache.claz.org/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+  - tar zxvf apache-maven-3.3.9-bin.tar.gz
+  - chmod +x apache-maven-3.3.9/bin/mvn
+  - export M2_HOME=$PWD/apache-maven-3.3.9
+  - export PATH=$PWD/apache-maven-3.3.9/bin:${PATH}
+  - hash -r
+before_script:
+  - export M2_HOME=$PWD/apache-maven-3.3.9
+  - export PATH=$PWD/apache-maven-3.3.9/bin:${PATH}
+  - hash -r
 script: mvn clean verify -f releng/us.coastalhacking.semiotics.model.aggregator 
