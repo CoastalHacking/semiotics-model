@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="us.coastalhacking.semiotics.license.feature.source" version="1.0.0.qualifier">
+      <category name="license"/>
+   </feature>
+   <feature id="us.coastalhacking.semiotics.model.feature.source" version="1.0.0.qualifier">
+      <category name="model_feature"/>
+   </feature>
+   <category-def name="model_feature" label="Semiotics Model"/>
+   <category-def name="license" label="Semiotics License"/>
+</site>

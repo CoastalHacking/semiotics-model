@@ -1,0 +1,4 @@
+# oh you .gitignore
+!target/
+target/*
+!target/repository/

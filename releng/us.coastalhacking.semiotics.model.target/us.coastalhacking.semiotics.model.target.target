@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="us.coastalhacking.semiotics.model.target" sequenceNumber="16">
+<?pde version="3.8"?><target name="us.coastalhacking.semiotics.model.target" sequenceNumber="26">
 <locations>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.platform.feature.group" version="4.6.0.v20160606-1342"/>
-<unit id="org.eclipse.xtext.runtime.feature.group" version="2.10.0.v201605250459"/>
-<unit id="org.eclipse.emf.ecore.xcore.lib.feature.group" version="1.2.100.v20160526-0606"/>
-<unit id="org.eclipse.xtext.xbase.lib.feature.group" version="2.10.0.v201605250459"/>
-<unit id="org.eclipse.emf.edit.feature.group" version="2.12.0.v20160526-0356"/>
-<unit id="org.eclipse.emf.feature.group" version="2.12.0.v20160526-0356"/>
-<repository location="http://download.eclipse.org/releases/neon/201606221000"/>
-</location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="com.google.guava" version="15.0.0.v201403281430"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository/"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.platform.feature.group" version="4.6.0.v20160606-1342"/>
+<unit id="org.eclipse.emf.source.feature.group" version="2.12.0.v20160526-0356"/>
+<unit id="org.eclipse.emf.edit.source.feature.group" version="2.12.0.v20160526-0356"/>
+<unit id="org.eclipse.xtext.xbase.lib.source.feature.group" version="2.10.0.v201605250459"/>
+<unit id="org.eclipse.emf.ecore.xcore.lib.feature.group" version="1.2.100.v20160526-0606"/>
+<unit id="org.eclipse.xtext.xbase.lib.feature.group" version="2.10.0.v201605250459"/>
+<unit id="org.eclipse.emf.ecore.xcore.lib.source.feature.group" version="1.2.100.v20160526-0606"/>
+<unit id="org.eclipse.platform.sdk" version="4.6.0.I20160606-1100"/>
+<unit id="org.eclipse.xtext.runtime.source.feature.group" version="2.10.0.v201605250459"/>
+<unit id="org.eclipse.xtext.runtime.feature.group" version="2.10.0.v201605250459"/>
+<unit id="org.eclipse.emf.feature.group" version="2.12.0.v20160526-0356"/>
+<unit id="org.eclipse.emf.edit.feature.group" version="2.12.0.v20160526-0356"/>
+<repository location="http://download.eclipse.org/releases/neon/201606221000"/>
 </location>
 </locations>
 </target>
