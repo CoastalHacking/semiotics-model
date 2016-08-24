@@ -24,7 +24,7 @@ package us.coastalhacking.semiotics.model.assessment;
  * @model
  * @generated
  */
-public interface Contains extends DataFlowConstraint {
+public interface Contains extends FlowNode<DataFlowConstraint> {
 	/**
 	 * Returns the value of the '<em><b>Contents</b></em>' attribute.
 	 * <!-- begin-user-doc -->

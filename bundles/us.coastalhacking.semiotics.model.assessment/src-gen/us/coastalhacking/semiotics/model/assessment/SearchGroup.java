@@ -18,60 +18,14 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link us.coastalhacking.semiotics.model.assessment.SearchGroup#getSearches <em>Searches</em>}</li>
- *   <li>{@link us.coastalhacking.semiotics.model.assessment.SearchGroup#getSearchResultDescription <em>Search Result Description</em>}</li>
  *   <li>{@link us.coastalhacking.semiotics.model.assessment.SearchGroup#getSearchResultCWEs <em>Search Result CW Es</em>}</li>
  * </ul>
  *
  * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getSearchGroup()
- * @model
+ * @model interface="true" abstract="true"
  * @generated
  */
-public interface SearchGroup extends Nameable {
-	/**
-	 * Returns the value of the '<em><b>Searches</b></em>' containment reference list.
-	 * The list contents are of type {@link us.coastalhacking.semiotics.model.assessment.Search}.
-	 * It is bidirectional and its opposite is '{@link us.coastalhacking.semiotics.model.assessment.Search#getSearchGroup <em>Search Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Searches</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Searches</em>' containment reference list.
-	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getSearchGroup_Searches()
-	 * @see us.coastalhacking.semiotics.model.assessment.Search#getSearchGroup
-	 * @model opposite="searchGroup" containment="true"
-	 * @generated
-	 */
-	EList<Search> getSearches();
-
-	/**
-	 * Returns the value of the '<em><b>Search Result Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Search Result Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Search Result Description</em>' attribute.
-	 * @see #setSearchResultDescription(String)
-	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getSearchGroup_SearchResultDescription()
-	 * @model unique="false"
-	 * @generated
-	 */
-	String getSearchResultDescription();
-
-	/**
-	 * Sets the value of the '{@link us.coastalhacking.semiotics.model.assessment.SearchGroup#getSearchResultDescription <em>Search Result Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Search Result Description</em>' attribute.
-	 * @see #getSearchResultDescription()
-	 * @generated
-	 */
-	void setSearchResultDescription(String value);
-
+public interface SearchGroup<T extends SearchType> extends GroupableMembered<T, Applicational>, Describable {
 	/**
 	 * Returns the value of the '<em><b>Search Result CW Es</b></em>' reference list.
 	 * The list contents are of type {@link us.coastalhacking.semiotics.model.assessment.CWE}.

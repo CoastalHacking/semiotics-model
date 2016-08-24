@@ -24,7 +24,7 @@ package us.coastalhacking.semiotics.model.assessment;
  * @model
  * @generated
  */
-public interface EndsWith extends DataFlowConstraint {
+public interface EndsWith extends FlowNode<DataFlowConstraint> {
 	/**
 	 * Returns the value of the '<em><b>Suffix</b></em>' attribute.
 	 * <!-- begin-user-doc -->

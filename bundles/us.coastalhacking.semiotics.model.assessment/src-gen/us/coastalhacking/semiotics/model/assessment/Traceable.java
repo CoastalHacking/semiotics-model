@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <!-- begin-model-doc -->
  * *
- * Something that associates, connects, or relates evidence to reviewers
+ * Something that associates, connects, or relates evidence to examinees
  * <!-- end-model-doc -->
  *
  * <p>
@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link us.coastalhacking.semiotics.model.assessment.Traceable#getEvidence <em>Evidence</em>}</li>
- *   <li>{@link us.coastalhacking.semiotics.model.assessment.Traceable#getReviewers <em>Reviewers</em>}</li>
+ *   <li>{@link us.coastalhacking.semiotics.model.assessment.Traceable#getExaminees <em>Examinees</em>}</li>
  * </ul>
  *
  * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getTraceable()
@@ -51,21 +51,21 @@ public interface Traceable extends Nameable {
 	EList<Provable> getEvidence();
 
 	/**
-	 * Returns the value of the '<em><b>Reviewers</b></em>' reference list.
-	 * The list contents are of type {@link us.coastalhacking.semiotics.model.assessment.Reviewable}.
-	 * It is bidirectional and its opposite is '{@link us.coastalhacking.semiotics.model.assessment.Reviewable#getTraces <em>Traces</em>}'.
+	 * Returns the value of the '<em><b>Examinees</b></em>' reference list.
+	 * The list contents are of type {@link us.coastalhacking.semiotics.model.assessment.Examinable}.
+	 * It is bidirectional and its opposite is '{@link us.coastalhacking.semiotics.model.assessment.Examinable#getTraces <em>Traces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Reviewers</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Examinees</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reviewers</em>' reference list.
-	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getTraceable_Reviewers()
-	 * @see us.coastalhacking.semiotics.model.assessment.Reviewable#getTraces
+	 * @return the value of the '<em>Examinees</em>' reference list.
+	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getTraceable_Examinees()
+	 * @see us.coastalhacking.semiotics.model.assessment.Examinable#getTraces
 	 * @model opposite="traces"
 	 * @generated
 	 */
-	EList<Reviewable> getReviewers();
+	EList<Examinable> getExaminees();
 
 } // Traceable

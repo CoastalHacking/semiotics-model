@@ -19,17 +19,17 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link us.coastalhacking.semiotics.model.assessment.Data#getSnippets <em>Snippets</em>}</li>
- *   <li>{@link us.coastalhacking.semiotics.model.assessment.Data#getDataGroup <em>Data Group</em>}</li>
+ *   <li>{@link us.coastalhacking.semiotics.model.assessment.Data#getData <em>Data</em>}</li>
  * </ul>
  *
  * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getData()
- * @model
+ * @model interface="true" abstract="true"
  * @generated
  */
-public interface Data extends Nameable {
+public interface Data<T extends DataType> extends Member<T>, Provable {
 	/**
 	 * Returns the value of the '<em><b>Snippets</b></em>' containment reference list.
-	 * The list contents are of type {@link us.coastalhacking.semiotics.model.assessment.Snippet}.
+	 * The list contents are of type {@link us.coastalhacking.semiotics.model.assessment.Snippet}&lt;? extends us.coastalhacking.semiotics.model.assessment.SnippetType>.
 	 * It is bidirectional and its opposite is '{@link us.coastalhacking.semiotics.model.assessment.Snippet#getData <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -43,34 +43,33 @@ public interface Data extends Nameable {
 	 * @model opposite="data" containment="true"
 	 * @generated
 	 */
-	EList<Snippet> getSnippets();
+	EList<Snippet<? extends SnippetType>> getSnippets();
 
 	/**
-	 * Returns the value of the '<em><b>Data Group</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link us.coastalhacking.semiotics.model.assessment.DataGroup#getData <em>Data</em>}'.
+	 * Returns the value of the '<em><b>Data</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Data Group</em>' container reference isn't clear,
+	 * If the meaning of the '<em>Data</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Data Group</em>' container reference.
-	 * @see #setDataGroup(DataGroup)
-	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getData_DataGroup()
-	 * @see us.coastalhacking.semiotics.model.assessment.DataGroup#getData
-	 * @model opposite="data" transient="false"
+	 * @return the value of the '<em>Data</em>' attribute.
+	 * @see #setData(String)
+	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getData_Data()
+	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyMultiLine='true'"
 	 * @generated
 	 */
-	DataGroup getDataGroup();
+	String getData();
 
 	/**
-	 * Sets the value of the '{@link us.coastalhacking.semiotics.model.assessment.Data#getDataGroup <em>Data Group</em>}' container reference.
+	 * Sets the value of the '{@link us.coastalhacking.semiotics.model.assessment.Data#getData <em>Data</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Data Group</em>' container reference.
-	 * @see #getDataGroup()
+	 * @param value the new value of the '<em>Data</em>' attribute.
+	 * @see #getData()
 	 * @generated
 	 */
-	void setDataGroup(DataGroup value);
+	void setData(String value);
 
 } // Data

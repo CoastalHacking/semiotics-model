@@ -1,4 +1,9 @@
 /**
+ * Copyright (c) 2016 Coastal Hacking
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License
+ * v1.0 which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
  */
 package us.coastalhacking.semiotics.model.assessment.provider;
 
@@ -72,52 +77,6 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.ControlGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ControlGroupItemProvider controlGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.ControlGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createControlGroupAdapter() {
-		if (controlGroupItemProvider == null) {
-			controlGroupItemProvider = new ControlGroupItemProvider(this);
-		}
-
-		return controlGroupItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.Control} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ControlItemProvider controlItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.Control}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createControlAdapter() {
-		if (controlItemProvider == null) {
-			controlItemProvider = new ControlItemProvider(this);
-		}
-
-		return controlItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.CWEGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -164,72 +123,417 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.Data} instances.
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.Authentication} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataItemProvider dataItemProvider;
+	protected AuthenticationItemProvider authenticationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.Data}.
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.Authentication}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDataAdapter() {
-		if (dataItemProvider == null) {
-			dataItemProvider = new DataItemProvider(this);
+	public Adapter createAuthenticationAdapter() {
+		if (authenticationItemProvider == null) {
+			authenticationItemProvider = new AuthenticationItemProvider(this);
 		}
 
-		return dataItemProvider;
+		return authenticationItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.DataGroup} instances.
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.AuthenticationGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataGroupItemProvider dataGroupItemProvider;
+	protected AuthenticationGroupItemProvider authenticationGroupItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.DataGroup}.
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.AuthenticationGroup}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDataGroupAdapter() {
-		if (dataGroupItemProvider == null) {
-			dataGroupItemProvider = new DataGroupItemProvider(this);
+	public Adapter createAuthenticationGroupAdapter() {
+		if (authenticationGroupItemProvider == null) {
+			authenticationGroupItemProvider = new AuthenticationGroupItemProvider(this);
 		}
 
-		return dataGroupItemProvider;
+		return authenticationGroupItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.Snippet} instances.
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.Authorization} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SnippetItemProvider snippetItemProvider;
+	protected AuthorizationItemProvider authorizationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.Snippet}.
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.Authorization}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSnippetAdapter() {
-		if (snippetItemProvider == null) {
-			snippetItemProvider = new SnippetItemProvider(this);
+	public Adapter createAuthorizationAdapter() {
+		if (authorizationItemProvider == null) {
+			authorizationItemProvider = new AuthorizationItemProvider(this);
 		}
 
-		return snippetItemProvider;
+		return authorizationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.AccountGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AccountGroupItemProvider accountGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.AccountGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAccountGroupAdapter() {
+		if (accountGroupItemProvider == null) {
+			accountGroupItemProvider = new AccountGroupItemProvider(this);
+		}
+
+		return accountGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.Account} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AccountItemProvider accountItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.Account}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAccountAdapter() {
+		if (accountItemProvider == null) {
+			accountItemProvider = new AccountItemProvider(this);
+		}
+
+		return accountItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.AuthorizationGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AuthorizationGroupItemProvider authorizationGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.AuthorizationGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAuthorizationGroupAdapter() {
+		if (authorizationGroupItemProvider == null) {
+			authorizationGroupItemProvider = new AuthorizationGroupItemProvider(this);
+		}
+
+		return authorizationGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.Cryptography} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CryptographyItemProvider cryptographyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.Cryptography}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCryptographyAdapter() {
+		if (cryptographyItemProvider == null) {
+			cryptographyItemProvider = new CryptographyItemProvider(this);
+		}
+
+		return cryptographyItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.OutputEncodingGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OutputEncodingGroupItemProvider outputEncodingGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.OutputEncodingGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOutputEncodingGroupAdapter() {
+		if (outputEncodingGroupItemProvider == null) {
+			outputEncodingGroupItemProvider = new OutputEncodingGroupItemProvider(this);
+		}
+
+		return outputEncodingGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.OutputEncoding} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OutputEncodingItemProvider outputEncodingItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.OutputEncoding}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOutputEncodingAdapter() {
+		if (outputEncodingItemProvider == null) {
+			outputEncodingItemProvider = new OutputEncodingItemProvider(this);
+		}
+
+		return outputEncodingItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.CryptographyGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CryptographyGroupItemProvider cryptographyGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.CryptographyGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCryptographyGroupAdapter() {
+		if (cryptographyGroupItemProvider == null) {
+			cryptographyGroupItemProvider = new CryptographyGroupItemProvider(this);
+		}
+
+		return cryptographyGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.GenericControl} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GenericControlItemProvider genericControlItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.GenericControl}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGenericControlAdapter() {
+		if (genericControlItemProvider == null) {
+			genericControlItemProvider = new GenericControlItemProvider(this);
+		}
+
+		return genericControlItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.GenericControlGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GenericControlGroupItemProvider genericControlGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.GenericControlGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGenericControlGroupAdapter() {
+		if (genericControlGroupItemProvider == null) {
+			genericControlGroupItemProvider = new GenericControlGroupItemProvider(this);
+		}
+
+		return genericControlGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.NetworkIngress} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NetworkIngressItemProvider networkIngressItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.NetworkIngress}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNetworkIngressAdapter() {
+		if (networkIngressItemProvider == null) {
+			networkIngressItemProvider = new NetworkIngressItemProvider(this);
+		}
+
+		return networkIngressItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.NetworkIngressGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NetworkIngressGroupItemProvider networkIngressGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.NetworkIngressGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNetworkIngressGroupAdapter() {
+		if (networkIngressGroupItemProvider == null) {
+			networkIngressGroupItemProvider = new NetworkIngressGroupItemProvider(this);
+		}
+
+		return networkIngressGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.NetworkEgress} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NetworkEgressItemProvider networkEgressItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.NetworkEgress}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNetworkEgressAdapter() {
+		if (networkEgressItemProvider == null) {
+			networkEgressItemProvider = new NetworkEgressItemProvider(this);
+		}
+
+		return networkEgressItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.NetworkEgressGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NetworkEgressGroupItemProvider networkEgressGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.NetworkEgressGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNetworkEgressGroupAdapter() {
+		if (networkEgressGroupItemProvider == null) {
+			networkEgressGroupItemProvider = new NetworkEgressGroupItemProvider(this);
+		}
+
+		return networkEgressGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.TextSnippet} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TextSnippetItemProvider textSnippetItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.TextSnippet}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTextSnippetAdapter() {
+		if (textSnippetItemProvider == null) {
+			textSnippetItemProvider = new TextSnippetItemProvider(this);
+		}
+
+		return textSnippetItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.FileType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FileTypeItemProvider fileTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.FileType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFileTypeAdapter() {
+		if (fileTypeItemProvider == null) {
+			fileTypeItemProvider = new FileTypeItemProvider(this);
+		}
+
+		return fileTypeItemProvider;
 	}
 
 	/**
@@ -256,6 +560,52 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.FileGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FileGroupItemProvider fileGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.FileGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFileGroupAdapter() {
+		if (fileGroupItemProvider == null) {
+			fileGroupItemProvider = new FileGroupItemProvider(this);
+		}
+
+		return fileGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.RequestType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RequestTypeItemProvider requestTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.RequestType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRequestTypeAdapter() {
+		if (requestTypeItemProvider == null) {
+			requestTypeItemProvider = new RequestTypeItemProvider(this);
+		}
+
+		return requestTypeItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.Request} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -276,6 +626,52 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 		}
 
 		return requestItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.RequestGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RequestGroupItemProvider requestGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.RequestGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRequestGroupAdapter() {
+		if (requestGroupItemProvider == null) {
+			requestGroupItemProvider = new RequestGroupItemProvider(this);
+		}
+
+		return requestGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.ResponseType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResponseTypeItemProvider responseTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.ResponseType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResponseTypeAdapter() {
+		if (responseTypeItemProvider == null) {
+			responseTypeItemProvider = new ResponseTypeItemProvider(this);
+		}
+
+		return responseTypeItemProvider;
 	}
 
 	/**
@@ -302,95 +698,26 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.Flow} instances.
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.ResponseGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FlowItemProvider flowItemProvider;
+	protected ResponseGroupItemProvider responseGroupItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.Flow}.
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.ResponseGroup}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createFlowAdapter() {
-		if (flowItemProvider == null) {
-			flowItemProvider = new FlowItemProvider(this);
+	public Adapter createResponseGroupAdapter() {
+		if (responseGroupItemProvider == null) {
+			responseGroupItemProvider = new ResponseGroupItemProvider(this);
 		}
 
-		return flowItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.FlowSource} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FlowSourceItemProvider flowSourceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.FlowSource}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFlowSourceAdapter() {
-		if (flowSourceItemProvider == null) {
-			flowSourceItemProvider = new FlowSourceItemProvider(this);
-		}
-
-		return flowSourceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.FlowSink} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FlowSinkItemProvider flowSinkItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.FlowSink}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFlowSinkAdapter() {
-		if (flowSinkItemProvider == null) {
-			flowSinkItemProvider = new FlowSinkItemProvider(this);
-		}
-
-		return flowSinkItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.FlowGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FlowGroupItemProvider flowGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.FlowGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFlowGroupAdapter() {
-		if (flowGroupItemProvider == null) {
-			flowGroupItemProvider = new FlowGroupItemProvider(this);
-		}
-
-		return flowGroupItemProvider;
+		return responseGroupItemProvider;
 	}
 
 	/**
@@ -417,72 +744,49 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.DataFlowSource} instances.
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.DataFlowNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataFlowSourceItemProvider dataFlowSourceItemProvider;
+	protected DataFlowNodeItemProvider dataFlowNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.DataFlowSource}.
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.DataFlowNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDataFlowSourceAdapter() {
-		if (dataFlowSourceItemProvider == null) {
-			dataFlowSourceItemProvider = new DataFlowSourceItemProvider(this);
+	public Adapter createDataFlowNodeAdapter() {
+		if (dataFlowNodeItemProvider == null) {
+			dataFlowNodeItemProvider = new DataFlowNodeItemProvider(this);
 		}
 
-		return dataFlowSourceItemProvider;
+		return dataFlowNodeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.DataFlowSink} instances.
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.DataFlowGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataFlowSinkItemProvider dataFlowSinkItemProvider;
+	protected DataFlowGroupItemProvider dataFlowGroupItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.DataFlowSink}.
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.DataFlowGroup}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDataFlowSinkAdapter() {
-		if (dataFlowSinkItemProvider == null) {
-			dataFlowSinkItemProvider = new DataFlowSinkItemProvider(this);
+	public Adapter createDataFlowGroupAdapter() {
+		if (dataFlowGroupItemProvider == null) {
+			dataFlowGroupItemProvider = new DataFlowGroupItemProvider(this);
 		}
 
-		return dataFlowSinkItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.FlowConstraint} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FlowConstraintItemProvider flowConstraintItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.FlowConstraint}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFlowConstraintAdapter() {
-		if (flowConstraintItemProvider == null) {
-			flowConstraintItemProvider = new FlowConstraintItemProvider(this);
-		}
-
-		return flowConstraintItemProvider;
+		return dataFlowGroupItemProvider;
 	}
 
 	/**
@@ -624,72 +928,95 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.ControlFlowSource} instances.
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.ControlFlowNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ControlFlowSourceItemProvider controlFlowSourceItemProvider;
+	protected ControlFlowNodeItemProvider controlFlowNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.ControlFlowSource}.
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.ControlFlowNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createControlFlowSourceAdapter() {
-		if (controlFlowSourceItemProvider == null) {
-			controlFlowSourceItemProvider = new ControlFlowSourceItemProvider(this);
+	public Adapter createControlFlowNodeAdapter() {
+		if (controlFlowNodeItemProvider == null) {
+			controlFlowNodeItemProvider = new ControlFlowNodeItemProvider(this);
 		}
 
-		return controlFlowSourceItemProvider;
+		return controlFlowNodeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.ControlFlowSink} instances.
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.ControlFlowGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ControlFlowSinkItemProvider controlFlowSinkItemProvider;
+	protected ControlFlowGroupItemProvider controlFlowGroupItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.ControlFlowSink}.
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.ControlFlowGroup}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createControlFlowSinkAdapter() {
-		if (controlFlowSinkItemProvider == null) {
-			controlFlowSinkItemProvider = new ControlFlowSinkItemProvider(this);
+	public Adapter createControlFlowGroupAdapter() {
+		if (controlFlowGroupItemProvider == null) {
+			controlFlowGroupItemProvider = new ControlFlowGroupItemProvider(this);
 		}
 
-		return controlFlowSinkItemProvider;
+		return controlFlowGroupItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.Assessment} instances.
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.ApplicationAssessment} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AssessmentItemProvider assessmentItemProvider;
+	protected ApplicationAssessmentItemProvider applicationAssessmentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.Assessment}.
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.ApplicationAssessment}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAssessmentAdapter() {
-		if (assessmentItemProvider == null) {
-			assessmentItemProvider = new AssessmentItemProvider(this);
+	public Adapter createApplicationAssessmentAdapter() {
+		if (applicationAssessmentItemProvider == null) {
+			applicationAssessmentItemProvider = new ApplicationAssessmentItemProvider(this);
 		}
 
-		return assessmentItemProvider;
+		return applicationAssessmentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.ApplicationAssessmentGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ApplicationAssessmentGroupItemProvider applicationAssessmentGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.ApplicationAssessmentGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createApplicationAssessmentGroupAdapter() {
+		if (applicationAssessmentGroupItemProvider == null) {
+			applicationAssessmentGroupItemProvider = new ApplicationAssessmentGroupItemProvider(this);
+		}
+
+		return applicationAssessmentGroupItemProvider;
 	}
 
 	/**
@@ -716,95 +1043,95 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.ApplicationGroup} instances.
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.WebApplication} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApplicationGroupItemProvider applicationGroupItemProvider;
+	protected WebApplicationItemProvider webApplicationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.ApplicationGroup}.
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.WebApplication}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createApplicationGroupAdapter() {
-		if (applicationGroupItemProvider == null) {
-			applicationGroupItemProvider = new ApplicationGroupItemProvider(this);
+	public Adapter createWebApplicationAdapter() {
+		if (webApplicationItemProvider == null) {
+			webApplicationItemProvider = new WebApplicationItemProvider(this);
 		}
 
-		return applicationGroupItemProvider;
+		return webApplicationItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.Application} instances.
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.WebApplicationGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApplicationItemProvider applicationItemProvider;
+	protected WebApplicationGroupItemProvider webApplicationGroupItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.Application}.
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.WebApplicationGroup}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createApplicationAdapter() {
-		if (applicationItemProvider == null) {
-			applicationItemProvider = new ApplicationItemProvider(this);
+	public Adapter createWebApplicationGroupAdapter() {
+		if (webApplicationGroupItemProvider == null) {
+			webApplicationGroupItemProvider = new WebApplicationGroupItemProvider(this);
 		}
 
-		return applicationItemProvider;
+		return webApplicationGroupItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.SearchGroup} instances.
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.JavaSearch} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SearchGroupItemProvider searchGroupItemProvider;
+	protected JavaSearchItemProvider javaSearchItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.SearchGroup}.
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.JavaSearch}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSearchGroupAdapter() {
-		if (searchGroupItemProvider == null) {
-			searchGroupItemProvider = new SearchGroupItemProvider(this);
+	public Adapter createJavaSearchAdapter() {
+		if (javaSearchItemProvider == null) {
+			javaSearchItemProvider = new JavaSearchItemProvider(this);
 		}
 
-		return searchGroupItemProvider;
+		return javaSearchItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.Search} instances.
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.JavaSearchGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SearchItemProvider searchItemProvider;
+	protected JavaSearchGroupItemProvider javaSearchGroupItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.Search}.
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.JavaSearchGroup}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSearchAdapter() {
-		if (searchItemProvider == null) {
-			searchItemProvider = new SearchItemProvider(this);
+	public Adapter createJavaSearchGroupAdapter() {
+		if (javaSearchGroupItemProvider == null) {
+			javaSearchGroupItemProvider = new JavaSearchGroupItemProvider(this);
 		}
 
-		return searchItemProvider;
+		return javaSearchGroupItemProvider;
 	}
 
 	/**
@@ -828,6 +1155,98 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 		}
 
 		return javaSearchPatternItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.LocalTaskGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LocalTaskGroupItemProvider localTaskGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.LocalTaskGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLocalTaskGroupAdapter() {
+		if (localTaskGroupItemProvider == null) {
+			localTaskGroupItemProvider = new LocalTaskGroupItemProvider(this);
+		}
+
+		return localTaskGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.LocalTask} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LocalTaskItemProvider localTaskItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.LocalTask}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLocalTaskAdapter() {
+		if (localTaskItemProvider == null) {
+			localTaskItemProvider = new LocalTaskItemProvider(this);
+		}
+
+		return localTaskItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.LocalFindingGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LocalFindingGroupItemProvider localFindingGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.LocalFindingGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLocalFindingGroupAdapter() {
+		if (localFindingGroupItemProvider == null) {
+			localFindingGroupItemProvider = new LocalFindingGroupItemProvider(this);
+		}
+
+		return localFindingGroupItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link us.coastalhacking.semiotics.model.assessment.LocalFinding} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LocalFindingItemProvider localFindingItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link us.coastalhacking.semiotics.model.assessment.LocalFinding}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLocalFindingAdapter() {
+		if (localFindingItemProvider == null) {
+			localFindingItemProvider = new LocalFindingItemProvider(this);
+		}
+
+		return localFindingItemProvider;
 	}
 
 	/**
@@ -929,39 +1348,57 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 	 * @generated
 	 */
 	public void dispose() {
-		if (controlGroupItemProvider != null) controlGroupItemProvider.dispose();
-		if (controlItemProvider != null) controlItemProvider.dispose();
 		if (cweGroupItemProvider != null) cweGroupItemProvider.dispose();
 		if (cweItemProvider != null) cweItemProvider.dispose();
-		if (dataItemProvider != null) dataItemProvider.dispose();
-		if (dataGroupItemProvider != null) dataGroupItemProvider.dispose();
-		if (snippetItemProvider != null) snippetItemProvider.dispose();
+		if (authenticationGroupItemProvider != null) authenticationGroupItemProvider.dispose();
+		if (authenticationItemProvider != null) authenticationItemProvider.dispose();
+		if (authorizationGroupItemProvider != null) authorizationGroupItemProvider.dispose();
+		if (authorizationItemProvider != null) authorizationItemProvider.dispose();
+		if (accountGroupItemProvider != null) accountGroupItemProvider.dispose();
+		if (accountItemProvider != null) accountItemProvider.dispose();
+		if (cryptographyGroupItemProvider != null) cryptographyGroupItemProvider.dispose();
+		if (cryptographyItemProvider != null) cryptographyItemProvider.dispose();
+		if (outputEncodingGroupItemProvider != null) outputEncodingGroupItemProvider.dispose();
+		if (outputEncodingItemProvider != null) outputEncodingItemProvider.dispose();
+		if (genericControlItemProvider != null) genericControlItemProvider.dispose();
+		if (genericControlGroupItemProvider != null) genericControlGroupItemProvider.dispose();
+		if (networkIngressItemProvider != null) networkIngressItemProvider.dispose();
+		if (networkIngressGroupItemProvider != null) networkIngressGroupItemProvider.dispose();
+		if (networkEgressItemProvider != null) networkEgressItemProvider.dispose();
+		if (networkEgressGroupItemProvider != null) networkEgressGroupItemProvider.dispose();
+		if (textSnippetItemProvider != null) textSnippetItemProvider.dispose();
+		if (fileTypeItemProvider != null) fileTypeItemProvider.dispose();
 		if (fileItemProvider != null) fileItemProvider.dispose();
+		if (fileGroupItemProvider != null) fileGroupItemProvider.dispose();
+		if (requestTypeItemProvider != null) requestTypeItemProvider.dispose();
 		if (requestItemProvider != null) requestItemProvider.dispose();
+		if (requestGroupItemProvider != null) requestGroupItemProvider.dispose();
+		if (responseTypeItemProvider != null) responseTypeItemProvider.dispose();
 		if (responseItemProvider != null) responseItemProvider.dispose();
-		if (flowItemProvider != null) flowItemProvider.dispose();
-		if (flowSourceItemProvider != null) flowSourceItemProvider.dispose();
-		if (flowSinkItemProvider != null) flowSinkItemProvider.dispose();
-		if (flowGroupItemProvider != null) flowGroupItemProvider.dispose();
+		if (responseGroupItemProvider != null) responseGroupItemProvider.dispose();
 		if (dataFlowItemProvider != null) dataFlowItemProvider.dispose();
-		if (dataFlowSourceItemProvider != null) dataFlowSourceItemProvider.dispose();
-		if (dataFlowSinkItemProvider != null) dataFlowSinkItemProvider.dispose();
-		if (flowConstraintItemProvider != null) flowConstraintItemProvider.dispose();
+		if (dataFlowNodeItemProvider != null) dataFlowNodeItemProvider.dispose();
+		if (dataFlowGroupItemProvider != null) dataFlowGroupItemProvider.dispose();
 		if (endsWithItemProvider != null) endsWithItemProvider.dispose();
 		if (startsWithItemProvider != null) startsWithItemProvider.dispose();
 		if (matchesItemProvider != null) matchesItemProvider.dispose();
 		if (containsItemProvider != null) containsItemProvider.dispose();
 		if (castedToItemProvider != null) castedToItemProvider.dispose();
 		if (controlFlowItemProvider != null) controlFlowItemProvider.dispose();
-		if (controlFlowSourceItemProvider != null) controlFlowSourceItemProvider.dispose();
-		if (controlFlowSinkItemProvider != null) controlFlowSinkItemProvider.dispose();
-		if (assessmentItemProvider != null) assessmentItemProvider.dispose();
+		if (controlFlowNodeItemProvider != null) controlFlowNodeItemProvider.dispose();
+		if (controlFlowGroupItemProvider != null) controlFlowGroupItemProvider.dispose();
+		if (applicationAssessmentItemProvider != null) applicationAssessmentItemProvider.dispose();
+		if (applicationAssessmentGroupItemProvider != null) applicationAssessmentGroupItemProvider.dispose();
 		if (propertyItemProvider != null) propertyItemProvider.dispose();
-		if (applicationGroupItemProvider != null) applicationGroupItemProvider.dispose();
-		if (applicationItemProvider != null) applicationItemProvider.dispose();
-		if (searchGroupItemProvider != null) searchGroupItemProvider.dispose();
-		if (searchItemProvider != null) searchItemProvider.dispose();
+		if (webApplicationItemProvider != null) webApplicationItemProvider.dispose();
+		if (webApplicationGroupItemProvider != null) webApplicationGroupItemProvider.dispose();
+		if (javaSearchItemProvider != null) javaSearchItemProvider.dispose();
+		if (javaSearchGroupItemProvider != null) javaSearchGroupItemProvider.dispose();
 		if (javaSearchPatternItemProvider != null) javaSearchPatternItemProvider.dispose();
+		if (localTaskGroupItemProvider != null) localTaskGroupItemProvider.dispose();
+		if (localTaskItemProvider != null) localTaskItemProvider.dispose();
+		if (localFindingGroupItemProvider != null) localFindingGroupItemProvider.dispose();
+		if (localFindingItemProvider != null) localFindingItemProvider.dispose();
 	}
 
 }

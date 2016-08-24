@@ -28,7 +28,7 @@ package us.coastalhacking.semiotics.model.assessment;
  * @model
  * @generated
  */
-public interface JavaSearchPattern extends SearchPattern {
+public interface JavaSearchPattern extends SearchPattern<JavaSearchType> {
 	/**
 	 * Returns the value of the '<em><b>Pattern Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link us.coastalhacking.semiotics.model.assessment.JavaSearchPatternType}.

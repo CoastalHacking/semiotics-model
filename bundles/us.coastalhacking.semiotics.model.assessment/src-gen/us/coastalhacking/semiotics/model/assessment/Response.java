@@ -24,7 +24,7 @@ package us.coastalhacking.semiotics.model.assessment;
  * @model
  * @generated
  */
-public interface Response extends Data {
+public interface Response extends Data<ResponseType> {
 	/**
 	 * Returns the value of the '<em><b>Request</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link us.coastalhacking.semiotics.model.assessment.Request#getResponse <em>Response</em>}'.

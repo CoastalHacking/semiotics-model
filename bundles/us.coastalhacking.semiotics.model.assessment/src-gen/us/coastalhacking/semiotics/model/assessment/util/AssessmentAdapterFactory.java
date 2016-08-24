@@ -77,8 +77,12 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 				return createNameableAdapter();
 			}
 			@Override
-			public Adapter caseReviewable(Reviewable object) {
-				return createReviewableAdapter();
+			public Adapter caseDescribable(Describable object) {
+				return createDescribableAdapter();
+			}
+			@Override
+			public Adapter caseExaminable(Examinable object) {
+				return createExaminableAdapter();
 			}
 			@Override
 			public Adapter caseProvable(Provable object) {
@@ -93,11 +97,47 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 				return createSearchableAdapter();
 			}
 			@Override
-			public Adapter caseControlGroup(ControlGroup object) {
+			public Adapter caseTaskable(Taskable object) {
+				return createTaskableAdapter();
+			}
+			@Override
+			public Adapter caseFindable(Findable object) {
+				return createFindableAdapter();
+			}
+			@Override
+			public Adapter caseGroupable(Groupable object) {
+				return createGroupableAdapter();
+			}
+			@Override
+			public Adapter caseMembered(Membered object) {
+				return createMemberedAdapter();
+			}
+			@Override
+			public <T extends Groupable> Adapter caseGroup(Group<T> object) {
+				return createGroupAdapter();
+			}
+			@Override
+			public <T extends Groupable> Adapter caseMember(Member<T> object) {
+				return createMemberAdapter();
+			}
+			@Override
+			public <G extends Groupable, M extends Membered> Adapter caseGroupableMembered(GroupableMembered<G, M> object) {
+				return createGroupableMemberedAdapter();
+			}
+			@Override
+			public <G extends Groupable, M extends Membered> Adapter caseMemberedGroupable(MemberedGroupable<G, M> object) {
+				return createMemberedGroupableAdapter();
+			}
+			@Override
+			public Adapter caseControlType(ControlType object) {
+				return createControlTypeAdapter();
+			}
+			@Override
+			public <T extends ControlType> Adapter caseControlGroup(ControlGroup<T> object) {
 				return createControlGroupAdapter();
 			}
 			@Override
-			public Adapter caseControl(Control object) {
+			public <T extends ControlType> Adapter caseControl(Control<T> object) {
 				return createControlAdapter();
 			}
 			@Override
@@ -109,60 +149,208 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 				return createCWEAdapter();
 			}
 			@Override
-			public Adapter caseData(Data object) {
+			public Adapter caseAuthenticationControlType(AuthenticationControlType object) {
+				return createAuthenticationControlTypeAdapter();
+			}
+			@Override
+			public Adapter caseAuthenticationGroup(AuthenticationGroup object) {
+				return createAuthenticationGroupAdapter();
+			}
+			@Override
+			public Adapter caseAuthentication(Authentication object) {
+				return createAuthenticationAdapter();
+			}
+			@Override
+			public Adapter caseAuthorizationControlType(AuthorizationControlType object) {
+				return createAuthorizationControlTypeAdapter();
+			}
+			@Override
+			public Adapter caseAuthorizationGroup(AuthorizationGroup object) {
+				return createAuthorizationGroupAdapter();
+			}
+			@Override
+			public Adapter caseAuthorization(Authorization object) {
+				return createAuthorizationAdapter();
+			}
+			@Override
+			public Adapter caseAccountControlType(AccountControlType object) {
+				return createAccountControlTypeAdapter();
+			}
+			@Override
+			public Adapter caseAccountGroup(AccountGroup object) {
+				return createAccountGroupAdapter();
+			}
+			@Override
+			public Adapter caseAccount(Account object) {
+				return createAccountAdapter();
+			}
+			@Override
+			public Adapter caseCryptographyControlType(CryptographyControlType object) {
+				return createCryptographyControlTypeAdapter();
+			}
+			@Override
+			public Adapter caseCryptographyGroup(CryptographyGroup object) {
+				return createCryptographyGroupAdapter();
+			}
+			@Override
+			public Adapter caseCryptography(Cryptography object) {
+				return createCryptographyAdapter();
+			}
+			@Override
+			public Adapter caseOutputEncodingControlType(OutputEncodingControlType object) {
+				return createOutputEncodingControlTypeAdapter();
+			}
+			@Override
+			public Adapter caseOutputEncodingGroup(OutputEncodingGroup object) {
+				return createOutputEncodingGroupAdapter();
+			}
+			@Override
+			public Adapter caseOutputEncoding(OutputEncoding object) {
+				return createOutputEncodingAdapter();
+			}
+			@Override
+			public Adapter caseGenericControlType(GenericControlType object) {
+				return createGenericControlTypeAdapter();
+			}
+			@Override
+			public Adapter caseGenericControl(GenericControl object) {
+				return createGenericControlAdapter();
+			}
+			@Override
+			public Adapter caseGenericControlGroup(GenericControlGroup object) {
+				return createGenericControlGroupAdapter();
+			}
+			@Override
+			public Adapter caseSurfaceAreaType(SurfaceAreaType object) {
+				return createSurfaceAreaTypeAdapter();
+			}
+			@Override
+			public <T extends SurfaceAreaType> Adapter caseSurfaceAreaGroup(SurfaceAreaGroup<T> object) {
+				return createSurfaceAreaGroupAdapter();
+			}
+			@Override
+			public <T extends SurfaceAreaType> Adapter caseSurfaceArea(SurfaceArea<T> object) {
+				return createSurfaceAreaAdapter();
+			}
+			@Override
+			public Adapter caseNetworkIngressType(NetworkIngressType object) {
+				return createNetworkIngressTypeAdapter();
+			}
+			@Override
+			public Adapter caseNetworkIngress(NetworkIngress object) {
+				return createNetworkIngressAdapter();
+			}
+			@Override
+			public Adapter caseNetworkIngressGroup(NetworkIngressGroup object) {
+				return createNetworkIngressGroupAdapter();
+			}
+			@Override
+			public Adapter caseNetworkEgressType(NetworkEgressType object) {
+				return createNetworkEgressTypeAdapter();
+			}
+			@Override
+			public Adapter caseNetworkEgress(NetworkEgress object) {
+				return createNetworkEgressAdapter();
+			}
+			@Override
+			public Adapter caseNetworkEgressGroup(NetworkEgressGroup object) {
+				return createNetworkEgressGroupAdapter();
+			}
+			@Override
+			public Adapter caseDataType(DataType object) {
+				return createDataTypeAdapter();
+			}
+			@Override
+			public <T extends DataType> Adapter caseData(Data<T> object) {
 				return createDataAdapter();
 			}
 			@Override
-			public Adapter caseDataGroup(DataGroup object) {
+			public <T extends DataType> Adapter caseDataGroup(DataGroup<T> object) {
 				return createDataGroupAdapter();
 			}
 			@Override
-			public Adapter caseSnippet(Snippet object) {
+			public Adapter caseSnippetType(SnippetType object) {
+				return createSnippetTypeAdapter();
+			}
+			@Override
+			public <T extends SnippetType> Adapter caseSnippet(Snippet<T> object) {
 				return createSnippetAdapter();
+			}
+			@Override
+			public Adapter caseTextSnippetType(TextSnippetType object) {
+				return createTextSnippetTypeAdapter();
+			}
+			@Override
+			public Adapter caseTextSnippet(TextSnippet object) {
+				return createTextSnippetAdapter();
+			}
+			@Override
+			public Adapter caseFileType(FileType object) {
+				return createFileTypeAdapter();
 			}
 			@Override
 			public Adapter caseFile(File object) {
 				return createFileAdapter();
 			}
 			@Override
+			public Adapter caseFileGroup(FileGroup object) {
+				return createFileGroupAdapter();
+			}
+			@Override
+			public Adapter caseRequestType(RequestType object) {
+				return createRequestTypeAdapter();
+			}
+			@Override
 			public Adapter caseRequest(Request object) {
 				return createRequestAdapter();
+			}
+			@Override
+			public Adapter caseRequestGroup(RequestGroup object) {
+				return createRequestGroupAdapter();
+			}
+			@Override
+			public Adapter caseResponseType(ResponseType object) {
+				return createResponseTypeAdapter();
 			}
 			@Override
 			public Adapter caseResponse(Response object) {
 				return createResponseAdapter();
 			}
 			@Override
-			public Adapter caseFlow(Flow object) {
+			public Adapter caseResponseGroup(ResponseGroup object) {
+				return createResponseGroupAdapter();
+			}
+			@Override
+			public Adapter caseFlowType(FlowType object) {
+				return createFlowTypeAdapter();
+			}
+			@Override
+			public <T extends FlowType> Adapter caseFlow(Flow<T> object) {
 				return createFlowAdapter();
 			}
 			@Override
-			public Adapter caseFlowSource(FlowSource object) {
-				return createFlowSourceAdapter();
-			}
-			@Override
-			public Adapter caseFlowSink(FlowSink object) {
-				return createFlowSinkAdapter();
-			}
-			@Override
-			public Adapter caseFlowGroup(FlowGroup object) {
+			public <T extends FlowType> Adapter caseFlowGroup(FlowGroup<T> object) {
 				return createFlowGroupAdapter();
+			}
+			@Override
+			public <T extends FlowType> Adapter caseFlowNode(FlowNode<T> object) {
+				return createFlowNodeAdapter();
+			}
+			@Override
+			public Adapter caseDataFlowType(DataFlowType object) {
+				return createDataFlowTypeAdapter();
 			}
 			@Override
 			public Adapter caseDataFlow(DataFlow object) {
 				return createDataFlowAdapter();
 			}
 			@Override
-			public Adapter caseDataFlowSource(DataFlowSource object) {
-				return createDataFlowSourceAdapter();
+			public Adapter caseDataFlowNode(DataFlowNode object) {
+				return createDataFlowNodeAdapter();
 			}
 			@Override
-			public Adapter caseDataFlowSink(DataFlowSink object) {
-				return createDataFlowSinkAdapter();
-			}
-			@Override
-			public Adapter caseFlowConstraint(FlowConstraint object) {
-				return createFlowConstraintAdapter();
+			public Adapter caseDataFlowGroup(DataFlowGroup object) {
+				return createDataFlowGroupAdapter();
 			}
 			@Override
 			public Adapter caseDataFlowConstraint(DataFlowConstraint object) {
@@ -189,48 +377,160 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 				return createCastedToAdapter();
 			}
 			@Override
+			public Adapter caseControlFlowType(ControlFlowType object) {
+				return createControlFlowTypeAdapter();
+			}
+			@Override
 			public Adapter caseControlFlow(ControlFlow object) {
 				return createControlFlowAdapter();
 			}
 			@Override
-			public Adapter caseControlFlowSource(ControlFlowSource object) {
-				return createControlFlowSourceAdapter();
+			public Adapter caseControlFlowNode(ControlFlowNode object) {
+				return createControlFlowNodeAdapter();
 			}
 			@Override
-			public Adapter caseControlFlowSink(ControlFlowSink object) {
-				return createControlFlowSinkAdapter();
+			public Adapter caseControlFlowGroup(ControlFlowGroup object) {
+				return createControlFlowGroupAdapter();
 			}
 			@Override
-			public Adapter caseAssessment(Assessment object) {
+			public Adapter caseAssessmentType(AssessmentType object) {
+				return createAssessmentTypeAdapter();
+			}
+			@Override
+			public Adapter caseAssessable(Assessable object) {
+				return createAssessableAdapter();
+			}
+			@Override
+			public <T extends AssessmentType> Adapter caseAssessment(Assessment<T> object) {
 				return createAssessmentAdapter();
+			}
+			@Override
+			public <T extends AssessmentType> Adapter caseAssessmentGroup(AssessmentGroup<T> object) {
+				return createAssessmentGroupAdapter();
+			}
+			@Override
+			public Adapter caseApplicationAssessmentType(ApplicationAssessmentType object) {
+				return createApplicationAssessmentTypeAdapter();
+			}
+			@Override
+			public Adapter caseApplicationAssessment(ApplicationAssessment object) {
+				return createApplicationAssessmentAdapter();
+			}
+			@Override
+			public Adapter caseApplicationAssessmentGroup(ApplicationAssessmentGroup object) {
+				return createApplicationAssessmentGroupAdapter();
 			}
 			@Override
 			public Adapter caseProperty(Property object) {
 				return createPropertyAdapter();
 			}
 			@Override
-			public Adapter caseApplicationGroup(ApplicationGroup object) {
-				return createApplicationGroupAdapter();
+			public Adapter caseApplicationType(ApplicationType object) {
+				return createApplicationTypeAdapter();
 			}
 			@Override
-			public Adapter caseApplication(Application object) {
+			public Adapter caseApplicational(Applicational object) {
+				return createApplicationalAdapter();
+			}
+			@Override
+			public <T extends ApplicationType> Adapter caseApplication(Application<T> object) {
 				return createApplicationAdapter();
 			}
 			@Override
-			public Adapter caseSearchGroup(SearchGroup object) {
+			public <T extends ApplicationType> Adapter caseApplicationGroup(ApplicationGroup<T> object) {
+				return createApplicationGroupAdapter();
+			}
+			@Override
+			public Adapter caseWebApplicationType(WebApplicationType object) {
+				return createWebApplicationTypeAdapter();
+			}
+			@Override
+			public Adapter caseWebApplication(WebApplication object) {
+				return createWebApplicationAdapter();
+			}
+			@Override
+			public Adapter caseWebApplicationGroup(WebApplicationGroup object) {
+				return createWebApplicationGroupAdapter();
+			}
+			@Override
+			public Adapter caseSearchType(SearchType object) {
+				return createSearchTypeAdapter();
+			}
+			@Override
+			public <T extends SearchType> Adapter caseSearchGroup(SearchGroup<T> object) {
 				return createSearchGroupAdapter();
 			}
 			@Override
-			public Adapter caseSearch(Search object) {
+			public <T extends SearchType> Adapter caseSearch(Search<T> object) {
 				return createSearchAdapter();
 			}
 			@Override
-			public Adapter caseSearchPattern(SearchPattern object) {
+			public <T extends SearchType> Adapter caseSearchPattern(SearchPattern<T> object) {
 				return createSearchPatternAdapter();
+			}
+			@Override
+			public Adapter caseJavaSearchType(JavaSearchType object) {
+				return createJavaSearchTypeAdapter();
+			}
+			@Override
+			public Adapter caseJavaSearch(JavaSearch object) {
+				return createJavaSearchAdapter();
+			}
+			@Override
+			public Adapter caseJavaSearchGroup(JavaSearchGroup object) {
+				return createJavaSearchGroupAdapter();
 			}
 			@Override
 			public Adapter caseJavaSearchPattern(JavaSearchPattern object) {
 				return createJavaSearchPatternAdapter();
+			}
+			@Override
+			public Adapter caseTaskType(TaskType object) {
+				return createTaskTypeAdapter();
+			}
+			@Override
+			public <T extends TaskType> Adapter caseTaskGroup(TaskGroup<T> object) {
+				return createTaskGroupAdapter();
+			}
+			@Override
+			public <T extends TaskType> Adapter caseTask(Task<T> object) {
+				return createTaskAdapter();
+			}
+			@Override
+			public Adapter caseLocalTaskType(LocalTaskType object) {
+				return createLocalTaskTypeAdapter();
+			}
+			@Override
+			public Adapter caseLocalTaskGroup(LocalTaskGroup object) {
+				return createLocalTaskGroupAdapter();
+			}
+			@Override
+			public Adapter caseLocalTask(LocalTask object) {
+				return createLocalTaskAdapter();
+			}
+			@Override
+			public Adapter caseFindingType(FindingType object) {
+				return createFindingTypeAdapter();
+			}
+			@Override
+			public <T extends FindingType> Adapter caseFindingGroup(FindingGroup<T> object) {
+				return createFindingGroupAdapter();
+			}
+			@Override
+			public <T extends FindingType> Adapter caseFinding(Finding<T> object) {
+				return createFindingAdapter();
+			}
+			@Override
+			public Adapter caseLocalFindingType(LocalFindingType object) {
+				return createLocalFindingTypeAdapter();
+			}
+			@Override
+			public Adapter caseLocalFindingGroup(LocalFindingGroup object) {
+				return createLocalFindingGroupAdapter();
+			}
+			@Override
+			public Adapter caseLocalFinding(LocalFinding object) {
+				return createLocalFindingAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -267,16 +567,30 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Reviewable <em>Reviewable</em>}'.
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Describable <em>Describable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see us.coastalhacking.semiotics.model.assessment.Reviewable
+	 * @see us.coastalhacking.semiotics.model.assessment.Describable
 	 * @generated
 	 */
-	public Adapter createReviewableAdapter() {
+	public Adapter createDescribableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Examinable <em>Examinable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Examinable
+	 * @generated
+	 */
+	public Adapter createExaminableAdapter() {
 		return null;
 	}
 
@@ -319,6 +633,132 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSearchableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Taskable <em>Taskable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Taskable
+	 * @generated
+	 */
+	public Adapter createTaskableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Findable <em>Findable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Findable
+	 * @generated
+	 */
+	public Adapter createFindableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Groupable <em>Groupable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Groupable
+	 * @generated
+	 */
+	public Adapter createGroupableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Membered <em>Membered</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Membered
+	 * @generated
+	 */
+	public Adapter createMemberedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Group <em>Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Group
+	 * @generated
+	 */
+	public Adapter createGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Member <em>Member</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Member
+	 * @generated
+	 */
+	public Adapter createMemberAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.GroupableMembered <em>Groupable Membered</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.GroupableMembered
+	 * @generated
+	 */
+	public Adapter createGroupableMemberedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.MemberedGroupable <em>Membered Groupable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.MemberedGroupable
+	 * @generated
+	 */
+	public Adapter createMemberedGroupableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.ControlType <em>Control Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.ControlType
+	 * @generated
+	 */
+	public Adapter createControlTypeAdapter() {
 		return null;
 	}
 
@@ -379,6 +819,398 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.AuthenticationControlType <em>Authentication Control Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.AuthenticationControlType
+	 * @generated
+	 */
+	public Adapter createAuthenticationControlTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.AuthenticationGroup <em>Authentication Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.AuthenticationGroup
+	 * @generated
+	 */
+	public Adapter createAuthenticationGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Authentication <em>Authentication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Authentication
+	 * @generated
+	 */
+	public Adapter createAuthenticationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.AuthorizationControlType <em>Authorization Control Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.AuthorizationControlType
+	 * @generated
+	 */
+	public Adapter createAuthorizationControlTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.AuthorizationGroup <em>Authorization Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.AuthorizationGroup
+	 * @generated
+	 */
+	public Adapter createAuthorizationGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Authorization <em>Authorization</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Authorization
+	 * @generated
+	 */
+	public Adapter createAuthorizationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.AccountControlType <em>Account Control Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.AccountControlType
+	 * @generated
+	 */
+	public Adapter createAccountControlTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.AccountGroup <em>Account Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.AccountGroup
+	 * @generated
+	 */
+	public Adapter createAccountGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Account <em>Account</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Account
+	 * @generated
+	 */
+	public Adapter createAccountAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.CryptographyControlType <em>Cryptography Control Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.CryptographyControlType
+	 * @generated
+	 */
+	public Adapter createCryptographyControlTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.CryptographyGroup <em>Cryptography Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.CryptographyGroup
+	 * @generated
+	 */
+	public Adapter createCryptographyGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Cryptography <em>Cryptography</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Cryptography
+	 * @generated
+	 */
+	public Adapter createCryptographyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.OutputEncodingControlType <em>Output Encoding Control Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.OutputEncodingControlType
+	 * @generated
+	 */
+	public Adapter createOutputEncodingControlTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.OutputEncodingGroup <em>Output Encoding Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.OutputEncodingGroup
+	 * @generated
+	 */
+	public Adapter createOutputEncodingGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.OutputEncoding <em>Output Encoding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.OutputEncoding
+	 * @generated
+	 */
+	public Adapter createOutputEncodingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.GenericControlType <em>Generic Control Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.GenericControlType
+	 * @generated
+	 */
+	public Adapter createGenericControlTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.GenericControl <em>Generic Control</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.GenericControl
+	 * @generated
+	 */
+	public Adapter createGenericControlAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.GenericControlGroup <em>Generic Control Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.GenericControlGroup
+	 * @generated
+	 */
+	public Adapter createGenericControlGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.SurfaceAreaType <em>Surface Area Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.SurfaceAreaType
+	 * @generated
+	 */
+	public Adapter createSurfaceAreaTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.SurfaceAreaGroup <em>Surface Area Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.SurfaceAreaGroup
+	 * @generated
+	 */
+	public Adapter createSurfaceAreaGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.SurfaceArea <em>Surface Area</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.SurfaceArea
+	 * @generated
+	 */
+	public Adapter createSurfaceAreaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.NetworkIngressType <em>Network Ingress Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.NetworkIngressType
+	 * @generated
+	 */
+	public Adapter createNetworkIngressTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.NetworkIngress <em>Network Ingress</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.NetworkIngress
+	 * @generated
+	 */
+	public Adapter createNetworkIngressAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.NetworkIngressGroup <em>Network Ingress Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.NetworkIngressGroup
+	 * @generated
+	 */
+	public Adapter createNetworkIngressGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.NetworkEgressType <em>Network Egress Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.NetworkEgressType
+	 * @generated
+	 */
+	public Adapter createNetworkEgressTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.NetworkEgress <em>Network Egress</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.NetworkEgress
+	 * @generated
+	 */
+	public Adapter createNetworkEgressAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.NetworkEgressGroup <em>Network Egress Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.NetworkEgressGroup
+	 * @generated
+	 */
+	public Adapter createNetworkEgressGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.DataType <em>Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.DataType
+	 * @generated
+	 */
+	public Adapter createDataTypeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Data <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -407,6 +1239,20 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.SnippetType <em>Snippet Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.SnippetType
+	 * @generated
+	 */
+	public Adapter createSnippetTypeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Snippet <em>Snippet</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -417,6 +1263,48 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSnippetAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.TextSnippetType <em>Text Snippet Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.TextSnippetType
+	 * @generated
+	 */
+	public Adapter createTextSnippetTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.TextSnippet <em>Text Snippet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.TextSnippet
+	 * @generated
+	 */
+	public Adapter createTextSnippetAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.FileType <em>File Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.FileType
+	 * @generated
+	 */
+	public Adapter createFileTypeAdapter() {
 		return null;
 	}
 
@@ -435,6 +1323,34 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.FileGroup <em>File Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.FileGroup
+	 * @generated
+	 */
+	public Adapter createFileGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.RequestType <em>Request Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.RequestType
+	 * @generated
+	 */
+	public Adapter createRequestTypeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Request <em>Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -445,6 +1361,34 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRequestAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.RequestGroup <em>Request Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.RequestGroup
+	 * @generated
+	 */
+	public Adapter createRequestGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.ResponseType <em>Response Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.ResponseType
+	 * @generated
+	 */
+	public Adapter createResponseTypeAdapter() {
 		return null;
 	}
 
@@ -463,6 +1407,34 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.ResponseGroup <em>Response Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.ResponseGroup
+	 * @generated
+	 */
+	public Adapter createResponseGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.FlowType <em>Flow Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.FlowType
+	 * @generated
+	 */
+	public Adapter createFlowTypeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Flow <em>Flow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -473,34 +1445,6 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFlowAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.FlowSource <em>Flow Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see us.coastalhacking.semiotics.model.assessment.FlowSource
-	 * @generated
-	 */
-	public Adapter createFlowSourceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.FlowSink <em>Flow Sink</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see us.coastalhacking.semiotics.model.assessment.FlowSink
-	 * @generated
-	 */
-	public Adapter createFlowSinkAdapter() {
 		return null;
 	}
 
@@ -519,6 +1463,34 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.FlowNode <em>Flow Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.FlowNode
+	 * @generated
+	 */
+	public Adapter createFlowNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.DataFlowType <em>Data Flow Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.DataFlowType
+	 * @generated
+	 */
+	public Adapter createDataFlowTypeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.DataFlow <em>Data Flow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -533,44 +1505,30 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.DataFlowSource <em>Data Flow Source</em>}'.
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.DataFlowNode <em>Data Flow Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see us.coastalhacking.semiotics.model.assessment.DataFlowSource
+	 * @see us.coastalhacking.semiotics.model.assessment.DataFlowNode
 	 * @generated
 	 */
-	public Adapter createDataFlowSourceAdapter() {
+	public Adapter createDataFlowNodeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.DataFlowSink <em>Data Flow Sink</em>}'.
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.DataFlowGroup <em>Data Flow Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see us.coastalhacking.semiotics.model.assessment.DataFlowSink
+	 * @see us.coastalhacking.semiotics.model.assessment.DataFlowGroup
 	 * @generated
 	 */
-	public Adapter createDataFlowSinkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.FlowConstraint <em>Flow Constraint</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see us.coastalhacking.semiotics.model.assessment.FlowConstraint
-	 * @generated
-	 */
-	public Adapter createFlowConstraintAdapter() {
+	public Adapter createDataFlowGroupAdapter() {
 		return null;
 	}
 
@@ -659,6 +1617,20 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.ControlFlowType <em>Control Flow Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.ControlFlowType
+	 * @generated
+	 */
+	public Adapter createControlFlowTypeAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.ControlFlow <em>Control Flow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -673,30 +1645,58 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.ControlFlowSource <em>Control Flow Source</em>}'.
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.ControlFlowNode <em>Control Flow Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see us.coastalhacking.semiotics.model.assessment.ControlFlowSource
+	 * @see us.coastalhacking.semiotics.model.assessment.ControlFlowNode
 	 * @generated
 	 */
-	public Adapter createControlFlowSourceAdapter() {
+	public Adapter createControlFlowNodeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.ControlFlowSink <em>Control Flow Sink</em>}'.
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.ControlFlowGroup <em>Control Flow Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see us.coastalhacking.semiotics.model.assessment.ControlFlowSink
+	 * @see us.coastalhacking.semiotics.model.assessment.ControlFlowGroup
 	 * @generated
 	 */
-	public Adapter createControlFlowSinkAdapter() {
+	public Adapter createControlFlowGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.AssessmentType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentType
+	 * @generated
+	 */
+	public Adapter createAssessmentTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Assessable <em>Assessable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Assessable
+	 * @generated
+	 */
+	public Adapter createAssessableAdapter() {
 		return null;
 	}
 
@@ -715,6 +1715,62 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.AssessmentGroup <em>Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentGroup
+	 * @generated
+	 */
+	public Adapter createAssessmentGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.ApplicationAssessmentType <em>Application Assessment Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationAssessmentType
+	 * @generated
+	 */
+	public Adapter createApplicationAssessmentTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.ApplicationAssessment <em>Application Assessment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationAssessment
+	 * @generated
+	 */
+	public Adapter createApplicationAssessmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.ApplicationAssessmentGroup <em>Application Assessment Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationAssessmentGroup
+	 * @generated
+	 */
+	public Adapter createApplicationAssessmentGroupAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Property <em>Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -725,6 +1781,48 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.ApplicationType <em>Application Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationType
+	 * @generated
+	 */
+	public Adapter createApplicationTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Applicational <em>Applicational</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Applicational
+	 * @generated
+	 */
+	public Adapter createApplicationalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Application <em>Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Application
+	 * @generated
+	 */
+	public Adapter createApplicationAdapter() {
 		return null;
 	}
 
@@ -743,16 +1841,58 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Application <em>Application</em>}'.
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.WebApplicationType <em>Web Application Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see us.coastalhacking.semiotics.model.assessment.Application
+	 * @see us.coastalhacking.semiotics.model.assessment.WebApplicationType
 	 * @generated
 	 */
-	public Adapter createApplicationAdapter() {
+	public Adapter createWebApplicationTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.WebApplication <em>Web Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.WebApplication
+	 * @generated
+	 */
+	public Adapter createWebApplicationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.WebApplicationGroup <em>Web Application Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.WebApplicationGroup
+	 * @generated
+	 */
+	public Adapter createWebApplicationGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.SearchType <em>Search Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.SearchType
+	 * @generated
+	 */
+	public Adapter createSearchTypeAdapter() {
 		return null;
 	}
 
@@ -799,6 +1939,48 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.JavaSearchType <em>Java Search Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.JavaSearchType
+	 * @generated
+	 */
+	public Adapter createJavaSearchTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.JavaSearch <em>Java Search</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.JavaSearch
+	 * @generated
+	 */
+	public Adapter createJavaSearchAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.JavaSearchGroup <em>Java Search Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.JavaSearchGroup
+	 * @generated
+	 */
+	public Adapter createJavaSearchGroupAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.JavaSearchPattern <em>Java Search Pattern</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -809,6 +1991,174 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createJavaSearchPatternAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.TaskType <em>Task Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.TaskType
+	 * @generated
+	 */
+	public Adapter createTaskTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.TaskGroup <em>Task Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.TaskGroup
+	 * @generated
+	 */
+	public Adapter createTaskGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Task <em>Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Task
+	 * @generated
+	 */
+	public Adapter createTaskAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.LocalTaskType <em>Local Task Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.LocalTaskType
+	 * @generated
+	 */
+	public Adapter createLocalTaskTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.LocalTaskGroup <em>Local Task Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.LocalTaskGroup
+	 * @generated
+	 */
+	public Adapter createLocalTaskGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.LocalTask <em>Local Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.LocalTask
+	 * @generated
+	 */
+	public Adapter createLocalTaskAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.FindingType <em>Finding Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.FindingType
+	 * @generated
+	 */
+	public Adapter createFindingTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.FindingGroup <em>Finding Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.FindingGroup
+	 * @generated
+	 */
+	public Adapter createFindingGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.Finding <em>Finding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.Finding
+	 * @generated
+	 */
+	public Adapter createFindingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.LocalFindingType <em>Local Finding Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.LocalFindingType
+	 * @generated
+	 */
+	public Adapter createLocalFindingTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.LocalFindingGroup <em>Local Finding Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.LocalFindingGroup
+	 * @generated
+	 */
+	public Adapter createLocalFindingGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link us.coastalhacking.semiotics.model.assessment.LocalFinding <em>Local Finding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see us.coastalhacking.semiotics.model.assessment.LocalFinding
+	 * @generated
+	 */
+	public Adapter createLocalFindingAdapter() {
 		return null;
 	}
 

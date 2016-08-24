@@ -62,39 +62,57 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case AssessmentPackage.CONTROL_GROUP: return createControlGroup();
-			case AssessmentPackage.CONTROL: return createControl();
 			case AssessmentPackage.CWE_GROUP: return createCWEGroup();
 			case AssessmentPackage.CWE: return createCWE();
-			case AssessmentPackage.DATA: return createData();
-			case AssessmentPackage.DATA_GROUP: return createDataGroup();
-			case AssessmentPackage.SNIPPET: return createSnippet();
+			case AssessmentPackage.AUTHENTICATION_GROUP: return createAuthenticationGroup();
+			case AssessmentPackage.AUTHENTICATION: return createAuthentication();
+			case AssessmentPackage.AUTHORIZATION_GROUP: return createAuthorizationGroup();
+			case AssessmentPackage.AUTHORIZATION: return createAuthorization();
+			case AssessmentPackage.ACCOUNT_GROUP: return createAccountGroup();
+			case AssessmentPackage.ACCOUNT: return createAccount();
+			case AssessmentPackage.CRYPTOGRAPHY_GROUP: return createCryptographyGroup();
+			case AssessmentPackage.CRYPTOGRAPHY: return createCryptography();
+			case AssessmentPackage.OUTPUT_ENCODING_GROUP: return createOutputEncodingGroup();
+			case AssessmentPackage.OUTPUT_ENCODING: return createOutputEncoding();
+			case AssessmentPackage.GENERIC_CONTROL: return createGenericControl();
+			case AssessmentPackage.GENERIC_CONTROL_GROUP: return createGenericControlGroup();
+			case AssessmentPackage.NETWORK_INGRESS: return createNetworkIngress();
+			case AssessmentPackage.NETWORK_INGRESS_GROUP: return createNetworkIngressGroup();
+			case AssessmentPackage.NETWORK_EGRESS: return createNetworkEgress();
+			case AssessmentPackage.NETWORK_EGRESS_GROUP: return createNetworkEgressGroup();
+			case AssessmentPackage.TEXT_SNIPPET: return createTextSnippet();
+			case AssessmentPackage.FILE_TYPE: return createFileType();
 			case AssessmentPackage.FILE: return createFile();
+			case AssessmentPackage.FILE_GROUP: return createFileGroup();
+			case AssessmentPackage.REQUEST_TYPE: return createRequestType();
 			case AssessmentPackage.REQUEST: return createRequest();
+			case AssessmentPackage.REQUEST_GROUP: return createRequestGroup();
+			case AssessmentPackage.RESPONSE_TYPE: return createResponseType();
 			case AssessmentPackage.RESPONSE: return createResponse();
-			case AssessmentPackage.FLOW: return createFlow();
-			case AssessmentPackage.FLOW_SOURCE: return createFlowSource();
-			case AssessmentPackage.FLOW_SINK: return createFlowSink();
-			case AssessmentPackage.FLOW_GROUP: return createFlowGroup();
+			case AssessmentPackage.RESPONSE_GROUP: return createResponseGroup();
 			case AssessmentPackage.DATA_FLOW: return createDataFlow();
-			case AssessmentPackage.DATA_FLOW_SOURCE: return createDataFlowSource();
-			case AssessmentPackage.DATA_FLOW_SINK: return createDataFlowSink();
-			case AssessmentPackage.FLOW_CONSTRAINT: return createFlowConstraint();
+			case AssessmentPackage.DATA_FLOW_NODE: return createDataFlowNode();
+			case AssessmentPackage.DATA_FLOW_GROUP: return createDataFlowGroup();
 			case AssessmentPackage.ENDS_WITH: return createEndsWith();
 			case AssessmentPackage.STARTS_WITH: return createStartsWith();
 			case AssessmentPackage.MATCHES: return createMatches();
 			case AssessmentPackage.CONTAINS: return createContains();
 			case AssessmentPackage.CASTED_TO: return createCastedTo();
 			case AssessmentPackage.CONTROL_FLOW: return createControlFlow();
-			case AssessmentPackage.CONTROL_FLOW_SOURCE: return createControlFlowSource();
-			case AssessmentPackage.CONTROL_FLOW_SINK: return createControlFlowSink();
-			case AssessmentPackage.ASSESSMENT: return createAssessment();
+			case AssessmentPackage.CONTROL_FLOW_NODE: return createControlFlowNode();
+			case AssessmentPackage.CONTROL_FLOW_GROUP: return createControlFlowGroup();
+			case AssessmentPackage.APPLICATION_ASSESSMENT: return createApplicationAssessment();
+			case AssessmentPackage.APPLICATION_ASSESSMENT_GROUP: return createApplicationAssessmentGroup();
 			case AssessmentPackage.PROPERTY: return createProperty();
-			case AssessmentPackage.APPLICATION_GROUP: return createApplicationGroup();
-			case AssessmentPackage.APPLICATION: return createApplication();
-			case AssessmentPackage.SEARCH_GROUP: return createSearchGroup();
-			case AssessmentPackage.SEARCH: return createSearch();
+			case AssessmentPackage.WEB_APPLICATION: return createWebApplication();
+			case AssessmentPackage.WEB_APPLICATION_GROUP: return createWebApplicationGroup();
+			case AssessmentPackage.JAVA_SEARCH: return createJavaSearch();
+			case AssessmentPackage.JAVA_SEARCH_GROUP: return createJavaSearchGroup();
 			case AssessmentPackage.JAVA_SEARCH_PATTERN: return createJavaSearchPattern();
+			case AssessmentPackage.LOCAL_TASK_GROUP: return createLocalTaskGroup();
+			case AssessmentPackage.LOCAL_TASK: return createLocalTask();
+			case AssessmentPackage.LOCAL_FINDING_GROUP: return createLocalFindingGroup();
+			case AssessmentPackage.LOCAL_FINDING: return createLocalFinding();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -108,8 +126,8 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case AssessmentPackage.DATA_SOURCE_TYPE:
-				return createDataSourceTypeFromString(eDataType, initialValue);
+			case AssessmentPackage.DATA_TAINT_TYPE:
+				return createDataTaintTypeFromString(eDataType, initialValue);
 			case AssessmentPackage.MATCHER_REGEX:
 				return createMatcherRegexFromString(eDataType, initialValue);
 			case AssessmentPackage.JAVA_SEARCH_PATTERN_TYPE:
@@ -122,6 +140,8 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 				return createJavaMatchRuleFromString(eDataType, initialValue);
 			case AssessmentPackage.JAVA_MATCH_CASE_SENSITIVITY:
 				return createJavaMatchCaseSensitivityFromString(eDataType, initialValue);
+			case AssessmentPackage.TASK_STATUS:
+				return createTaskStatusFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -135,8 +155,8 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case AssessmentPackage.DATA_SOURCE_TYPE:
-				return convertDataSourceTypeToString(eDataType, instanceValue);
+			case AssessmentPackage.DATA_TAINT_TYPE:
+				return convertDataTaintTypeToString(eDataType, instanceValue);
 			case AssessmentPackage.MATCHER_REGEX:
 				return convertMatcherRegexToString(eDataType, instanceValue);
 			case AssessmentPackage.JAVA_SEARCH_PATTERN_TYPE:
@@ -149,29 +169,11 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 				return convertJavaMatchRuleToString(eDataType, instanceValue);
 			case AssessmentPackage.JAVA_MATCH_CASE_SENSITIVITY:
 				return convertJavaMatchCaseSensitivityToString(eDataType, instanceValue);
+			case AssessmentPackage.TASK_STATUS:
+				return convertTaskStatusToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ControlGroup createControlGroup() {
-		ControlGroupImpl controlGroup = new ControlGroupImpl();
-		return controlGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Control createControl() {
-		ControlImpl control = new ControlImpl();
-		return control;
 	}
 
 	/**
@@ -199,9 +201,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Data createData() {
-		DataImpl data = new DataImpl();
-		return data;
+	public AuthenticationGroup createAuthenticationGroup() {
+		AuthenticationGroupImpl authenticationGroup = new AuthenticationGroupImpl();
+		return authenticationGroup;
 	}
 
 	/**
@@ -209,9 +211,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataGroup createDataGroup() {
-		DataGroupImpl dataGroup = new DataGroupImpl();
-		return dataGroup;
+	public Authentication createAuthentication() {
+		AuthenticationImpl authentication = new AuthenticationImpl();
+		return authentication;
 	}
 
 	/**
@@ -219,9 +221,159 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Snippet createSnippet() {
-		SnippetImpl snippet = new SnippetImpl();
-		return snippet;
+	public AuthorizationGroup createAuthorizationGroup() {
+		AuthorizationGroupImpl authorizationGroup = new AuthorizationGroupImpl();
+		return authorizationGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Authorization createAuthorization() {
+		AuthorizationImpl authorization = new AuthorizationImpl();
+		return authorization;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AccountGroup createAccountGroup() {
+		AccountGroupImpl accountGroup = new AccountGroupImpl();
+		return accountGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Account createAccount() {
+		AccountImpl account = new AccountImpl();
+		return account;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CryptographyGroup createCryptographyGroup() {
+		CryptographyGroupImpl cryptographyGroup = new CryptographyGroupImpl();
+		return cryptographyGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Cryptography createCryptography() {
+		CryptographyImpl cryptography = new CryptographyImpl();
+		return cryptography;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OutputEncodingGroup createOutputEncodingGroup() {
+		OutputEncodingGroupImpl outputEncodingGroup = new OutputEncodingGroupImpl();
+		return outputEncodingGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OutputEncoding createOutputEncoding() {
+		OutputEncodingImpl outputEncoding = new OutputEncodingImpl();
+		return outputEncoding;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GenericControl createGenericControl() {
+		GenericControlImpl genericControl = new GenericControlImpl();
+		return genericControl;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GenericControlGroup createGenericControlGroup() {
+		GenericControlGroupImpl genericControlGroup = new GenericControlGroupImpl();
+		return genericControlGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NetworkIngress createNetworkIngress() {
+		NetworkIngressImpl networkIngress = new NetworkIngressImpl();
+		return networkIngress;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NetworkIngressGroup createNetworkIngressGroup() {
+		NetworkIngressGroupImpl networkIngressGroup = new NetworkIngressGroupImpl();
+		return networkIngressGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NetworkEgress createNetworkEgress() {
+		NetworkEgressImpl networkEgress = new NetworkEgressImpl();
+		return networkEgress;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NetworkEgressGroup createNetworkEgressGroup() {
+		NetworkEgressGroupImpl networkEgressGroup = new NetworkEgressGroupImpl();
+		return networkEgressGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TextSnippet createTextSnippet() {
+		TextSnippetImpl textSnippet = new TextSnippetImpl();
+		return textSnippet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FileType createFileType() {
+		FileTypeImpl fileType = new FileTypeImpl();
+		return fileType;
 	}
 
 	/**
@@ -239,9 +391,49 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public FileGroup createFileGroup() {
+		FileGroupImpl fileGroup = new FileGroupImpl();
+		return fileGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RequestType createRequestType() {
+		RequestTypeImpl requestType = new RequestTypeImpl();
+		return requestType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Request createRequest() {
 		RequestImpl request = new RequestImpl();
 		return request;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RequestGroup createRequestGroup() {
+		RequestGroupImpl requestGroup = new RequestGroupImpl();
+		return requestGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ResponseType createResponseType() {
+		ResponseTypeImpl responseType = new ResponseTypeImpl();
+		return responseType;
 	}
 
 	/**
@@ -259,39 +451,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Flow createFlow() {
-		FlowImpl flow = new FlowImpl();
-		return flow;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FlowSource createFlowSource() {
-		FlowSourceImpl flowSource = new FlowSourceImpl();
-		return flowSource;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FlowSink createFlowSink() {
-		FlowSinkImpl flowSink = new FlowSinkImpl();
-		return flowSink;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FlowGroup createFlowGroup() {
-		FlowGroupImpl flowGroup = new FlowGroupImpl();
-		return flowGroup;
+	public ResponseGroup createResponseGroup() {
+		ResponseGroupImpl responseGroup = new ResponseGroupImpl();
+		return responseGroup;
 	}
 
 	/**
@@ -309,9 +471,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataFlowSource createDataFlowSource() {
-		DataFlowSourceImpl dataFlowSource = new DataFlowSourceImpl();
-		return dataFlowSource;
+	public DataFlowNode createDataFlowNode() {
+		DataFlowNodeImpl dataFlowNode = new DataFlowNodeImpl();
+		return dataFlowNode;
 	}
 
 	/**
@@ -319,19 +481,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataFlowSink createDataFlowSink() {
-		DataFlowSinkImpl dataFlowSink = new DataFlowSinkImpl();
-		return dataFlowSink;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FlowConstraint createFlowConstraint() {
-		FlowConstraintImpl flowConstraint = new FlowConstraintImpl();
-		return flowConstraint;
+	public DataFlowGroup createDataFlowGroup() {
+		DataFlowGroupImpl dataFlowGroup = new DataFlowGroupImpl();
+		return dataFlowGroup;
 	}
 
 	/**
@@ -399,9 +551,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ControlFlowSource createControlFlowSource() {
-		ControlFlowSourceImpl controlFlowSource = new ControlFlowSourceImpl();
-		return controlFlowSource;
+	public ControlFlowNode createControlFlowNode() {
+		ControlFlowNodeImpl controlFlowNode = new ControlFlowNodeImpl();
+		return controlFlowNode;
 	}
 
 	/**
@@ -409,9 +561,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ControlFlowSink createControlFlowSink() {
-		ControlFlowSinkImpl controlFlowSink = new ControlFlowSinkImpl();
-		return controlFlowSink;
+	public ControlFlowGroup createControlFlowGroup() {
+		ControlFlowGroupImpl controlFlowGroup = new ControlFlowGroupImpl();
+		return controlFlowGroup;
 	}
 
 	/**
@@ -419,9 +571,19 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Assessment createAssessment() {
-		AssessmentImpl assessment = new AssessmentImpl();
-		return assessment;
+	public ApplicationAssessment createApplicationAssessment() {
+		ApplicationAssessmentImpl applicationAssessment = new ApplicationAssessmentImpl();
+		return applicationAssessment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ApplicationAssessmentGroup createApplicationAssessmentGroup() {
+		ApplicationAssessmentGroupImpl applicationAssessmentGroup = new ApplicationAssessmentGroupImpl();
+		return applicationAssessmentGroup;
 	}
 
 	/**
@@ -439,9 +601,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ApplicationGroup createApplicationGroup() {
-		ApplicationGroupImpl applicationGroup = new ApplicationGroupImpl();
-		return applicationGroup;
+	public WebApplication createWebApplication() {
+		WebApplicationImpl webApplication = new WebApplicationImpl();
+		return webApplication;
 	}
 
 	/**
@@ -449,9 +611,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Application createApplication() {
-		ApplicationImpl application = new ApplicationImpl();
-		return application;
+	public WebApplicationGroup createWebApplicationGroup() {
+		WebApplicationGroupImpl webApplicationGroup = new WebApplicationGroupImpl();
+		return webApplicationGroup;
 	}
 
 	/**
@@ -459,9 +621,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SearchGroup createSearchGroup() {
-		SearchGroupImpl searchGroup = new SearchGroupImpl();
-		return searchGroup;
+	public JavaSearch createJavaSearch() {
+		JavaSearchImpl javaSearch = new JavaSearchImpl();
+		return javaSearch;
 	}
 
 	/**
@@ -469,9 +631,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Search createSearch() {
-		SearchImpl search = new SearchImpl();
-		return search;
+	public JavaSearchGroup createJavaSearchGroup() {
+		JavaSearchGroupImpl javaSearchGroup = new JavaSearchGroupImpl();
+		return javaSearchGroup;
 	}
 
 	/**
@@ -489,8 +651,48 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataSourceType createDataSourceTypeFromString(EDataType eDataType, String initialValue) {
-		DataSourceType result = DataSourceType.get(initialValue);
+	public LocalTaskGroup createLocalTaskGroup() {
+		LocalTaskGroupImpl localTaskGroup = new LocalTaskGroupImpl();
+		return localTaskGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LocalTask createLocalTask() {
+		LocalTaskImpl localTask = new LocalTaskImpl();
+		return localTask;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LocalFindingGroup createLocalFindingGroup() {
+		LocalFindingGroupImpl localFindingGroup = new LocalFindingGroupImpl();
+		return localFindingGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LocalFinding createLocalFinding() {
+		LocalFindingImpl localFinding = new LocalFindingImpl();
+		return localFinding;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataTaintType createDataTaintTypeFromString(EDataType eDataType, String initialValue) {
+		DataTaintType result = DataTaintType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -500,7 +702,7 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertDataSourceTypeToString(EDataType eDataType, Object instanceValue) {
+	public String convertDataTaintTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -621,6 +823,26 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * @generated
 	 */
 	public String convertJavaMatchCaseSensitivityToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TaskStatus createTaskStatusFromString(EDataType eDataType, String initialValue) {
+		TaskStatus result = TaskStatus.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTaskStatusToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

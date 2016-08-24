@@ -140,7 +140,7 @@ public interface CWE extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Controls</b></em>' reference list.
-	 * The list contents are of type {@link us.coastalhacking.semiotics.model.assessment.Control}.
+	 * The list contents are of type {@link us.coastalhacking.semiotics.model.assessment.Control}&lt;? extends us.coastalhacking.semiotics.model.assessment.ControlType>.
 	 * It is bidirectional and its opposite is '{@link us.coastalhacking.semiotics.model.assessment.Control#getCwes <em>Cwes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -154,6 +154,6 @@ public interface CWE extends EObject {
 	 * @model opposite="cwes"
 	 * @generated
 	 */
-	EList<Control> getControls();
+	EList<Control<? extends ControlType>> getControls();
 
 } // CWE

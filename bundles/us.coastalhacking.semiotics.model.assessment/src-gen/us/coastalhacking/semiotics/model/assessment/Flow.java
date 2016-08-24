@@ -7,7 +7,6 @@
  */
 package us.coastalhacking.semiotics.model.assessment;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,59 +17,68 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link us.coastalhacking.semiotics.model.assessment.Flow#getFlowFrom <em>Flow From</em>}</li>
- *   <li>{@link us.coastalhacking.semiotics.model.assessment.Flow#getFlowTo <em>Flow To</em>}</li>
+ *   <li>{@link us.coastalhacking.semiotics.model.assessment.Flow#getValue <em>Value</em>}</li>
+ *   <li>{@link us.coastalhacking.semiotics.model.assessment.Flow#getFlows <em>Flows</em>}</li>
  * </ul>
  *
  * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getFlow()
- * @model
+ * @model interface="true" abstract="true"
  * @generated
  */
-public interface Flow extends Traceable {
+public interface Flow<T extends FlowType> extends Member<T>, Traceable {
 	/**
-	 * Returns the value of the '<em><b>Flow From</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link us.coastalhacking.semiotics.model.assessment.Flow#getFlowTo <em>Flow To</em>}'.
+	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Flow From</em>' container reference isn't clear,
+	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flow From</em>' container reference.
-	 * @see #setFlowFrom(Flow)
-	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getFlow_FlowFrom()
-	 * @see us.coastalhacking.semiotics.model.assessment.Flow#getFlowTo
-	 * @model opposite="flowTo" transient="false"
+	 * @return the value of the '<em>Value</em>' attribute.
+	 * @see #setValue(String)
+	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getFlow_Value()
+	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyMultiLine='true'"
 	 * @generated
 	 */
-	Flow getFlowFrom();
+	String getValue();
 
 	/**
-	 * Sets the value of the '{@link us.coastalhacking.semiotics.model.assessment.Flow#getFlowFrom <em>Flow From</em>}' container reference.
+	 * Sets the value of the '{@link us.coastalhacking.semiotics.model.assessment.Flow#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Flow From</em>' container reference.
-	 * @see #getFlowFrom()
+	 * @param value the new value of the '<em>Value</em>' attribute.
+	 * @see #getValue()
 	 * @generated
 	 */
-	void setFlowFrom(Flow value);
+	void setValue(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Flow To</b></em>' containment reference list.
-	 * The list contents are of type {@link us.coastalhacking.semiotics.model.assessment.Flow}.
-	 * It is bidirectional and its opposite is '{@link us.coastalhacking.semiotics.model.assessment.Flow#getFlowFrom <em>Flow From</em>}'.
+	 * Returns the value of the '<em><b>Flows</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link us.coastalhacking.semiotics.model.assessment.FlowNode#getFlowRoot <em>Flow Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Flow To</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Flows</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flow To</em>' containment reference list.
-	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getFlow_FlowTo()
-	 * @see us.coastalhacking.semiotics.model.assessment.Flow#getFlowFrom
-	 * @model opposite="flowFrom" containment="true"
+	 * @return the value of the '<em>Flows</em>' containment reference.
+	 * @see #setFlows(FlowNode)
+	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getFlow_Flows()
+	 * @see us.coastalhacking.semiotics.model.assessment.FlowNode#getFlowRoot
+	 * @model opposite="flowRoot" containment="true"
 	 * @generated
 	 */
-	EList<Flow> getFlowTo();
+	FlowNode<? extends FlowType> getFlows();
+
+	/**
+	 * Sets the value of the '{@link us.coastalhacking.semiotics.model.assessment.Flow#getFlows <em>Flows</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Flows</em>' containment reference.
+	 * @see #getFlows()
+	 * @generated
+	 */
+	void setFlows(FlowNode<? extends FlowType> value);
 
 } // Flow

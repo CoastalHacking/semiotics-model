@@ -101,14 +101,51 @@ public interface AssessmentPackage extends EPackage {
 	int NAMEABLE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Reviewable <em>Reviewable</em>}' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Describable <em>Describable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.Reviewable
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getReviewable()
+	 * @see us.coastalhacking.semiotics.model.assessment.Describable
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDescribable()
 	 * @generated
 	 */
-	int REVIEWABLE = 1;
+	int DESCRIBABLE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESCRIBABLE__DESCRIPTION = 0;
+
+	/**
+	 * The number of structural features of the '<em>Describable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESCRIBABLE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Describable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESCRIBABLE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Examinable <em>Examinable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.Examinable
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getExaminable()
+	 * @generated
+	 */
+	int EXAMINABLE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -117,7 +154,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REVIEWABLE__NAME = NAMEABLE__NAME;
+	int EXAMINABLE__NAME = NAMEABLE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
@@ -126,7 +163,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REVIEWABLE__EVIDENCE = NAMEABLE_FEATURE_COUNT + 0;
+	int EXAMINABLE__EVIDENCE = NAMEABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Traces</b></em>' reference list.
@@ -135,7 +172,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REVIEWABLE__TRACES = NAMEABLE_FEATURE_COUNT + 1;
+	int EXAMINABLE__TRACES = NAMEABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Searches</b></em>' reference list.
@@ -144,25 +181,43 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REVIEWABLE__SEARCHES = NAMEABLE_FEATURE_COUNT + 2;
+	int EXAMINABLE__SEARCHES = NAMEABLE_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Reviewable</em>' class.
+	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REVIEWABLE_FEATURE_COUNT = NAMEABLE_FEATURE_COUNT + 3;
+	int EXAMINABLE__TASKS = NAMEABLE_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of operations of the '<em>Reviewable</em>' class.
+	 * The feature id for the '<em><b>Findings</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REVIEWABLE_OPERATION_COUNT = NAMEABLE_OPERATION_COUNT + 0;
+	int EXAMINABLE__FINDINGS = NAMEABLE_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Examinable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMINABLE_FEATURE_COUNT = NAMEABLE_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Examinable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMINABLE_OPERATION_COUNT = NAMEABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Provable <em>Provable</em>}' class.
@@ -172,7 +227,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getProvable()
 	 * @generated
 	 */
-	int PROVABLE = 2;
+	int PROVABLE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -184,13 +239,13 @@ public interface AssessmentPackage extends EPackage {
 	int PROVABLE__NAME = NAMEABLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROVABLE__REVIEWERS = NAMEABLE_FEATURE_COUNT + 0;
+	int PROVABLE__EXAMINEES = NAMEABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Traces</b></em>' reference list.
@@ -227,7 +282,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTraceable()
 	 * @generated
 	 */
-	int TRACEABLE = 3;
+	int TRACEABLE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -248,13 +303,13 @@ public interface AssessmentPackage extends EPackage {
 	int TRACEABLE__EVIDENCE = NAMEABLE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACEABLE__REVIEWERS = NAMEABLE_FEATURE_COUNT + 1;
+	int TRACEABLE__EXAMINEES = NAMEABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Traceable</em>' class.
@@ -282,7 +337,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSearchable()
 	 * @generated
 	 */
-	int SEARCHABLE = 4;
+	int SEARCHABLE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -294,13 +349,13 @@ public interface AssessmentPackage extends EPackage {
 	int SEARCHABLE__NAME = NAMEABLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCHABLE__REVIEWERS = NAMEABLE_FEATURE_COUNT + 0;
+	int SEARCHABLE__EXAMINEES = NAMEABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Searchable</em>' class.
@@ -321,14 +376,14 @@ public interface AssessmentPackage extends EPackage {
 	int SEARCHABLE_OPERATION_COUNT = NAMEABLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ControlGroupImpl <em>Control Group</em>}' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Taskable <em>Taskable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.ControlGroupImpl
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlGroup()
+	 * @see us.coastalhacking.semiotics.model.assessment.Taskable
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTaskable()
 	 * @generated
 	 */
-	int CONTROL_GROUP = 5;
+	int TASKABLE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -337,16 +392,403 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_GROUP__NAME = NAMEABLE__NAME;
+	int TASKABLE__NAME = NAMEABLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Controls</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_GROUP__CONTROLS = NAMEABLE_FEATURE_COUNT + 0;
+	int TASKABLE__EXAMINEES = NAMEABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Taskable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASKABLE_FEATURE_COUNT = NAMEABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Taskable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASKABLE_OPERATION_COUNT = NAMEABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Findable <em>Findable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.Findable
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFindable()
+	 * @generated
+	 */
+	int FINDABLE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDABLE__NAME = NAMEABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDABLE__EXAMINEES = NAMEABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Findable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDABLE_FEATURE_COUNT = NAMEABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Findable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDABLE_OPERATION_COUNT = NAMEABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Groupable <em>Groupable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.Groupable
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getGroupable()
+	 * @generated
+	 */
+	int GROUPABLE = 8;
+
+	/**
+	 * The number of structural features of the '<em>Groupable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUPABLE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Groupable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUPABLE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Membered <em>Membered</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.Membered
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getMembered()
+	 * @generated
+	 */
+	int MEMBERED = 9;
+
+	/**
+	 * The number of structural features of the '<em>Membered</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBERED_FEATURE_COUNT = GROUPABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Membered</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBERED_OPERATION_COUNT = GROUPABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Group <em>Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.Group
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getGroup()
+	 * @generated
+	 */
+	int GROUP = 10;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__NAME = NAMEABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP__MEMBERS = NAMEABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP_FEATURE_COUNT = NAMEABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP_OPERATION_COUNT = NAMEABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Member <em>Member</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.Member
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getMember()
+	 * @generated
+	 */
+	int MEMBER = 11;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBER__NAME = NAMEABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBER__GROUP = NAMEABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Member</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBER_FEATURE_COUNT = NAMEABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Member</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBER_OPERATION_COUNT = NAMEABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.GroupableMembered <em>Groupable Membered</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.GroupableMembered
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getGroupableMembered()
+	 * @generated
+	 */
+	int GROUPABLE_MEMBERED = 12;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUPABLE_MEMBERED__NAME = GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUPABLE_MEMBERED__MEMBERS = GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUPABLE_MEMBERED__GROUP = GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Groupable Membered</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUPABLE_MEMBERED_FEATURE_COUNT = GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Groupable Membered</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUPABLE_MEMBERED_OPERATION_COUNT = GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.MemberedGroupable <em>Membered Groupable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.MemberedGroupable
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getMemberedGroupable()
+	 * @generated
+	 */
+	int MEMBERED_GROUPABLE = 13;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBERED_GROUPABLE__NAME = MEMBER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBERED_GROUPABLE__GROUP = MEMBER__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBERED_GROUPABLE__MEMBERS = MEMBER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Membered Groupable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBERED_GROUPABLE_FEATURE_COUNT = MEMBER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Membered Groupable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBERED_GROUPABLE_OPERATION_COUNT = MEMBER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.ControlType <em>Control Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.ControlType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlType()
+	 * @generated
+	 */
+	int CONTROL_TYPE = 14;
+
+	/**
+	 * The number of structural features of the '<em>Control Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_TYPE_FEATURE_COUNT = GROUPABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Control Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_TYPE_OPERATION_COUNT = GROUPABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.ControlGroup <em>Control Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.ControlGroup
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlGroup()
+	 * @generated
+	 */
+	int CONTROL_GROUP = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_GROUP__NAME = GROUPABLE_MEMBERED__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_GROUP__MEMBERS = GROUPABLE_MEMBERED__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_GROUP__GROUP = GROUPABLE_MEMBERED__GROUP;
 
 	/**
 	 * The number of structural features of the '<em>Control Group</em>' class.
@@ -355,7 +797,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_GROUP_FEATURE_COUNT = NAMEABLE_FEATURE_COUNT + 1;
+	int CONTROL_GROUP_FEATURE_COUNT = GROUPABLE_MEMBERED_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Control Group</em>' class.
@@ -364,17 +806,17 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_GROUP_OPERATION_COUNT = NAMEABLE_OPERATION_COUNT + 0;
+	int CONTROL_GROUP_OPERATION_COUNT = GROUPABLE_MEMBERED_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ControlImpl <em>Control</em>}' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Control <em>Control</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.ControlImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.Control
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControl()
 	 * @generated
 	 */
-	int CONTROL = 6;
+	int CONTROL = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -383,7 +825,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL__NAME = REVIEWABLE__NAME;
+	int CONTROL__NAME = MEMBER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__GROUP = MEMBER__GROUP;
 
 	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
@@ -392,7 +843,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL__EVIDENCE = REVIEWABLE__EVIDENCE;
+	int CONTROL__EVIDENCE = MEMBER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Traces</b></em>' reference list.
@@ -401,7 +852,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL__TRACES = REVIEWABLE__TRACES;
+	int CONTROL__TRACES = MEMBER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Searches</b></em>' reference list.
@@ -410,16 +861,34 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL__SEARCHES = REVIEWABLE__SEARCHES;
+	int CONTROL__SEARCHES = MEMBER_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Control Group</b></em>' container reference.
+	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL__CONTROL_GROUP = REVIEWABLE_FEATURE_COUNT + 0;
+	int CONTROL__TASKS = MEMBER_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Findings</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__FINDINGS = MEMBER_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__DESCRIPTION = MEMBER_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Cwes</b></em>' reference list.
@@ -428,7 +897,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL__CWES = REVIEWABLE_FEATURE_COUNT + 1;
+	int CONTROL__CWES = MEMBER_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Control</em>' class.
@@ -437,7 +906,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FEATURE_COUNT = REVIEWABLE_FEATURE_COUNT + 2;
+	int CONTROL_FEATURE_COUNT = MEMBER_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Control</em>' class.
@@ -446,7 +915,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_OPERATION_COUNT = REVIEWABLE_OPERATION_COUNT + 0;
+	int CONTROL_OPERATION_COUNT = MEMBER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.CWEGroupImpl <em>CWE Group</em>}' class.
@@ -456,7 +925,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getCWEGroup()
 	 * @generated
 	 */
-	int CWE_GROUP = 7;
+	int CWE_GROUP = 17;
 
 	/**
 	 * The feature id for the '<em><b>Cwes</b></em>' containment reference list.
@@ -493,7 +962,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getCWE()
 	 * @generated
 	 */
-	int CWE = 8;
+	int CWE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Cwe Group</b></em>' container reference.
@@ -559,14 +1028,42 @@ public interface AssessmentPackage extends EPackage {
 	int CWE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataImpl <em>Data</em>}' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.AuthenticationControlType <em>Authentication Control Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.DataImpl
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getData()
+	 * @see us.coastalhacking.semiotics.model.assessment.AuthenticationControlType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAuthenticationControlType()
 	 * @generated
 	 */
-	int DATA = 9;
+	int AUTHENTICATION_CONTROL_TYPE = 19;
+
+	/**
+	 * The number of structural features of the '<em>Authentication Control Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION_CONTROL_TYPE_FEATURE_COUNT = CONTROL_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Authentication Control Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION_CONTROL_TYPE_OPERATION_COUNT = CONTROL_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.AuthenticationGroupImpl <em>Authentication Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AuthenticationGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAuthenticationGroup()
+	 * @generated
+	 */
+	int AUTHENTICATION_GROUP = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -575,7 +1072,1726 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__NAME = NAMEABLE__NAME;
+	int AUTHENTICATION_GROUP__NAME = CONTROL_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION_GROUP__MEMBERS = CONTROL_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION_GROUP__GROUP = CONTROL_GROUP__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Authentication Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION_GROUP_FEATURE_COUNT = CONTROL_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Authentication Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION_GROUP_OPERATION_COUNT = CONTROL_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.AuthenticationImpl <em>Authentication</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AuthenticationImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAuthentication()
+	 * @generated
+	 */
+	int AUTHENTICATION = 21;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__NAME = CONTROL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__GROUP = CONTROL__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__EVIDENCE = CONTROL__EVIDENCE;
+
+	/**
+	 * The feature id for the '<em><b>Traces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__TRACES = CONTROL__TRACES;
+
+	/**
+	 * The feature id for the '<em><b>Searches</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__SEARCHES = CONTROL__SEARCHES;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__TASKS = CONTROL__TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Findings</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__FINDINGS = CONTROL__FINDINGS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__DESCRIPTION = CONTROL__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Cwes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION__CWES = CONTROL__CWES;
+
+	/**
+	 * The number of structural features of the '<em>Authentication</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION_FEATURE_COUNT = CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Authentication</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHENTICATION_OPERATION_COUNT = CONTROL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.AuthorizationControlType <em>Authorization Control Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.AuthorizationControlType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAuthorizationControlType()
+	 * @generated
+	 */
+	int AUTHORIZATION_CONTROL_TYPE = 22;
+
+	/**
+	 * The number of structural features of the '<em>Authorization Control Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION_CONTROL_TYPE_FEATURE_COUNT = CONTROL_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Authorization Control Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION_CONTROL_TYPE_OPERATION_COUNT = CONTROL_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.AuthorizationGroupImpl <em>Authorization Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AuthorizationGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAuthorizationGroup()
+	 * @generated
+	 */
+	int AUTHORIZATION_GROUP = 23;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION_GROUP__NAME = CONTROL_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION_GROUP__MEMBERS = CONTROL_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION_GROUP__GROUP = CONTROL_GROUP__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Authorization Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION_GROUP_FEATURE_COUNT = CONTROL_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Authorization Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION_GROUP_OPERATION_COUNT = CONTROL_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.AuthorizationImpl <em>Authorization</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AuthorizationImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAuthorization()
+	 * @generated
+	 */
+	int AUTHORIZATION = 24;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION__NAME = CONTROL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION__GROUP = CONTROL__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION__EVIDENCE = CONTROL__EVIDENCE;
+
+	/**
+	 * The feature id for the '<em><b>Traces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION__TRACES = CONTROL__TRACES;
+
+	/**
+	 * The feature id for the '<em><b>Searches</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION__SEARCHES = CONTROL__SEARCHES;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION__TASKS = CONTROL__TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Findings</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION__FINDINGS = CONTROL__FINDINGS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION__DESCRIPTION = CONTROL__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Cwes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION__CWES = CONTROL__CWES;
+
+	/**
+	 * The number of structural features of the '<em>Authorization</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION_FEATURE_COUNT = CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Authorization</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTHORIZATION_OPERATION_COUNT = CONTROL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.AccountControlType <em>Account Control Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.AccountControlType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAccountControlType()
+	 * @generated
+	 */
+	int ACCOUNT_CONTROL_TYPE = 25;
+
+	/**
+	 * The number of structural features of the '<em>Account Control Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_CONTROL_TYPE_FEATURE_COUNT = CONTROL_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Account Control Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_CONTROL_TYPE_OPERATION_COUNT = CONTROL_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.AccountGroupImpl <em>Account Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AccountGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAccountGroup()
+	 * @generated
+	 */
+	int ACCOUNT_GROUP = 26;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_GROUP__NAME = CONTROL_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_GROUP__MEMBERS = CONTROL_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_GROUP__GROUP = CONTROL_GROUP__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Account Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_GROUP_FEATURE_COUNT = CONTROL_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Account Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_GROUP_OPERATION_COUNT = CONTROL_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.AccountImpl <em>Account</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AccountImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAccount()
+	 * @generated
+	 */
+	int ACCOUNT = 27;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__NAME = CONTROL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__GROUP = CONTROL__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__EVIDENCE = CONTROL__EVIDENCE;
+
+	/**
+	 * The feature id for the '<em><b>Traces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__TRACES = CONTROL__TRACES;
+
+	/**
+	 * The feature id for the '<em><b>Searches</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__SEARCHES = CONTROL__SEARCHES;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__TASKS = CONTROL__TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Findings</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__FINDINGS = CONTROL__FINDINGS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__DESCRIPTION = CONTROL__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Cwes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__CWES = CONTROL__CWES;
+
+	/**
+	 * The feature id for the '<em><b>Username</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__USERNAME = CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__PASSWORD = CONTROL_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Account</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_FEATURE_COUNT = CONTROL_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Account</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT_OPERATION_COUNT = CONTROL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.CryptographyControlType <em>Cryptography Control Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.CryptographyControlType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getCryptographyControlType()
+	 * @generated
+	 */
+	int CRYPTOGRAPHY_CONTROL_TYPE = 28;
+
+	/**
+	 * The number of structural features of the '<em>Cryptography Control Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY_CONTROL_TYPE_FEATURE_COUNT = CONTROL_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Cryptography Control Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY_CONTROL_TYPE_OPERATION_COUNT = CONTROL_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.CryptographyGroupImpl <em>Cryptography Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.CryptographyGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getCryptographyGroup()
+	 * @generated
+	 */
+	int CRYPTOGRAPHY_GROUP = 29;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY_GROUP__NAME = CONTROL_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY_GROUP__MEMBERS = CONTROL_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY_GROUP__GROUP = CONTROL_GROUP__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Cryptography Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY_GROUP_FEATURE_COUNT = CONTROL_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Cryptography Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY_GROUP_OPERATION_COUNT = CONTROL_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.CryptographyImpl <em>Cryptography</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.CryptographyImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getCryptography()
+	 * @generated
+	 */
+	int CRYPTOGRAPHY = 30;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY__NAME = CONTROL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY__GROUP = CONTROL__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY__EVIDENCE = CONTROL__EVIDENCE;
+
+	/**
+	 * The feature id for the '<em><b>Traces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY__TRACES = CONTROL__TRACES;
+
+	/**
+	 * The feature id for the '<em><b>Searches</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY__SEARCHES = CONTROL__SEARCHES;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY__TASKS = CONTROL__TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Findings</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY__FINDINGS = CONTROL__FINDINGS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY__DESCRIPTION = CONTROL__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Cwes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY__CWES = CONTROL__CWES;
+
+	/**
+	 * The number of structural features of the '<em>Cryptography</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY_FEATURE_COUNT = CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Cryptography</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRYPTOGRAPHY_OPERATION_COUNT = CONTROL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.OutputEncodingControlType <em>Output Encoding Control Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.OutputEncodingControlType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getOutputEncodingControlType()
+	 * @generated
+	 */
+	int OUTPUT_ENCODING_CONTROL_TYPE = 31;
+
+	/**
+	 * The number of structural features of the '<em>Output Encoding Control Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING_CONTROL_TYPE_FEATURE_COUNT = CONTROL_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Output Encoding Control Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING_CONTROL_TYPE_OPERATION_COUNT = CONTROL_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.OutputEncodingGroupImpl <em>Output Encoding Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.OutputEncodingGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getOutputEncodingGroup()
+	 * @generated
+	 */
+	int OUTPUT_ENCODING_GROUP = 32;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING_GROUP__NAME = CONTROL_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING_GROUP__MEMBERS = CONTROL_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING_GROUP__GROUP = CONTROL_GROUP__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Output Encoding Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING_GROUP_FEATURE_COUNT = CONTROL_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Output Encoding Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING_GROUP_OPERATION_COUNT = CONTROL_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.OutputEncodingImpl <em>Output Encoding</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.OutputEncodingImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getOutputEncoding()
+	 * @generated
+	 */
+	int OUTPUT_ENCODING = 33;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING__NAME = CONTROL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING__GROUP = CONTROL__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING__EVIDENCE = CONTROL__EVIDENCE;
+
+	/**
+	 * The feature id for the '<em><b>Traces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING__TRACES = CONTROL__TRACES;
+
+	/**
+	 * The feature id for the '<em><b>Searches</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING__SEARCHES = CONTROL__SEARCHES;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING__TASKS = CONTROL__TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Findings</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING__FINDINGS = CONTROL__FINDINGS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING__DESCRIPTION = CONTROL__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Cwes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING__CWES = CONTROL__CWES;
+
+	/**
+	 * The number of structural features of the '<em>Output Encoding</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING_FEATURE_COUNT = CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Output Encoding</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_ENCODING_OPERATION_COUNT = CONTROL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.GenericControlType <em>Generic Control Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.GenericControlType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getGenericControlType()
+	 * @generated
+	 */
+	int GENERIC_CONTROL_TYPE = 34;
+
+	/**
+	 * The number of structural features of the '<em>Generic Control Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL_TYPE_FEATURE_COUNT = CONTROL_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Generic Control Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL_TYPE_OPERATION_COUNT = CONTROL_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.GenericControlImpl <em>Generic Control</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.GenericControlImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getGenericControl()
+	 * @generated
+	 */
+	int GENERIC_CONTROL = 35;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL__NAME = CONTROL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL__GROUP = CONTROL__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL__EVIDENCE = CONTROL__EVIDENCE;
+
+	/**
+	 * The feature id for the '<em><b>Traces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL__TRACES = CONTROL__TRACES;
+
+	/**
+	 * The feature id for the '<em><b>Searches</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL__SEARCHES = CONTROL__SEARCHES;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL__TASKS = CONTROL__TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Findings</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL__FINDINGS = CONTROL__FINDINGS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL__DESCRIPTION = CONTROL__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Cwes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL__CWES = CONTROL__CWES;
+
+	/**
+	 * The number of structural features of the '<em>Generic Control</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL_FEATURE_COUNT = CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Generic Control</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL_OPERATION_COUNT = CONTROL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.GenericControlGroupImpl <em>Generic Control Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.GenericControlGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getGenericControlGroup()
+	 * @generated
+	 */
+	int GENERIC_CONTROL_GROUP = 36;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL_GROUP__NAME = CONTROL_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL_GROUP__MEMBERS = CONTROL_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL_GROUP__GROUP = CONTROL_GROUP__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Generic Control Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL_GROUP_FEATURE_COUNT = CONTROL_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Generic Control Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_CONTROL_GROUP_OPERATION_COUNT = CONTROL_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.SurfaceAreaType <em>Surface Area Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.SurfaceAreaType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSurfaceAreaType()
+	 * @generated
+	 */
+	int SURFACE_AREA_TYPE = 37;
+
+	/**
+	 * The number of structural features of the '<em>Surface Area Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA_TYPE_FEATURE_COUNT = GROUPABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Surface Area Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA_TYPE_OPERATION_COUNT = GROUPABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.SurfaceAreaGroup <em>Surface Area Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.SurfaceAreaGroup
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSurfaceAreaGroup()
+	 * @generated
+	 */
+	int SURFACE_AREA_GROUP = 38;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA_GROUP__NAME = GROUPABLE_MEMBERED__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA_GROUP__MEMBERS = GROUPABLE_MEMBERED__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA_GROUP__GROUP = GROUPABLE_MEMBERED__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Surface Area Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA_GROUP_FEATURE_COUNT = GROUPABLE_MEMBERED_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Surface Area Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA_GROUP_OPERATION_COUNT = GROUPABLE_MEMBERED_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.SurfaceArea <em>Surface Area</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.SurfaceArea
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSurfaceArea()
+	 * @generated
+	 */
+	int SURFACE_AREA = 39;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA__NAME = MEMBER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA__GROUP = MEMBER__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA__EVIDENCE = MEMBER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Traces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA__TRACES = MEMBER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Searches</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA__SEARCHES = MEMBER_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA__TASKS = MEMBER_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Findings</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA__FINDINGS = MEMBER_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Surface Area</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA_FEATURE_COUNT = MEMBER_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Surface Area</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SURFACE_AREA_OPERATION_COUNT = MEMBER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.NetworkIngressType <em>Network Ingress Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.NetworkIngressType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getNetworkIngressType()
+	 * @generated
+	 */
+	int NETWORK_INGRESS_TYPE = 40;
+
+	/**
+	 * The number of structural features of the '<em>Network Ingress Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS_TYPE_FEATURE_COUNT = SURFACE_AREA_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Network Ingress Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS_TYPE_OPERATION_COUNT = SURFACE_AREA_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.NetworkIngressImpl <em>Network Ingress</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.NetworkIngressImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getNetworkIngress()
+	 * @generated
+	 */
+	int NETWORK_INGRESS = 41;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS__NAME = SURFACE_AREA__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS__GROUP = SURFACE_AREA__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS__EVIDENCE = SURFACE_AREA__EVIDENCE;
+
+	/**
+	 * The feature id for the '<em><b>Traces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS__TRACES = SURFACE_AREA__TRACES;
+
+	/**
+	 * The feature id for the '<em><b>Searches</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS__SEARCHES = SURFACE_AREA__SEARCHES;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS__TASKS = SURFACE_AREA__TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Findings</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS__FINDINGS = SURFACE_AREA__FINDINGS;
+
+	/**
+	 * The number of structural features of the '<em>Network Ingress</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS_FEATURE_COUNT = SURFACE_AREA_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Network Ingress</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS_OPERATION_COUNT = SURFACE_AREA_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.NetworkIngressGroupImpl <em>Network Ingress Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.NetworkIngressGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getNetworkIngressGroup()
+	 * @generated
+	 */
+	int NETWORK_INGRESS_GROUP = 42;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS_GROUP__NAME = SURFACE_AREA_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS_GROUP__MEMBERS = SURFACE_AREA_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS_GROUP__GROUP = SURFACE_AREA_GROUP__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Network Ingress Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS_GROUP_FEATURE_COUNT = SURFACE_AREA_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Network Ingress Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_INGRESS_GROUP_OPERATION_COUNT = SURFACE_AREA_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.NetworkEgressType <em>Network Egress Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.NetworkEgressType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getNetworkEgressType()
+	 * @generated
+	 */
+	int NETWORK_EGRESS_TYPE = 43;
+
+	/**
+	 * The number of structural features of the '<em>Network Egress Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS_TYPE_FEATURE_COUNT = SURFACE_AREA_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Network Egress Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS_TYPE_OPERATION_COUNT = SURFACE_AREA_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.NetworkEgressImpl <em>Network Egress</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.NetworkEgressImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getNetworkEgress()
+	 * @generated
+	 */
+	int NETWORK_EGRESS = 44;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS__NAME = SURFACE_AREA__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS__GROUP = SURFACE_AREA__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS__EVIDENCE = SURFACE_AREA__EVIDENCE;
+
+	/**
+	 * The feature id for the '<em><b>Traces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS__TRACES = SURFACE_AREA__TRACES;
+
+	/**
+	 * The feature id for the '<em><b>Searches</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS__SEARCHES = SURFACE_AREA__SEARCHES;
+
+	/**
+	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS__TASKS = SURFACE_AREA__TASKS;
+
+	/**
+	 * The feature id for the '<em><b>Findings</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS__FINDINGS = SURFACE_AREA__FINDINGS;
+
+	/**
+	 * The number of structural features of the '<em>Network Egress</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS_FEATURE_COUNT = SURFACE_AREA_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Network Egress</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS_OPERATION_COUNT = SURFACE_AREA_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.NetworkEgressGroupImpl <em>Network Egress Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.NetworkEgressGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getNetworkEgressGroup()
+	 * @generated
+	 */
+	int NETWORK_EGRESS_GROUP = 45;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS_GROUP__NAME = SURFACE_AREA_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS_GROUP__MEMBERS = SURFACE_AREA_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS_GROUP__GROUP = SURFACE_AREA_GROUP__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Network Egress Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS_GROUP_FEATURE_COUNT = SURFACE_AREA_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Network Egress Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NETWORK_EGRESS_GROUP_OPERATION_COUNT = SURFACE_AREA_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.DataType <em>Data Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.DataType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataType()
+	 * @generated
+	 */
+	int DATA_TYPE = 46;
+
+	/**
+	 * The number of structural features of the '<em>Data Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_FEATURE_COUNT = GROUPABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Data Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TYPE_OPERATION_COUNT = GROUPABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Data <em>Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.Data
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getData()
+	 * @generated
+	 */
+	int DATA = 47;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__NAME = MEMBER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__GROUP = MEMBER__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__EXAMINEES = MEMBER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Traces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__TRACES = MEMBER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Snippets</b></em>' containment reference list.
@@ -584,16 +2800,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__SNIPPETS = NAMEABLE_FEATURE_COUNT + 0;
+	int DATA__SNIPPETS = MEMBER_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Data Group</b></em>' container reference.
+	 * The feature id for the '<em><b>Data</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__DATA_GROUP = NAMEABLE_FEATURE_COUNT + 1;
+	int DATA__DATA = MEMBER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Data</em>' class.
@@ -602,7 +2818,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FEATURE_COUNT = NAMEABLE_FEATURE_COUNT + 2;
+	int DATA_FEATURE_COUNT = MEMBER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Data</em>' class.
@@ -611,17 +2827,17 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_OPERATION_COUNT = NAMEABLE_OPERATION_COUNT + 0;
+	int DATA_OPERATION_COUNT = MEMBER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataGroupImpl <em>Data Group</em>}' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.DataGroup <em>Data Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.DataGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.DataGroup
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataGroup()
 	 * @generated
 	 */
-	int DATA_GROUP = 10;
+	int DATA_GROUP = 48;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -630,16 +2846,25 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_GROUP__NAME = NAMEABLE__NAME;
+	int DATA_GROUP__NAME = GROUPABLE_MEMBERED__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Data</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_GROUP__DATA = NAMEABLE_FEATURE_COUNT + 0;
+	int DATA_GROUP__MEMBERS = GROUPABLE_MEMBERED__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_GROUP__GROUP = GROUPABLE_MEMBERED__GROUP;
 
 	/**
 	 * The number of structural features of the '<em>Data Group</em>' class.
@@ -648,7 +2873,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_GROUP_FEATURE_COUNT = NAMEABLE_FEATURE_COUNT + 1;
+	int DATA_GROUP_FEATURE_COUNT = GROUPABLE_MEMBERED_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Data Group</em>' class.
@@ -657,17 +2882,45 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_GROUP_OPERATION_COUNT = NAMEABLE_OPERATION_COUNT + 0;
+	int DATA_GROUP_OPERATION_COUNT = GROUPABLE_MEMBERED_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.SnippetImpl <em>Snippet</em>}' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.SnippetType <em>Snippet Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.SnippetImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.SnippetType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSnippetType()
+	 * @generated
+	 */
+	int SNIPPET_TYPE = 49;
+
+	/**
+	 * The number of structural features of the '<em>Snippet Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SNIPPET_TYPE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Snippet Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SNIPPET_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Snippet <em>Snippet</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.Snippet
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSnippet()
 	 * @generated
 	 */
-	int SNIPPET = 11;
+	int SNIPPET = 50;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -679,13 +2932,13 @@ public interface AssessmentPackage extends EPackage {
 	int SNIPPET__NAME = PROVABLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SNIPPET__REVIEWERS = PROVABLE__REVIEWERS;
+	int SNIPPET__EXAMINEES = PROVABLE__EXAMINEES;
 
 	/**
 	 * The feature id for the '<em><b>Traces</b></em>' reference list.
@@ -706,40 +2959,13 @@ public interface AssessmentPackage extends EPackage {
 	int SNIPPET__DATA = PROVABLE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Row</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SNIPPET__ROW = PROVABLE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Column</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SNIPPET__COLUMN = PROVABLE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Length</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SNIPPET__LENGTH = PROVABLE_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>Snippet</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SNIPPET_FEATURE_COUNT = PROVABLE_FEATURE_COUNT + 4;
+	int SNIPPET_FEATURE_COUNT = PROVABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Snippet</em>' class.
@@ -751,6 +2977,153 @@ public interface AssessmentPackage extends EPackage {
 	int SNIPPET_OPERATION_COUNT = PROVABLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.TextSnippetType <em>Text Snippet Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.TextSnippetType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTextSnippetType()
+	 * @generated
+	 */
+	int TEXT_SNIPPET_TYPE = 51;
+
+	/**
+	 * The number of structural features of the '<em>Text Snippet Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_SNIPPET_TYPE_FEATURE_COUNT = SNIPPET_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Text Snippet Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_SNIPPET_TYPE_OPERATION_COUNT = SNIPPET_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.TextSnippetImpl <em>Text Snippet</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.TextSnippetImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTextSnippet()
+	 * @generated
+	 */
+	int TEXT_SNIPPET = 52;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_SNIPPET__NAME = SNIPPET__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_SNIPPET__EXAMINEES = SNIPPET__EXAMINEES;
+
+	/**
+	 * The feature id for the '<em><b>Traces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_SNIPPET__TRACES = SNIPPET__TRACES;
+
+	/**
+	 * The feature id for the '<em><b>Data</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_SNIPPET__DATA = SNIPPET__DATA;
+
+	/**
+	 * The feature id for the '<em><b>Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_SNIPPET__OFFSET = SNIPPET_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_SNIPPET__LENGTH = SNIPPET_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_SNIPPET__TEXT = SNIPPET_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Text Snippet</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_SNIPPET_FEATURE_COUNT = SNIPPET_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Text Snippet</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_SNIPPET_OPERATION_COUNT = SNIPPET_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FileTypeImpl <em>File Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.FileTypeImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFileType()
+	 * @generated
+	 */
+	int FILE_TYPE = 53;
+
+	/**
+	 * The number of structural features of the '<em>File Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_TYPE_FEATURE_COUNT = DATA_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>File Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_TYPE_OPERATION_COUNT = DATA_TYPE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FileImpl <em>File</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -758,7 +3131,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFile()
 	 * @generated
 	 */
-	int FILE = 12;
+	int FILE = 54;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -770,6 +3143,33 @@ public interface AssessmentPackage extends EPackage {
 	int FILE__NAME = DATA__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE__GROUP = DATA__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE__EXAMINEES = DATA__EXAMINEES;
+
+	/**
+	 * The feature id for the '<em><b>Traces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE__TRACES = DATA__TRACES;
+
+	/**
 	 * The feature id for the '<em><b>Snippets</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -779,13 +3179,13 @@ public interface AssessmentPackage extends EPackage {
 	int FILE__SNIPPETS = DATA__SNIPPETS;
 
 	/**
-	 * The feature id for the '<em><b>Data Group</b></em>' container reference.
+	 * The feature id for the '<em><b>Data</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE__DATA_GROUP = DATA__DATA_GROUP;
+	int FILE__DATA = DATA__DATA;
 
 	/**
 	 * The feature id for the '<em><b>Full Path</b></em>' attribute.
@@ -797,22 +3197,13 @@ public interface AssessmentPackage extends EPackage {
 	int FILE__FULL_PATH = DATA_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Contents</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE__CONTENTS = DATA_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>File</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_FEATURE_COUNT = DATA_FEATURE_COUNT + 2;
+	int FILE_FEATURE_COUNT = DATA_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>File</em>' class.
@@ -824,6 +3215,89 @@ public interface AssessmentPackage extends EPackage {
 	int FILE_OPERATION_COUNT = DATA_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FileGroupImpl <em>File Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.FileGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFileGroup()
+	 * @generated
+	 */
+	int FILE_GROUP = 55;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_GROUP__NAME = DATA_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_GROUP__MEMBERS = DATA_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_GROUP__GROUP = DATA_GROUP__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>File Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_GROUP_FEATURE_COUNT = DATA_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>File Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_GROUP_OPERATION_COUNT = DATA_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.RequestTypeImpl <em>Request Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.RequestTypeImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getRequestType()
+	 * @generated
+	 */
+	int REQUEST_TYPE = 56;
+
+	/**
+	 * The number of structural features of the '<em>Request Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_TYPE_FEATURE_COUNT = DATA_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Request Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_TYPE_OPERATION_COUNT = DATA_TYPE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.RequestImpl <em>Request</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -831,7 +3305,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getRequest()
 	 * @generated
 	 */
-	int REQUEST = 13;
+	int REQUEST = 57;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -843,6 +3317,33 @@ public interface AssessmentPackage extends EPackage {
 	int REQUEST__NAME = DATA__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST__GROUP = DATA__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST__EXAMINEES = DATA__EXAMINEES;
+
+	/**
+	 * The feature id for the '<em><b>Traces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST__TRACES = DATA__TRACES;
+
+	/**
 	 * The feature id for the '<em><b>Snippets</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -852,13 +3353,13 @@ public interface AssessmentPackage extends EPackage {
 	int REQUEST__SNIPPETS = DATA__SNIPPETS;
 
 	/**
-	 * The feature id for the '<em><b>Data Group</b></em>' container reference.
+	 * The feature id for the '<em><b>Data</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUEST__DATA_GROUP = DATA__DATA_GROUP;
+	int REQUEST__DATA = DATA__DATA;
 
 	/**
 	 * The feature id for the '<em><b>Response</b></em>' reference.
@@ -888,6 +3389,89 @@ public interface AssessmentPackage extends EPackage {
 	int REQUEST_OPERATION_COUNT = DATA_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.RequestGroupImpl <em>Request Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.RequestGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getRequestGroup()
+	 * @generated
+	 */
+	int REQUEST_GROUP = 58;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_GROUP__NAME = DATA_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_GROUP__MEMBERS = DATA_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_GROUP__GROUP = DATA_GROUP__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Request Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_GROUP_FEATURE_COUNT = DATA_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Request Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_GROUP_OPERATION_COUNT = DATA_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ResponseTypeImpl <em>Response Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.ResponseTypeImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getResponseType()
+	 * @generated
+	 */
+	int RESPONSE_TYPE = 59;
+
+	/**
+	 * The number of structural features of the '<em>Response Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_TYPE_FEATURE_COUNT = DATA_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Response Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_TYPE_OPERATION_COUNT = DATA_TYPE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ResponseImpl <em>Response</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -895,7 +3479,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getResponse()
 	 * @generated
 	 */
-	int RESPONSE = 14;
+	int RESPONSE = 60;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -907,6 +3491,33 @@ public interface AssessmentPackage extends EPackage {
 	int RESPONSE__NAME = DATA__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE__GROUP = DATA__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE__EXAMINEES = DATA__EXAMINEES;
+
+	/**
+	 * The feature id for the '<em><b>Traces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE__TRACES = DATA__TRACES;
+
+	/**
 	 * The feature id for the '<em><b>Snippets</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -916,13 +3527,13 @@ public interface AssessmentPackage extends EPackage {
 	int RESPONSE__SNIPPETS = DATA__SNIPPETS;
 
 	/**
-	 * The feature id for the '<em><b>Data Group</b></em>' container reference.
+	 * The feature id for the '<em><b>Data</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESPONSE__DATA_GROUP = DATA__DATA_GROUP;
+	int RESPONSE__DATA = DATA__DATA;
 
 	/**
 	 * The feature id for the '<em><b>Request</b></em>' reference.
@@ -952,14 +3563,14 @@ public interface AssessmentPackage extends EPackage {
 	int RESPONSE_OPERATION_COUNT = DATA_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FlowImpl <em>Flow</em>}' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ResponseGroupImpl <em>Response Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.FlowImpl
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlow()
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.ResponseGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getResponseGroup()
 	 * @generated
 	 */
-	int FLOW = 15;
+	int RESPONSE_GROUP = 61;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -968,7 +3579,99 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLOW__NAME = TRACEABLE__NAME;
+	int RESPONSE_GROUP__NAME = DATA_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_GROUP__MEMBERS = DATA_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_GROUP__GROUP = DATA_GROUP__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Response Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_GROUP_FEATURE_COUNT = DATA_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Response Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_GROUP_OPERATION_COUNT = DATA_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.FlowType <em>Flow Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.FlowType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlowType()
+	 * @generated
+	 */
+	int FLOW_TYPE = 62;
+
+	/**
+	 * The number of structural features of the '<em>Flow Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_TYPE_FEATURE_COUNT = GROUPABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Flow Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_TYPE_OPERATION_COUNT = GROUPABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Flow <em>Flow</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.Flow
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlow()
+	 * @generated
+	 */
+	int FLOW = 63;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW__NAME = MEMBER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW__GROUP = MEMBER__GROUP;
 
 	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
@@ -977,34 +3680,34 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLOW__EVIDENCE = TRACEABLE__EVIDENCE;
+	int FLOW__EVIDENCE = MEMBER_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLOW__REVIEWERS = TRACEABLE__REVIEWERS;
+	int FLOW__EXAMINEES = MEMBER_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLOW__FLOW_FROM = TRACEABLE_FEATURE_COUNT + 0;
+	int FLOW__VALUE = MEMBER_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Flows</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLOW__FLOW_TO = TRACEABLE_FEATURE_COUNT + 1;
+	int FLOW__FLOWS = MEMBER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Flow</em>' class.
@@ -1013,7 +3716,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLOW_FEATURE_COUNT = TRACEABLE_FEATURE_COUNT + 2;
+	int FLOW_FEATURE_COUNT = MEMBER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Flow</em>' class.
@@ -1022,172 +3725,17 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLOW_OPERATION_COUNT = TRACEABLE_OPERATION_COUNT + 0;
+	int FLOW_OPERATION_COUNT = MEMBER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FlowSourceImpl <em>Flow Source</em>}' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.FlowGroup <em>Flow Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.FlowSourceImpl
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlowSource()
-	 * @generated
-	 */
-	int FLOW_SOURCE = 16;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SOURCE__NAME = FLOW__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SOURCE__EVIDENCE = FLOW__EVIDENCE;
-
-	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SOURCE__REVIEWERS = FLOW__REVIEWERS;
-
-	/**
-	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SOURCE__FLOW_FROM = FLOW__FLOW_FROM;
-
-	/**
-	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SOURCE__FLOW_TO = FLOW__FLOW_TO;
-
-	/**
-	 * The feature id for the '<em><b>Flow Group</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SOURCE__FLOW_GROUP = FLOW_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Flow Source</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SOURCE_FEATURE_COUNT = FLOW_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Flow Source</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SOURCE_OPERATION_COUNT = FLOW_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FlowSinkImpl <em>Flow Sink</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.FlowSinkImpl
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlowSink()
-	 * @generated
-	 */
-	int FLOW_SINK = 17;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SINK__NAME = FLOW__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SINK__EVIDENCE = FLOW__EVIDENCE;
-
-	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SINK__REVIEWERS = FLOW__REVIEWERS;
-
-	/**
-	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SINK__FLOW_FROM = FLOW__FLOW_FROM;
-
-	/**
-	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SINK__FLOW_TO = FLOW__FLOW_TO;
-
-	/**
-	 * The number of structural features of the '<em>Flow Sink</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SINK_FEATURE_COUNT = FLOW_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Flow Sink</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_SINK_OPERATION_COUNT = FLOW_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FlowGroupImpl <em>Flow Group</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.FlowGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.FlowGroup
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlowGroup()
 	 * @generated
 	 */
-	int FLOW_GROUP = 18;
+	int FLOW_GROUP = 64;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1196,16 +3744,25 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLOW_GROUP__NAME = NAMEABLE__NAME;
+	int FLOW_GROUP__NAME = GROUPABLE_MEMBERED__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Flow Sources</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLOW_GROUP__FLOW_SOURCES = NAMEABLE_FEATURE_COUNT + 0;
+	int FLOW_GROUP__MEMBERS = GROUPABLE_MEMBERED__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_GROUP__GROUP = GROUPABLE_MEMBERED__GROUP;
 
 	/**
 	 * The number of structural features of the '<em>Flow Group</em>' class.
@@ -1214,7 +3771,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLOW_GROUP_FEATURE_COUNT = NAMEABLE_FEATURE_COUNT + 1;
+	int FLOW_GROUP_FEATURE_COUNT = GROUPABLE_MEMBERED_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Flow Group</em>' class.
@@ -1223,7 +3780,117 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLOW_GROUP_OPERATION_COUNT = NAMEABLE_OPERATION_COUNT + 0;
+	int FLOW_GROUP_OPERATION_COUNT = GROUPABLE_MEMBERED_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.FlowNode <em>Flow Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.FlowNode
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlowNode()
+	 * @generated
+	 */
+	int FLOW_NODE = 65;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_NODE__NAME = TRACEABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_NODE__EVIDENCE = TRACEABLE__EVIDENCE;
+
+	/**
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_NODE__EXAMINEES = TRACEABLE__EXAMINEES;
+
+	/**
+	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_NODE__FLOW_FROM = TRACEABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Flow Root</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_NODE__FLOW_ROOT = TRACEABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_NODE__FLOW_TO = TRACEABLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Flow Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_NODE_FEATURE_COUNT = TRACEABLE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Flow Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOW_NODE_OPERATION_COUNT = TRACEABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.DataFlowType <em>Data Flow Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.DataFlowType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataFlowType()
+	 * @generated
+	 */
+	int DATA_FLOW_TYPE = 66;
+
+	/**
+	 * The number of structural features of the '<em>Data Flow Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_FLOW_TYPE_FEATURE_COUNT = FLOW_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Data Flow Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_FLOW_TYPE_OPERATION_COUNT = FLOW_TYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataFlowImpl <em>Data Flow</em>}' class.
@@ -1233,7 +3900,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataFlow()
 	 * @generated
 	 */
-	int DATA_FLOW = 19;
+	int DATA_FLOW = 67;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1245,6 +3912,15 @@ public interface AssessmentPackage extends EPackage {
 	int DATA_FLOW__NAME = FLOW__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_FLOW__GROUP = FLOW__GROUP;
+
+	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1254,31 +3930,40 @@ public interface AssessmentPackage extends EPackage {
 	int DATA_FLOW__EVIDENCE = FLOW__EVIDENCE;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW__REVIEWERS = FLOW__REVIEWERS;
+	int DATA_FLOW__EXAMINEES = FLOW__EXAMINEES;
 
 	/**
-	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW__FLOW_FROM = FLOW__FLOW_FROM;
+	int DATA_FLOW__VALUE = FLOW__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Flows</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW__FLOW_TO = FLOW__FLOW_TO;
+	int DATA_FLOW__FLOWS = FLOW__FLOWS;
+
+	/**
+	 * The feature id for the '<em><b>Source Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_FLOW__SOURCE_TYPE = FLOW_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Data Flow</em>' class.
@@ -1287,7 +3972,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_FEATURE_COUNT = FLOW_FEATURE_COUNT + 0;
+	int DATA_FLOW_FEATURE_COUNT = FLOW_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Data Flow</em>' class.
@@ -1299,14 +3984,14 @@ public interface AssessmentPackage extends EPackage {
 	int DATA_FLOW_OPERATION_COUNT = FLOW_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataFlowSourceImpl <em>Data Flow Source</em>}' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataFlowNodeImpl <em>Data Flow Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.DataFlowSourceImpl
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataFlowSource()
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.DataFlowNodeImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataFlowNode()
 	 * @generated
 	 */
-	int DATA_FLOW_SOURCE = 20;
+	int DATA_FLOW_NODE = 68;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1315,7 +4000,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_SOURCE__NAME = DATA_FLOW__NAME;
+	int DATA_FLOW_NODE__NAME = FLOW_NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
@@ -1324,16 +4009,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_SOURCE__EVIDENCE = DATA_FLOW__EVIDENCE;
+	int DATA_FLOW_NODE__EVIDENCE = FLOW_NODE__EVIDENCE;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_SOURCE__REVIEWERS = DATA_FLOW__REVIEWERS;
+	int DATA_FLOW_NODE__EXAMINEES = FLOW_NODE__EXAMINEES;
 
 	/**
 	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
@@ -1342,7 +4027,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_SOURCE__FLOW_FROM = DATA_FLOW__FLOW_FROM;
+	int DATA_FLOW_NODE__FLOW_FROM = FLOW_NODE__FLOW_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Flow Root</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_FLOW_NODE__FLOW_ROOT = FLOW_NODE__FLOW_ROOT;
 
 	/**
 	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
@@ -1351,62 +4045,35 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_SOURCE__FLOW_TO = DATA_FLOW__FLOW_TO;
+	int DATA_FLOW_NODE__FLOW_TO = FLOW_NODE__FLOW_TO;
 
 	/**
-	 * The feature id for the '<em><b>Flow Group</b></em>' container reference.
+	 * The number of structural features of the '<em>Data Flow Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_SOURCE__FLOW_GROUP = DATA_FLOW_FEATURE_COUNT + 0;
+	int DATA_FLOW_NODE_FEATURE_COUNT = FLOW_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The number of operations of the '<em>Data Flow Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_SOURCE__VALUE = DATA_FLOW_FEATURE_COUNT + 1;
+	int DATA_FLOW_NODE_OPERATION_COUNT = FLOW_NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Source Type</b></em>' attribute.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataFlowGroupImpl <em>Data Flow Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_FLOW_SOURCE__SOURCE_TYPE = DATA_FLOW_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Data Flow Source</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_FLOW_SOURCE_FEATURE_COUNT = DATA_FLOW_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Data Flow Source</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_FLOW_SOURCE_OPERATION_COUNT = DATA_FLOW_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataFlowSinkImpl <em>Data Flow Sink</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.DataFlowSinkImpl
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataFlowSink()
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.DataFlowGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataFlowGroup()
 	 * @generated
 	 */
-	int DATA_FLOW_SINK = 21;
+	int DATA_FLOW_GROUP = 69;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1415,144 +4082,53 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_SINK__NAME = DATA_FLOW__NAME;
+	int DATA_FLOW_GROUP__NAME = FLOW_GROUP__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_SINK__EVIDENCE = DATA_FLOW__EVIDENCE;
+	int DATA_FLOW_GROUP__MEMBERS = FLOW_GROUP__MEMBERS;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_SINK__REVIEWERS = DATA_FLOW__REVIEWERS;
+	int DATA_FLOW_GROUP__GROUP = FLOW_GROUP__GROUP;
 
 	/**
-	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
+	 * The number of structural features of the '<em>Data Flow Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_SINK__FLOW_FROM = DATA_FLOW__FLOW_FROM;
+	int DATA_FLOW_GROUP_FEATURE_COUNT = FLOW_GROUP_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
+	 * The number of operations of the '<em>Data Flow Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_SINK__FLOW_TO = DATA_FLOW__FLOW_TO;
+	int DATA_FLOW_GROUP_OPERATION_COUNT = FLOW_GROUP_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Data Flow Sink</em>' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.DataFlowConstraint <em>Data Flow Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_FLOW_SINK_FEATURE_COUNT = DATA_FLOW_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Data Flow Sink</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_FLOW_SINK_OPERATION_COUNT = DATA_FLOW_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FlowConstraintImpl <em>Flow Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.FlowConstraintImpl
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlowConstraint()
-	 * @generated
-	 */
-	int FLOW_CONSTRAINT = 22;
-
-	/**
-	 * The number of structural features of the '<em>Flow Constraint</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_CONSTRAINT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Flow Constraint</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOW_CONSTRAINT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataFlowConstraintImpl <em>Data Flow Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.DataFlowConstraintImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.DataFlowConstraint
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataFlowConstraint()
 	 * @generated
 	 */
-	int DATA_FLOW_CONSTRAINT = 23;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_FLOW_CONSTRAINT__NAME = DATA_FLOW__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_FLOW_CONSTRAINT__EVIDENCE = DATA_FLOW__EVIDENCE;
-
-	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_FLOW_CONSTRAINT__REVIEWERS = DATA_FLOW__REVIEWERS;
-
-	/**
-	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_FLOW_CONSTRAINT__FLOW_FROM = DATA_FLOW__FLOW_FROM;
-
-	/**
-	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_FLOW_CONSTRAINT__FLOW_TO = DATA_FLOW__FLOW_TO;
+	int DATA_FLOW_CONSTRAINT = 70;
 
 	/**
 	 * The number of structural features of the '<em>Data Flow Constraint</em>' class.
@@ -1561,7 +4137,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_CONSTRAINT_FEATURE_COUNT = DATA_FLOW_FEATURE_COUNT + 0;
+	int DATA_FLOW_CONSTRAINT_FEATURE_COUNT = DATA_FLOW_TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Data Flow Constraint</em>' class.
@@ -1570,7 +4146,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FLOW_CONSTRAINT_OPERATION_COUNT = DATA_FLOW_OPERATION_COUNT + 0;
+	int DATA_FLOW_CONSTRAINT_OPERATION_COUNT = DATA_FLOW_TYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.EndsWithImpl <em>Ends With</em>}' class.
@@ -1580,7 +4156,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getEndsWith()
 	 * @generated
 	 */
-	int ENDS_WITH = 24;
+	int ENDS_WITH = 71;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1589,7 +4165,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENDS_WITH__NAME = DATA_FLOW_CONSTRAINT__NAME;
+	int ENDS_WITH__NAME = FLOW_NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
@@ -1598,16 +4174,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENDS_WITH__EVIDENCE = DATA_FLOW_CONSTRAINT__EVIDENCE;
+	int ENDS_WITH__EVIDENCE = FLOW_NODE__EVIDENCE;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENDS_WITH__REVIEWERS = DATA_FLOW_CONSTRAINT__REVIEWERS;
+	int ENDS_WITH__EXAMINEES = FLOW_NODE__EXAMINEES;
 
 	/**
 	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
@@ -1616,7 +4192,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENDS_WITH__FLOW_FROM = DATA_FLOW_CONSTRAINT__FLOW_FROM;
+	int ENDS_WITH__FLOW_FROM = FLOW_NODE__FLOW_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Flow Root</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENDS_WITH__FLOW_ROOT = FLOW_NODE__FLOW_ROOT;
 
 	/**
 	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
@@ -1625,7 +4210,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENDS_WITH__FLOW_TO = DATA_FLOW_CONSTRAINT__FLOW_TO;
+	int ENDS_WITH__FLOW_TO = FLOW_NODE__FLOW_TO;
 
 	/**
 	 * The feature id for the '<em><b>Suffix</b></em>' attribute.
@@ -1634,7 +4219,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENDS_WITH__SUFFIX = DATA_FLOW_CONSTRAINT_FEATURE_COUNT + 0;
+	int ENDS_WITH__SUFFIX = FLOW_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Ends With</em>' class.
@@ -1643,7 +4228,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENDS_WITH_FEATURE_COUNT = DATA_FLOW_CONSTRAINT_FEATURE_COUNT + 1;
+	int ENDS_WITH_FEATURE_COUNT = FLOW_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Ends With</em>' class.
@@ -1652,7 +4237,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENDS_WITH_OPERATION_COUNT = DATA_FLOW_CONSTRAINT_OPERATION_COUNT + 0;
+	int ENDS_WITH_OPERATION_COUNT = FLOW_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.StartsWithImpl <em>Starts With</em>}' class.
@@ -1662,7 +4247,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getStartsWith()
 	 * @generated
 	 */
-	int STARTS_WITH = 25;
+	int STARTS_WITH = 72;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1671,7 +4256,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STARTS_WITH__NAME = DATA_FLOW_CONSTRAINT__NAME;
+	int STARTS_WITH__NAME = FLOW_NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
@@ -1680,16 +4265,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STARTS_WITH__EVIDENCE = DATA_FLOW_CONSTRAINT__EVIDENCE;
+	int STARTS_WITH__EVIDENCE = FLOW_NODE__EVIDENCE;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STARTS_WITH__REVIEWERS = DATA_FLOW_CONSTRAINT__REVIEWERS;
+	int STARTS_WITH__EXAMINEES = FLOW_NODE__EXAMINEES;
 
 	/**
 	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
@@ -1698,7 +4283,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STARTS_WITH__FLOW_FROM = DATA_FLOW_CONSTRAINT__FLOW_FROM;
+	int STARTS_WITH__FLOW_FROM = FLOW_NODE__FLOW_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Flow Root</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STARTS_WITH__FLOW_ROOT = FLOW_NODE__FLOW_ROOT;
 
 	/**
 	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
@@ -1707,7 +4301,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STARTS_WITH__FLOW_TO = DATA_FLOW_CONSTRAINT__FLOW_TO;
+	int STARTS_WITH__FLOW_TO = FLOW_NODE__FLOW_TO;
 
 	/**
 	 * The feature id for the '<em><b>Prefix</b></em>' attribute.
@@ -1716,7 +4310,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STARTS_WITH__PREFIX = DATA_FLOW_CONSTRAINT_FEATURE_COUNT + 0;
+	int STARTS_WITH__PREFIX = FLOW_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Starts With</em>' class.
@@ -1725,7 +4319,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STARTS_WITH_FEATURE_COUNT = DATA_FLOW_CONSTRAINT_FEATURE_COUNT + 1;
+	int STARTS_WITH_FEATURE_COUNT = FLOW_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Starts With</em>' class.
@@ -1734,7 +4328,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STARTS_WITH_OPERATION_COUNT = DATA_FLOW_CONSTRAINT_OPERATION_COUNT + 0;
+	int STARTS_WITH_OPERATION_COUNT = FLOW_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.MatchesImpl <em>Matches</em>}' class.
@@ -1744,7 +4338,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getMatches()
 	 * @generated
 	 */
-	int MATCHES = 26;
+	int MATCHES = 73;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1753,7 +4347,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MATCHES__NAME = DATA_FLOW_CONSTRAINT__NAME;
+	int MATCHES__NAME = FLOW_NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
@@ -1762,16 +4356,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MATCHES__EVIDENCE = DATA_FLOW_CONSTRAINT__EVIDENCE;
+	int MATCHES__EVIDENCE = FLOW_NODE__EVIDENCE;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MATCHES__REVIEWERS = DATA_FLOW_CONSTRAINT__REVIEWERS;
+	int MATCHES__EXAMINEES = FLOW_NODE__EXAMINEES;
 
 	/**
 	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
@@ -1780,7 +4374,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MATCHES__FLOW_FROM = DATA_FLOW_CONSTRAINT__FLOW_FROM;
+	int MATCHES__FLOW_FROM = FLOW_NODE__FLOW_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Flow Root</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MATCHES__FLOW_ROOT = FLOW_NODE__FLOW_ROOT;
 
 	/**
 	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
@@ -1789,7 +4392,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MATCHES__FLOW_TO = DATA_FLOW_CONSTRAINT__FLOW_TO;
+	int MATCHES__FLOW_TO = FLOW_NODE__FLOW_TO;
 
 	/**
 	 * The feature id for the '<em><b>Pattern</b></em>' attribute.
@@ -1798,7 +4401,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MATCHES__PATTERN = DATA_FLOW_CONSTRAINT_FEATURE_COUNT + 0;
+	int MATCHES__PATTERN = FLOW_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Regex Type</b></em>' attribute.
@@ -1807,7 +4410,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MATCHES__REGEX_TYPE = DATA_FLOW_CONSTRAINT_FEATURE_COUNT + 1;
+	int MATCHES__REGEX_TYPE = FLOW_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Matches</em>' class.
@@ -1816,7 +4419,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MATCHES_FEATURE_COUNT = DATA_FLOW_CONSTRAINT_FEATURE_COUNT + 2;
+	int MATCHES_FEATURE_COUNT = FLOW_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Matches</em>' class.
@@ -1825,7 +4428,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MATCHES_OPERATION_COUNT = DATA_FLOW_CONSTRAINT_OPERATION_COUNT + 0;
+	int MATCHES_OPERATION_COUNT = FLOW_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ContainsImpl <em>Contains</em>}' class.
@@ -1835,7 +4438,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getContains()
 	 * @generated
 	 */
-	int CONTAINS = 27;
+	int CONTAINS = 74;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1844,7 +4447,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS__NAME = DATA_FLOW_CONSTRAINT__NAME;
+	int CONTAINS__NAME = FLOW_NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
@@ -1853,16 +4456,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS__EVIDENCE = DATA_FLOW_CONSTRAINT__EVIDENCE;
+	int CONTAINS__EVIDENCE = FLOW_NODE__EVIDENCE;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS__REVIEWERS = DATA_FLOW_CONSTRAINT__REVIEWERS;
+	int CONTAINS__EXAMINEES = FLOW_NODE__EXAMINEES;
 
 	/**
 	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
@@ -1871,7 +4474,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS__FLOW_FROM = DATA_FLOW_CONSTRAINT__FLOW_FROM;
+	int CONTAINS__FLOW_FROM = FLOW_NODE__FLOW_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Flow Root</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINS__FLOW_ROOT = FLOW_NODE__FLOW_ROOT;
 
 	/**
 	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
@@ -1880,7 +4492,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS__FLOW_TO = DATA_FLOW_CONSTRAINT__FLOW_TO;
+	int CONTAINS__FLOW_TO = FLOW_NODE__FLOW_TO;
 
 	/**
 	 * The feature id for the '<em><b>Contents</b></em>' attribute.
@@ -1889,7 +4501,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS__CONTENTS = DATA_FLOW_CONSTRAINT_FEATURE_COUNT + 0;
+	int CONTAINS__CONTENTS = FLOW_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Contains</em>' class.
@@ -1898,7 +4510,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS_FEATURE_COUNT = DATA_FLOW_CONSTRAINT_FEATURE_COUNT + 1;
+	int CONTAINS_FEATURE_COUNT = FLOW_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Contains</em>' class.
@@ -1907,7 +4519,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINS_OPERATION_COUNT = DATA_FLOW_CONSTRAINT_OPERATION_COUNT + 0;
+	int CONTAINS_OPERATION_COUNT = FLOW_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.CastedToImpl <em>Casted To</em>}' class.
@@ -1917,7 +4529,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getCastedTo()
 	 * @generated
 	 */
-	int CASTED_TO = 28;
+	int CASTED_TO = 75;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1926,7 +4538,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CASTED_TO__NAME = DATA_FLOW_CONSTRAINT__NAME;
+	int CASTED_TO__NAME = FLOW_NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
@@ -1935,16 +4547,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CASTED_TO__EVIDENCE = DATA_FLOW_CONSTRAINT__EVIDENCE;
+	int CASTED_TO__EVIDENCE = FLOW_NODE__EVIDENCE;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CASTED_TO__REVIEWERS = DATA_FLOW_CONSTRAINT__REVIEWERS;
+	int CASTED_TO__EXAMINEES = FLOW_NODE__EXAMINEES;
 
 	/**
 	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
@@ -1953,7 +4565,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CASTED_TO__FLOW_FROM = DATA_FLOW_CONSTRAINT__FLOW_FROM;
+	int CASTED_TO__FLOW_FROM = FLOW_NODE__FLOW_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Flow Root</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASTED_TO__FLOW_ROOT = FLOW_NODE__FLOW_ROOT;
 
 	/**
 	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
@@ -1962,7 +4583,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CASTED_TO__FLOW_TO = DATA_FLOW_CONSTRAINT__FLOW_TO;
+	int CASTED_TO__FLOW_TO = FLOW_NODE__FLOW_TO;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1971,7 +4592,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CASTED_TO__TYPE = DATA_FLOW_CONSTRAINT_FEATURE_COUNT + 0;
+	int CASTED_TO__TYPE = FLOW_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Casted To</em>' class.
@@ -1980,7 +4601,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CASTED_TO_FEATURE_COUNT = DATA_FLOW_CONSTRAINT_FEATURE_COUNT + 1;
+	int CASTED_TO_FEATURE_COUNT = FLOW_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Casted To</em>' class.
@@ -1989,7 +4610,35 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CASTED_TO_OPERATION_COUNT = DATA_FLOW_CONSTRAINT_OPERATION_COUNT + 0;
+	int CASTED_TO_OPERATION_COUNT = FLOW_NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.ControlFlowType <em>Control Flow Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.ControlFlowType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlFlowType()
+	 * @generated
+	 */
+	int CONTROL_FLOW_TYPE = 76;
+
+	/**
+	 * The number of structural features of the '<em>Control Flow Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_FLOW_TYPE_FEATURE_COUNT = FLOW_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Control Flow Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_FLOW_TYPE_OPERATION_COUNT = FLOW_TYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ControlFlowImpl <em>Control Flow</em>}' class.
@@ -1999,7 +4648,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlFlow()
 	 * @generated
 	 */
-	int CONTROL_FLOW = 29;
+	int CONTROL_FLOW = 77;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2011,6 +4660,15 @@ public interface AssessmentPackage extends EPackage {
 	int CONTROL_FLOW__NAME = FLOW__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_FLOW__GROUP = FLOW__GROUP;
+
+	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2020,40 +4678,31 @@ public interface AssessmentPackage extends EPackage {
 	int CONTROL_FLOW__EVIDENCE = FLOW__EVIDENCE;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW__REVIEWERS = FLOW__REVIEWERS;
+	int CONTROL_FLOW__EXAMINEES = FLOW__EXAMINEES;
 
 	/**
-	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW__FLOW_FROM = FLOW__FLOW_FROM;
+	int CONTROL_FLOW__VALUE = FLOW__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Flows</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW__FLOW_TO = FLOW__FLOW_TO;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_FLOW__DESCRIPTION = FLOW_FEATURE_COUNT + 0;
+	int CONTROL_FLOW__FLOWS = FLOW__FLOWS;
 
 	/**
 	 * The number of structural features of the '<em>Control Flow</em>' class.
@@ -2062,7 +4711,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_FEATURE_COUNT = FLOW_FEATURE_COUNT + 1;
+	int CONTROL_FLOW_FEATURE_COUNT = FLOW_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Control Flow</em>' class.
@@ -2074,14 +4723,14 @@ public interface AssessmentPackage extends EPackage {
 	int CONTROL_FLOW_OPERATION_COUNT = FLOW_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ControlFlowSourceImpl <em>Control Flow Source</em>}' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ControlFlowNodeImpl <em>Control Flow Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.ControlFlowSourceImpl
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlFlowSource()
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.ControlFlowNodeImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlFlowNode()
 	 * @generated
 	 */
-	int CONTROL_FLOW_SOURCE = 30;
+	int CONTROL_FLOW_NODE = 78;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2090,7 +4739,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SOURCE__NAME = CONTROL_FLOW__NAME;
+	int CONTROL_FLOW_NODE__NAME = FLOW_NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
@@ -2099,16 +4748,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SOURCE__EVIDENCE = CONTROL_FLOW__EVIDENCE;
+	int CONTROL_FLOW_NODE__EVIDENCE = FLOW_NODE__EVIDENCE;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SOURCE__REVIEWERS = CONTROL_FLOW__REVIEWERS;
+	int CONTROL_FLOW_NODE__EXAMINEES = FLOW_NODE__EXAMINEES;
 
 	/**
 	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
@@ -2117,7 +4766,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SOURCE__FLOW_FROM = CONTROL_FLOW__FLOW_FROM;
+	int CONTROL_FLOW_NODE__FLOW_FROM = FLOW_NODE__FLOW_FROM;
+
+	/**
+	 * The feature id for the '<em><b>Flow Root</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_FLOW_NODE__FLOW_ROOT = FLOW_NODE__FLOW_ROOT;
 
 	/**
 	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
@@ -2126,53 +4784,35 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SOURCE__FLOW_TO = CONTROL_FLOW__FLOW_TO;
+	int CONTROL_FLOW_NODE__FLOW_TO = FLOW_NODE__FLOW_TO;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * The number of structural features of the '<em>Control Flow Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SOURCE__DESCRIPTION = CONTROL_FLOW__DESCRIPTION;
+	int CONTROL_FLOW_NODE_FEATURE_COUNT = FLOW_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Flow Group</b></em>' container reference.
+	 * The number of operations of the '<em>Control Flow Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SOURCE__FLOW_GROUP = CONTROL_FLOW_FEATURE_COUNT + 0;
+	int CONTROL_FLOW_NODE_OPERATION_COUNT = FLOW_NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Control Flow Source</em>' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ControlFlowGroupImpl <em>Control Flow Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_FLOW_SOURCE_FEATURE_COUNT = CONTROL_FLOW_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Control Flow Source</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_FLOW_SOURCE_OPERATION_COUNT = CONTROL_FLOW_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ControlFlowSinkImpl <em>Control Flow Sink</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.ControlFlowSinkImpl
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlFlowSink()
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.ControlFlowGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlFlowGroup()
 	 * @generated
 	 */
-	int CONTROL_FLOW_SINK = 31;
+	int CONTROL_FLOW_GROUP = 79;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2181,89 +4821,136 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SINK__NAME = CONTROL_FLOW__NAME;
+	int CONTROL_FLOW_GROUP__NAME = FLOW_GROUP__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Evidence</b></em>' reference list.
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SINK__EVIDENCE = CONTROL_FLOW__EVIDENCE;
+	int CONTROL_FLOW_GROUP__MEMBERS = FLOW_GROUP__MEMBERS;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference list.
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SINK__REVIEWERS = CONTROL_FLOW__REVIEWERS;
+	int CONTROL_FLOW_GROUP__GROUP = FLOW_GROUP__GROUP;
 
 	/**
-	 * The feature id for the '<em><b>Flow From</b></em>' container reference.
+	 * The number of structural features of the '<em>Control Flow Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SINK__FLOW_FROM = CONTROL_FLOW__FLOW_FROM;
+	int CONTROL_FLOW_GROUP_FEATURE_COUNT = FLOW_GROUP_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Flow To</b></em>' containment reference list.
+	 * The number of operations of the '<em>Control Flow Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SINK__FLOW_TO = CONTROL_FLOW__FLOW_TO;
+	int CONTROL_FLOW_GROUP_OPERATION_COUNT = FLOW_GROUP_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.AssessmentType <em>Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAssessmentType()
+	 * @generated
+	 */
+	int ASSESSMENT_TYPE = 80;
+
+	/**
+	 * The number of structural features of the '<em>Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SINK__DESCRIPTION = CONTROL_FLOW__DESCRIPTION;
+	int ASSESSMENT_TYPE_FEATURE_COUNT = GROUPABLE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Control Flow Sink</em>' class.
+	 * The number of operations of the '<em>Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SINK_FEATURE_COUNT = CONTROL_FLOW_FEATURE_COUNT + 0;
+	int ASSESSMENT_TYPE_OPERATION_COUNT = GROUPABLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Control Flow Sink</em>' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Assessable <em>Assessable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.Assessable
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAssessable()
+	 * @generated
+	 */
+	int ASSESSABLE = 81;
+
+	/**
+	 * The number of structural features of the '<em>Assessable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_FLOW_SINK_OPERATION_COUNT = CONTROL_FLOW_OPERATION_COUNT + 0;
+	int ASSESSABLE_FEATURE_COUNT = MEMBERED_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.AssessmentImpl <em>Assessment</em>}' class.
+	 * The number of operations of the '<em>Assessable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentImpl
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSABLE_OPERATION_COUNT = MEMBERED_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Assessment <em>Assessment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.Assessment
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAssessment()
 	 * @generated
 	 */
-	int ASSESSMENT = 32;
+	int ASSESSMENT = 82;
 
 	/**
-	 * The feature id for the '<em><b>Application Groups</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__APPLICATION_GROUPS = 0;
+	int ASSESSMENT__NAME = MEMBERED_GROUPABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT__GROUP = MEMBERED_GROUPABLE__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT__MEMBERS = MEMBERED_GROUPABLE__MEMBERS;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -2272,7 +4959,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__PROPERTIES = 1;
+	int ASSESSMENT__PROPERTIES = MEMBERED_GROUPABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Assessment</em>' class.
@@ -2281,7 +4968,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_FEATURE_COUNT = 2;
+	int ASSESSMENT_FEATURE_COUNT = MEMBERED_GROUPABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Assessment</em>' class.
@@ -2290,7 +4977,191 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_OPERATION_COUNT = 0;
+	int ASSESSMENT_OPERATION_COUNT = MEMBERED_GROUPABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.AssessmentGroup <em>Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentGroup
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAssessmentGroup()
+	 * @generated
+	 */
+	int ASSESSMENT_GROUP = 83;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT_GROUP__NAME = GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT_GROUP__MEMBERS = GROUP__MEMBERS;
+
+	/**
+	 * The number of structural features of the '<em>Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT_GROUP_FEATURE_COUNT = GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT_GROUP_OPERATION_COUNT = GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.ApplicationAssessmentType <em>Application Assessment Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationAssessmentType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplicationAssessmentType()
+	 * @generated
+	 */
+	int APPLICATION_ASSESSMENT_TYPE = 84;
+
+	/**
+	 * The number of structural features of the '<em>Application Assessment Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_ASSESSMENT_TYPE_FEATURE_COUNT = ASSESSMENT_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Application Assessment Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_ASSESSMENT_TYPE_OPERATION_COUNT = ASSESSMENT_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ApplicationAssessmentImpl <em>Application Assessment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.ApplicationAssessmentImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplicationAssessment()
+	 * @generated
+	 */
+	int APPLICATION_ASSESSMENT = 85;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_ASSESSMENT__NAME = ASSESSMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_ASSESSMENT__GROUP = ASSESSMENT__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_ASSESSMENT__MEMBERS = ASSESSMENT__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_ASSESSMENT__PROPERTIES = ASSESSMENT__PROPERTIES;
+
+	/**
+	 * The number of structural features of the '<em>Application Assessment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_ASSESSMENT_FEATURE_COUNT = ASSESSMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Application Assessment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_ASSESSMENT_OPERATION_COUNT = ASSESSMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ApplicationAssessmentGroupImpl <em>Application Assessment Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.ApplicationAssessmentGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplicationAssessmentGroup()
+	 * @generated
+	 */
+	int APPLICATION_ASSESSMENT_GROUP = 86;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_ASSESSMENT_GROUP__NAME = ASSESSMENT_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_ASSESSMENT_GROUP__MEMBERS = ASSESSMENT_GROUP__MEMBERS;
+
+	/**
+	 * The number of structural features of the '<em>Application Assessment Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_ASSESSMENT_GROUP_FEATURE_COUNT = ASSESSMENT_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Application Assessment Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_ASSESSMENT_GROUP_OPERATION_COUNT = ASSESSMENT_GROUP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.PropertyImpl <em>Property</em>}' class.
@@ -2300,7 +5171,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getProperty()
 	 * @generated
 	 */
-	int PROPERTY = 33;
+	int PROPERTY = 87;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -2339,69 +5210,70 @@ public interface AssessmentPackage extends EPackage {
 	int PROPERTY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ApplicationGroupImpl <em>Application Group</em>}' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.ApplicationType <em>Application Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.ApplicationGroupImpl
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplicationGroup()
+	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplicationType()
 	 * @generated
 	 */
-	int APPLICATION_GROUP = 34;
+	int APPLICATION_TYPE = 88;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION_GROUP__NAME = NAMEABLE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Applications</b></em>' containment reference list.
+	 * The number of structural features of the '<em>Application Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_GROUP__APPLICATIONS = NAMEABLE_FEATURE_COUNT + 0;
+	int APPLICATION_TYPE_FEATURE_COUNT = GROUPABLE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Assessment</b></em>' container reference.
+	 * The number of operations of the '<em>Application Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_GROUP__ASSESSMENT = NAMEABLE_FEATURE_COUNT + 1;
+	int APPLICATION_TYPE_OPERATION_COUNT = GROUPABLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Application Group</em>' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Applicational <em>Applicational</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.Applicational
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplicational()
+	 * @generated
+	 */
+	int APPLICATIONAL = 89;
+
+	/**
+	 * The number of structural features of the '<em>Applicational</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_GROUP_FEATURE_COUNT = NAMEABLE_FEATURE_COUNT + 2;
+	int APPLICATIONAL_FEATURE_COUNT = MEMBERED_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Application Group</em>' class.
+	 * The number of operations of the '<em>Applicational</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_GROUP_OPERATION_COUNT = NAMEABLE_OPERATION_COUNT + 0;
+	int APPLICATIONAL_OPERATION_COUNT = MEMBERED_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ApplicationImpl <em>Application</em>}' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Application <em>Application</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.ApplicationImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.Application
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplication()
 	 * @generated
 	 */
-	int APPLICATION = 35;
+	int APPLICATION = 90;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2410,43 +5282,25 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__NAME = NAMEABLE__NAME;
+	int APPLICATION__NAME = MEMBERED_GROUPABLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Application Group</b></em>' container reference.
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__APPLICATION_GROUP = NAMEABLE_FEATURE_COUNT + 0;
+	int APPLICATION__GROUP = MEMBERED_GROUPABLE__GROUP;
 
 	/**
-	 * The feature id for the '<em><b>Flow Groups</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__FLOW_GROUPS = NAMEABLE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Control Groups</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__CONTROL_GROUPS = NAMEABLE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Data Groups</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__DATA_GROUPS = NAMEABLE_FEATURE_COUNT + 3;
+	int APPLICATION__MEMBERS = MEMBERED_GROUPABLE__MEMBERS;
 
 	/**
 	 * The number of structural features of the '<em>Application</em>' class.
@@ -2455,7 +5309,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_FEATURE_COUNT = NAMEABLE_FEATURE_COUNT + 4;
+	int APPLICATION_FEATURE_COUNT = MEMBERED_GROUPABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Application</em>' class.
@@ -2464,17 +5318,17 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_OPERATION_COUNT = NAMEABLE_OPERATION_COUNT + 0;
+	int APPLICATION_OPERATION_COUNT = MEMBERED_GROUPABLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.SearchGroupImpl <em>Search Group</em>}' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.ApplicationGroup <em>Application Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.SearchGroupImpl
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSearchGroup()
+	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationGroup
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplicationGroup()
 	 * @generated
 	 */
-	int SEARCH_GROUP = 36;
+	int APPLICATION_GROUP = 91;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2483,25 +5337,273 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_GROUP__NAME = NAMEABLE__NAME;
+	int APPLICATION_GROUP__NAME = GROUPABLE_MEMBERED__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Searches</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_GROUP__SEARCHES = NAMEABLE_FEATURE_COUNT + 0;
+	int APPLICATION_GROUP__MEMBERS = GROUPABLE_MEMBERED__MEMBERS;
 
 	/**
-	 * The feature id for the '<em><b>Search Result Description</b></em>' attribute.
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_GROUP__SEARCH_RESULT_DESCRIPTION = NAMEABLE_FEATURE_COUNT + 1;
+	int APPLICATION_GROUP__GROUP = GROUPABLE_MEMBERED__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Application Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_GROUP_FEATURE_COUNT = GROUPABLE_MEMBERED_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Application Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_GROUP_OPERATION_COUNT = GROUPABLE_MEMBERED_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.WebApplicationType <em>Web Application Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.WebApplicationType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getWebApplicationType()
+	 * @generated
+	 */
+	int WEB_APPLICATION_TYPE = 92;
+
+	/**
+	 * The number of structural features of the '<em>Web Application Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APPLICATION_TYPE_FEATURE_COUNT = APPLICATION_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Web Application Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APPLICATION_TYPE_OPERATION_COUNT = APPLICATION_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.WebApplicationImpl <em>Web Application</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.WebApplicationImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getWebApplication()
+	 * @generated
+	 */
+	int WEB_APPLICATION = 93;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APPLICATION__NAME = APPLICATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APPLICATION__GROUP = APPLICATION__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APPLICATION__MEMBERS = APPLICATION__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Internal URL</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APPLICATION__INTERNAL_URL = APPLICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>External URL</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APPLICATION__EXTERNAL_URL = APPLICATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Web Application</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APPLICATION_FEATURE_COUNT = APPLICATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Web Application</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APPLICATION_OPERATION_COUNT = APPLICATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.WebApplicationGroupImpl <em>Web Application Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.WebApplicationGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getWebApplicationGroup()
+	 * @generated
+	 */
+	int WEB_APPLICATION_GROUP = 94;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APPLICATION_GROUP__NAME = APPLICATION_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APPLICATION_GROUP__MEMBERS = APPLICATION_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APPLICATION_GROUP__GROUP = APPLICATION_GROUP__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Web Application Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APPLICATION_GROUP_FEATURE_COUNT = APPLICATION_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Web Application Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APPLICATION_GROUP_OPERATION_COUNT = APPLICATION_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.SearchType <em>Search Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.SearchType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSearchType()
+	 * @generated
+	 */
+	int SEARCH_TYPE = 95;
+
+	/**
+	 * The number of structural features of the '<em>Search Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_TYPE_FEATURE_COUNT = GROUPABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Search Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_TYPE_OPERATION_COUNT = GROUPABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.SearchGroup <em>Search Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.SearchGroup
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSearchGroup()
+	 * @generated
+	 */
+	int SEARCH_GROUP = 96;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_GROUP__NAME = GROUPABLE_MEMBERED__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_GROUP__MEMBERS = GROUPABLE_MEMBERED__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_GROUP__GROUP = GROUPABLE_MEMBERED__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEARCH_GROUP__DESCRIPTION = GROUPABLE_MEMBERED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Search Result CW Es</b></em>' reference list.
@@ -2510,7 +5612,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_GROUP__SEARCH_RESULT_CW_ES = NAMEABLE_FEATURE_COUNT + 2;
+	int SEARCH_GROUP__SEARCH_RESULT_CW_ES = GROUPABLE_MEMBERED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Search Group</em>' class.
@@ -2519,7 +5621,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_GROUP_FEATURE_COUNT = NAMEABLE_FEATURE_COUNT + 3;
+	int SEARCH_GROUP_FEATURE_COUNT = GROUPABLE_MEMBERED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Search Group</em>' class.
@@ -2528,17 +5630,17 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_GROUP_OPERATION_COUNT = NAMEABLE_OPERATION_COUNT + 0;
+	int SEARCH_GROUP_OPERATION_COUNT = GROUPABLE_MEMBERED_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.SearchImpl <em>Search</em>}' class.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Search <em>Search</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.SearchImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.Search
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSearch()
 	 * @generated
 	 */
-	int SEARCH = 37;
+	int SEARCH = 97;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2547,25 +5649,25 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH__NAME = SEARCHABLE__NAME;
+	int SEARCH__NAME = MEMBER__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Reviewers</b></em>' reference.
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH__REVIEWERS = SEARCHABLE__REVIEWERS;
+	int SEARCH__GROUP = MEMBER__GROUP;
 
 	/**
-	 * The feature id for the '<em><b>Search Group</b></em>' container reference.
+	 * The feature id for the '<em><b>Examinees</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH__SEARCH_GROUP = SEARCHABLE_FEATURE_COUNT + 0;
+	int SEARCH__EXAMINEES = MEMBER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Pattern</b></em>' containment reference.
@@ -2574,7 +5676,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH__PATTERN = SEARCHABLE_FEATURE_COUNT + 1;
+	int SEARCH__PATTERN = MEMBER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Search</em>' class.
@@ -2583,7 +5685,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_FEATURE_COUNT = SEARCHABLE_FEATURE_COUNT + 2;
+	int SEARCH_FEATURE_COUNT = MEMBER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Search</em>' class.
@@ -2592,7 +5694,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEARCH_OPERATION_COUNT = SEARCHABLE_OPERATION_COUNT + 0;
+	int SEARCH_OPERATION_COUNT = MEMBER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.SearchPattern <em>Search Pattern</em>}' class.
@@ -2602,7 +5704,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSearchPattern()
 	 * @generated
 	 */
-	int SEARCH_PATTERN = 38;
+	int SEARCH_PATTERN = 98;
 
 	/**
 	 * The feature id for the '<em><b>Pattern</b></em>' attribute.
@@ -2632,6 +5734,171 @@ public interface AssessmentPackage extends EPackage {
 	int SEARCH_PATTERN_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.JavaSearchType <em>Java Search Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.JavaSearchType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getJavaSearchType()
+	 * @generated
+	 */
+	int JAVA_SEARCH_TYPE = 99;
+
+	/**
+	 * The number of structural features of the '<em>Java Search Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH_TYPE_FEATURE_COUNT = SEARCH_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Java Search Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH_TYPE_OPERATION_COUNT = SEARCH_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.JavaSearchImpl <em>Java Search</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.JavaSearchImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getJavaSearch()
+	 * @generated
+	 */
+	int JAVA_SEARCH = 100;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH__NAME = SEARCH__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH__GROUP = SEARCH__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Examinees</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH__EXAMINEES = SEARCH__EXAMINEES;
+
+	/**
+	 * The feature id for the '<em><b>Pattern</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH__PATTERN = SEARCH__PATTERN;
+
+	/**
+	 * The number of structural features of the '<em>Java Search</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH_FEATURE_COUNT = SEARCH_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Java Search</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH_OPERATION_COUNT = SEARCH_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.JavaSearchGroupImpl <em>Java Search Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.JavaSearchGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getJavaSearchGroup()
+	 * @generated
+	 */
+	int JAVA_SEARCH_GROUP = 101;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH_GROUP__NAME = SEARCH_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH_GROUP__MEMBERS = SEARCH_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH_GROUP__GROUP = SEARCH_GROUP__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH_GROUP__DESCRIPTION = SEARCH_GROUP__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Search Result CW Es</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH_GROUP__SEARCH_RESULT_CW_ES = SEARCH_GROUP__SEARCH_RESULT_CW_ES;
+
+	/**
+	 * The number of structural features of the '<em>Java Search Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH_GROUP_FEATURE_COUNT = SEARCH_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Java Search Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAVA_SEARCH_GROUP_OPERATION_COUNT = SEARCH_GROUP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.JavaSearchPatternImpl <em>Java Search Pattern</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2639,7 +5906,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getJavaSearchPattern()
 	 * @generated
 	 */
-	int JAVA_SEARCH_PATTERN = 39;
+	int JAVA_SEARCH_PATTERN = 102;
 
 	/**
 	 * The feature id for the '<em><b>Pattern</b></em>' attribute.
@@ -2714,14 +5981,692 @@ public interface AssessmentPackage extends EPackage {
 	int JAVA_SEARCH_PATTERN_OPERATION_COUNT = SEARCH_PATTERN_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.DataSourceType <em>Data Source Type</em>}' enum.
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.TaskType <em>Task Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see us.coastalhacking.semiotics.model.assessment.DataSourceType
-	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataSourceType()
+	 * @see us.coastalhacking.semiotics.model.assessment.TaskType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTaskType()
 	 * @generated
 	 */
-	int DATA_SOURCE_TYPE = 40;
+	int TASK_TYPE = 103;
+
+	/**
+	 * The number of structural features of the '<em>Task Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPE_FEATURE_COUNT = GROUPABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Task Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPE_OPERATION_COUNT = GROUPABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.TaskGroup <em>Task Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.TaskGroup
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTaskGroup()
+	 * @generated
+	 */
+	int TASK_GROUP = 104;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_GROUP__NAME = GROUPABLE_MEMBERED__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_GROUP__MEMBERS = GROUPABLE_MEMBERED__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_GROUP__GROUP = GROUPABLE_MEMBERED__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Task Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_GROUP_FEATURE_COUNT = GROUPABLE_MEMBERED_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Task Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_GROUP_OPERATION_COUNT = GROUPABLE_MEMBERED_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Task <em>Task</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.Task
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTask()
+	 * @generated
+	 */
+	int TASK = 105;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__NAME = MEMBER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__GROUP = MEMBER__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__EXAMINEES = MEMBER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__DESCRIPTION = MEMBER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Task Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__TASK_STATUS = MEMBER_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FEATURE_COUNT = MEMBER_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_OPERATION_COUNT = MEMBER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.LocalTaskType <em>Local Task Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.LocalTaskType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getLocalTaskType()
+	 * @generated
+	 */
+	int LOCAL_TASK_TYPE = 106;
+
+	/**
+	 * The number of structural features of the '<em>Local Task Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_TASK_TYPE_FEATURE_COUNT = TASK_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Local Task Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_TASK_TYPE_OPERATION_COUNT = TASK_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.LocalTaskGroupImpl <em>Local Task Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.LocalTaskGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getLocalTaskGroup()
+	 * @generated
+	 */
+	int LOCAL_TASK_GROUP = 107;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_TASK_GROUP__NAME = TASK_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_TASK_GROUP__MEMBERS = TASK_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_TASK_GROUP__GROUP = TASK_GROUP__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Local Task Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_TASK_GROUP_FEATURE_COUNT = TASK_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Local Task Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_TASK_GROUP_OPERATION_COUNT = TASK_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.LocalTaskImpl <em>Local Task</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.LocalTaskImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getLocalTask()
+	 * @generated
+	 */
+	int LOCAL_TASK = 108;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_TASK__NAME = TASK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_TASK__GROUP = TASK__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_TASK__EXAMINEES = TASK__EXAMINEES;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_TASK__DESCRIPTION = TASK__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Task Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_TASK__TASK_STATUS = TASK__TASK_STATUS;
+
+	/**
+	 * The number of structural features of the '<em>Local Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_TASK_FEATURE_COUNT = TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Local Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_TASK_OPERATION_COUNT = TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.FindingType <em>Finding Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.FindingType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFindingType()
+	 * @generated
+	 */
+	int FINDING_TYPE = 109;
+
+	/**
+	 * The number of structural features of the '<em>Finding Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING_TYPE_FEATURE_COUNT = GROUPABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Finding Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING_TYPE_OPERATION_COUNT = GROUPABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.FindingGroup <em>Finding Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.FindingGroup
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFindingGroup()
+	 * @generated
+	 */
+	int FINDING_GROUP = 110;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING_GROUP__NAME = GROUPABLE_MEMBERED__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING_GROUP__MEMBERS = GROUPABLE_MEMBERED__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING_GROUP__GROUP = GROUPABLE_MEMBERED__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Finding Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING_GROUP_FEATURE_COUNT = GROUPABLE_MEMBERED_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Finding Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING_GROUP_OPERATION_COUNT = GROUPABLE_MEMBERED_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.Finding <em>Finding</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.Finding
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFinding()
+	 * @generated
+	 */
+	int FINDING = 111;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING__NAME = MEMBER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING__GROUP = MEMBER__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING__EXAMINEES = MEMBER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING__DESCRIPTION = MEMBER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Details</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING__DETAILS = MEMBER_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Remediation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING__REMEDIATION = MEMBER_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Reproducer</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING__REPRODUCER = MEMBER_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>References</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING__REFERENCES = MEMBER_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>Finding</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING_FEATURE_COUNT = MEMBER_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>Finding</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING_OPERATION_COUNT = MEMBER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.LocalFindingType <em>Local Finding Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.LocalFindingType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getLocalFindingType()
+	 * @generated
+	 */
+	int LOCAL_FINDING_TYPE = 112;
+
+	/**
+	 * The number of structural features of the '<em>Local Finding Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING_TYPE_FEATURE_COUNT = FINDING_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Local Finding Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING_TYPE_OPERATION_COUNT = FINDING_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.LocalFindingGroupImpl <em>Local Finding Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.LocalFindingGroupImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getLocalFindingGroup()
+	 * @generated
+	 */
+	int LOCAL_FINDING_GROUP = 113;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING_GROUP__NAME = FINDING_GROUP__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING_GROUP__MEMBERS = FINDING_GROUP__MEMBERS;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING_GROUP__GROUP = FINDING_GROUP__GROUP;
+
+	/**
+	 * The number of structural features of the '<em>Local Finding Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING_GROUP_FEATURE_COUNT = FINDING_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Local Finding Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING_GROUP_OPERATION_COUNT = FINDING_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.impl.LocalFindingImpl <em>Local Finding</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.LocalFindingImpl
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getLocalFinding()
+	 * @generated
+	 */
+	int LOCAL_FINDING = 114;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING__NAME = FINDING__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING__GROUP = FINDING__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Examinees</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING__EXAMINEES = FINDING__EXAMINEES;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING__DESCRIPTION = FINDING__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Details</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING__DETAILS = FINDING__DETAILS;
+
+	/**
+	 * The feature id for the '<em><b>Remediation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING__REMEDIATION = FINDING__REMEDIATION;
+
+	/**
+	 * The feature id for the '<em><b>Reproducer</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING__REPRODUCER = FINDING__REPRODUCER;
+
+	/**
+	 * The feature id for the '<em><b>References</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING__REFERENCES = FINDING__REFERENCES;
+
+	/**
+	 * The number of structural features of the '<em>Local Finding</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING_FEATURE_COUNT = FINDING_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Local Finding</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCAL_FINDING_OPERATION_COUNT = FINDING_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.DataTaintType <em>Data Taint Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.DataTaintType
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataTaintType()
+	 * @generated
+	 */
+	int DATA_TAINT_TYPE = 115;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.MatcherRegex <em>Matcher Regex</em>}' enum.
@@ -2731,7 +6676,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getMatcherRegex()
 	 * @generated
 	 */
-	int MATCHER_REGEX = 41;
+	int MATCHER_REGEX = 116;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.JavaSearchPatternType <em>Java Search Pattern Type</em>}' enum.
@@ -2741,7 +6686,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getJavaSearchPatternType()
 	 * @generated
 	 */
-	int JAVA_SEARCH_PATTERN_TYPE = 42;
+	int JAVA_SEARCH_PATTERN_TYPE = 117;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.JavaSearchFor <em>Java Search For</em>}' enum.
@@ -2751,7 +6696,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getJavaSearchFor()
 	 * @generated
 	 */
-	int JAVA_SEARCH_FOR = 43;
+	int JAVA_SEARCH_FOR = 118;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.JavaLimitTo <em>Java Limit To</em>}' enum.
@@ -2761,7 +6706,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getJavaLimitTo()
 	 * @generated
 	 */
-	int JAVA_LIMIT_TO = 44;
+	int JAVA_LIMIT_TO = 119;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.JavaMatchRule <em>Java Match Rule</em>}' enum.
@@ -2771,7 +6716,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getJavaMatchRule()
 	 * @generated
 	 */
-	int JAVA_MATCH_RULE = 45;
+	int JAVA_MATCH_RULE = 120;
 
 	/**
 	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.JavaMatchCaseSensitivity <em>Java Match Case Sensitivity</em>}' enum.
@@ -2781,7 +6726,17 @@ public interface AssessmentPackage extends EPackage {
 	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getJavaMatchCaseSensitivity()
 	 * @generated
 	 */
-	int JAVA_MATCH_CASE_SENSITIVITY = 46;
+	int JAVA_MATCH_CASE_SENSITIVITY = 121;
+
+	/**
+	 * The meta object id for the '{@link us.coastalhacking.semiotics.model.assessment.TaskStatus <em>Task Status</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see us.coastalhacking.semiotics.model.assessment.TaskStatus
+	 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTaskStatus()
+	 * @generated
+	 */
+	int TASK_STATUS = 122;
 
 
 	/**
@@ -2806,47 +6761,90 @@ public interface AssessmentPackage extends EPackage {
 	EAttribute getNameable_Name();
 
 	/**
-	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Reviewable <em>Reviewable</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Describable <em>Describable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Reviewable</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Reviewable
+	 * @return the meta object for class '<em>Describable</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Describable
 	 * @generated
 	 */
-	EClass getReviewable();
+	EClass getDescribable();
 
 	/**
-	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Reviewable#getEvidence <em>Evidence</em>}'.
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.Describable#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Describable#getDescription()
+	 * @see #getDescribable()
+	 * @generated
+	 */
+	EAttribute getDescribable_Description();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Examinable <em>Examinable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Examinable</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Examinable
+	 * @generated
+	 */
+	EClass getExaminable();
+
+	/**
+	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Examinable#getEvidence <em>Evidence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Evidence</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Reviewable#getEvidence()
-	 * @see #getReviewable()
+	 * @see us.coastalhacking.semiotics.model.assessment.Examinable#getEvidence()
+	 * @see #getExaminable()
 	 * @generated
 	 */
-	EReference getReviewable_Evidence();
+	EReference getExaminable_Evidence();
 
 	/**
-	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Reviewable#getTraces <em>Traces</em>}'.
+	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Examinable#getTraces <em>Traces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Traces</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Reviewable#getTraces()
-	 * @see #getReviewable()
+	 * @see us.coastalhacking.semiotics.model.assessment.Examinable#getTraces()
+	 * @see #getExaminable()
 	 * @generated
 	 */
-	EReference getReviewable_Traces();
+	EReference getExaminable_Traces();
 
 	/**
-	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Reviewable#getSearches <em>Searches</em>}'.
+	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Examinable#getSearches <em>Searches</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Searches</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Reviewable#getSearches()
-	 * @see #getReviewable()
+	 * @see us.coastalhacking.semiotics.model.assessment.Examinable#getSearches()
+	 * @see #getExaminable()
 	 * @generated
 	 */
-	EReference getReviewable_Searches();
+	EReference getExaminable_Searches();
+
+	/**
+	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Examinable#getTasks <em>Tasks</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Tasks</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Examinable#getTasks()
+	 * @see #getExaminable()
+	 * @generated
+	 */
+	EReference getExaminable_Tasks();
+
+	/**
+	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Examinable#getFindings <em>Findings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Findings</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Examinable#getFindings()
+	 * @see #getExaminable()
+	 * @generated
+	 */
+	EReference getExaminable_Findings();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Provable <em>Provable</em>}'.
@@ -2859,15 +6857,15 @@ public interface AssessmentPackage extends EPackage {
 	EClass getProvable();
 
 	/**
-	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Provable#getReviewers <em>Reviewers</em>}'.
+	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Provable#getExaminees <em>Examinees</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Reviewers</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Provable#getReviewers()
+	 * @return the meta object for the reference list '<em>Examinees</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Provable#getExaminees()
 	 * @see #getProvable()
 	 * @generated
 	 */
-	EReference getProvable_Reviewers();
+	EReference getProvable_Examinees();
 
 	/**
 	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Provable#getTraces <em>Traces</em>}'.
@@ -2902,15 +6900,15 @@ public interface AssessmentPackage extends EPackage {
 	EReference getTraceable_Evidence();
 
 	/**
-	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Traceable#getReviewers <em>Reviewers</em>}'.
+	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Traceable#getExaminees <em>Examinees</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Reviewers</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Traceable#getReviewers()
+	 * @return the meta object for the reference list '<em>Examinees</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Traceable#getExaminees()
 	 * @see #getTraceable()
 	 * @generated
 	 */
-	EReference getTraceable_Reviewers();
+	EReference getTraceable_Examinees();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Searchable <em>Searchable</em>}'.
@@ -2923,15 +6921,149 @@ public interface AssessmentPackage extends EPackage {
 	EClass getSearchable();
 
 	/**
-	 * Returns the meta object for the reference '{@link us.coastalhacking.semiotics.model.assessment.Searchable#getReviewers <em>Reviewers</em>}'.
+	 * Returns the meta object for the reference '{@link us.coastalhacking.semiotics.model.assessment.Searchable#getExaminees <em>Examinees</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Reviewers</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Searchable#getReviewers()
+	 * @return the meta object for the reference '<em>Examinees</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Searchable#getExaminees()
 	 * @see #getSearchable()
 	 * @generated
 	 */
-	EReference getSearchable_Reviewers();
+	EReference getSearchable_Examinees();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Taskable <em>Taskable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Taskable</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Taskable
+	 * @generated
+	 */
+	EClass getTaskable();
+
+	/**
+	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Taskable#getExaminees <em>Examinees</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Examinees</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Taskable#getExaminees()
+	 * @see #getTaskable()
+	 * @generated
+	 */
+	EReference getTaskable_Examinees();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Findable <em>Findable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Findable</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Findable
+	 * @generated
+	 */
+	EClass getFindable();
+
+	/**
+	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Findable#getExaminees <em>Examinees</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Examinees</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Findable#getExaminees()
+	 * @see #getFindable()
+	 * @generated
+	 */
+	EReference getFindable_Examinees();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Groupable <em>Groupable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Groupable</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Groupable
+	 * @generated
+	 */
+	EClass getGroupable();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Membered <em>Membered</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Membered</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Membered
+	 * @generated
+	 */
+	EClass getMembered();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Group <em>Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Group
+	 * @generated
+	 */
+	EClass getGroup();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link us.coastalhacking.semiotics.model.assessment.Group#getMembers <em>Members</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Members</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Group#getMembers()
+	 * @see #getGroup()
+	 * @generated
+	 */
+	EReference getGroup_Members();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Member <em>Member</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Member</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Member
+	 * @generated
+	 */
+	EClass getMember();
+
+	/**
+	 * Returns the meta object for the container reference '{@link us.coastalhacking.semiotics.model.assessment.Member#getGroup <em>Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Member#getGroup()
+	 * @see #getMember()
+	 * @generated
+	 */
+	EReference getMember_Group();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.GroupableMembered <em>Groupable Membered</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Groupable Membered</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.GroupableMembered
+	 * @generated
+	 */
+	EClass getGroupableMembered();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.MemberedGroupable <em>Membered Groupable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Membered Groupable</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.MemberedGroupable
+	 * @generated
+	 */
+	EClass getMemberedGroupable();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ControlType <em>Control Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Control Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.ControlType
+	 * @generated
+	 */
+	EClass getControlType();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ControlGroup <em>Control Group</em>}'.
@@ -2944,17 +7076,6 @@ public interface AssessmentPackage extends EPackage {
 	EClass getControlGroup();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link us.coastalhacking.semiotics.model.assessment.ControlGroup#getControls <em>Controls</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Controls</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.ControlGroup#getControls()
-	 * @see #getControlGroup()
-	 * @generated
-	 */
-	EReference getControlGroup_Controls();
-
-	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Control <em>Control</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2963,17 +7084,6 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getControl();
-
-	/**
-	 * Returns the meta object for the container reference '{@link us.coastalhacking.semiotics.model.assessment.Control#getControlGroup <em>Control Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Control Group</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Control#getControlGroup()
-	 * @see #getControl()
-	 * @generated
-	 */
-	EReference getControl_ControlGroup();
 
 	/**
 	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.Control#getCwes <em>Cwes</em>}'.
@@ -3073,6 +7183,308 @@ public interface AssessmentPackage extends EPackage {
 	EReference getCWE_Controls();
 
 	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.AuthenticationControlType <em>Authentication Control Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Authentication Control Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.AuthenticationControlType
+	 * @generated
+	 */
+	EClass getAuthenticationControlType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.AuthenticationGroup <em>Authentication Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Authentication Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.AuthenticationGroup
+	 * @generated
+	 */
+	EClass getAuthenticationGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Authentication <em>Authentication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Authentication</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Authentication
+	 * @generated
+	 */
+	EClass getAuthentication();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.AuthorizationControlType <em>Authorization Control Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Authorization Control Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.AuthorizationControlType
+	 * @generated
+	 */
+	EClass getAuthorizationControlType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.AuthorizationGroup <em>Authorization Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Authorization Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.AuthorizationGroup
+	 * @generated
+	 */
+	EClass getAuthorizationGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Authorization <em>Authorization</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Authorization</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Authorization
+	 * @generated
+	 */
+	EClass getAuthorization();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.AccountControlType <em>Account Control Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Account Control Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.AccountControlType
+	 * @generated
+	 */
+	EClass getAccountControlType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.AccountGroup <em>Account Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Account Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.AccountGroup
+	 * @generated
+	 */
+	EClass getAccountGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Account <em>Account</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Account</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Account
+	 * @generated
+	 */
+	EClass getAccount();
+
+	/**
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.Account#getUsername <em>Username</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Username</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Account#getUsername()
+	 * @see #getAccount()
+	 * @generated
+	 */
+	EAttribute getAccount_Username();
+
+	/**
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.Account#getPassword <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Password</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Account#getPassword()
+	 * @see #getAccount()
+	 * @generated
+	 */
+	EAttribute getAccount_Password();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.CryptographyControlType <em>Cryptography Control Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cryptography Control Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.CryptographyControlType
+	 * @generated
+	 */
+	EClass getCryptographyControlType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.CryptographyGroup <em>Cryptography Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cryptography Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.CryptographyGroup
+	 * @generated
+	 */
+	EClass getCryptographyGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Cryptography <em>Cryptography</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cryptography</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Cryptography
+	 * @generated
+	 */
+	EClass getCryptography();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.OutputEncodingControlType <em>Output Encoding Control Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Output Encoding Control Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.OutputEncodingControlType
+	 * @generated
+	 */
+	EClass getOutputEncodingControlType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.OutputEncodingGroup <em>Output Encoding Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Output Encoding Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.OutputEncodingGroup
+	 * @generated
+	 */
+	EClass getOutputEncodingGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.OutputEncoding <em>Output Encoding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Output Encoding</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.OutputEncoding
+	 * @generated
+	 */
+	EClass getOutputEncoding();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.GenericControlType <em>Generic Control Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Generic Control Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.GenericControlType
+	 * @generated
+	 */
+	EClass getGenericControlType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.GenericControl <em>Generic Control</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Generic Control</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.GenericControl
+	 * @generated
+	 */
+	EClass getGenericControl();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.GenericControlGroup <em>Generic Control Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Generic Control Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.GenericControlGroup
+	 * @generated
+	 */
+	EClass getGenericControlGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.SurfaceAreaType <em>Surface Area Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Surface Area Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.SurfaceAreaType
+	 * @generated
+	 */
+	EClass getSurfaceAreaType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.SurfaceAreaGroup <em>Surface Area Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Surface Area Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.SurfaceAreaGroup
+	 * @generated
+	 */
+	EClass getSurfaceAreaGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.SurfaceArea <em>Surface Area</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Surface Area</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.SurfaceArea
+	 * @generated
+	 */
+	EClass getSurfaceArea();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.NetworkIngressType <em>Network Ingress Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Network Ingress Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.NetworkIngressType
+	 * @generated
+	 */
+	EClass getNetworkIngressType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.NetworkIngress <em>Network Ingress</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Network Ingress</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.NetworkIngress
+	 * @generated
+	 */
+	EClass getNetworkIngress();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.NetworkIngressGroup <em>Network Ingress Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Network Ingress Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.NetworkIngressGroup
+	 * @generated
+	 */
+	EClass getNetworkIngressGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.NetworkEgressType <em>Network Egress Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Network Egress Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.NetworkEgressType
+	 * @generated
+	 */
+	EClass getNetworkEgressType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.NetworkEgress <em>Network Egress</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Network Egress</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.NetworkEgress
+	 * @generated
+	 */
+	EClass getNetworkEgress();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.NetworkEgressGroup <em>Network Egress Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Network Egress Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.NetworkEgressGroup
+	 * @generated
+	 */
+	EClass getNetworkEgressGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.DataType <em>Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.DataType
+	 * @generated
+	 */
+	EClass getDataType();
+
+	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Data <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3094,15 +7506,15 @@ public interface AssessmentPackage extends EPackage {
 	EReference getData_Snippets();
 
 	/**
-	 * Returns the meta object for the container reference '{@link us.coastalhacking.semiotics.model.assessment.Data#getDataGroup <em>Data Group</em>}'.
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.Data#getData <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Data Group</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Data#getDataGroup()
+	 * @return the meta object for the attribute '<em>Data</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Data#getData()
 	 * @see #getData()
 	 * @generated
 	 */
-	EReference getData_DataGroup();
+	EAttribute getData_Data();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.DataGroup <em>Data Group</em>}'.
@@ -3115,15 +7527,14 @@ public interface AssessmentPackage extends EPackage {
 	EClass getDataGroup();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link us.coastalhacking.semiotics.model.assessment.DataGroup#getData <em>Data</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.SnippetType <em>Snippet Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Data</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.DataGroup#getData()
-	 * @see #getDataGroup()
+	 * @return the meta object for class '<em>Snippet Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.SnippetType
 	 * @generated
 	 */
-	EReference getDataGroup_Data();
+	EClass getSnippetType();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Snippet <em>Snippet</em>}'.
@@ -3147,37 +7558,67 @@ public interface AssessmentPackage extends EPackage {
 	EReference getSnippet_Data();
 
 	/**
-	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.Snippet#getRow <em>Row</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.TextSnippetType <em>Text Snippet Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Row</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Snippet#getRow()
-	 * @see #getSnippet()
+	 * @return the meta object for class '<em>Text Snippet Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.TextSnippetType
 	 * @generated
 	 */
-	EAttribute getSnippet_Row();
+	EClass getTextSnippetType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.Snippet#getColumn <em>Column</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.TextSnippet <em>Text Snippet</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Column</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Snippet#getColumn()
-	 * @see #getSnippet()
+	 * @return the meta object for class '<em>Text Snippet</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.TextSnippet
 	 * @generated
 	 */
-	EAttribute getSnippet_Column();
+	EClass getTextSnippet();
 
 	/**
-	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.Snippet#getLength <em>Length</em>}'.
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.TextSnippet#getOffset <em>Offset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Offset</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.TextSnippet#getOffset()
+	 * @see #getTextSnippet()
+	 * @generated
+	 */
+	EAttribute getTextSnippet_Offset();
+
+	/**
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.TextSnippet#getLength <em>Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Length</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Snippet#getLength()
-	 * @see #getSnippet()
+	 * @see us.coastalhacking.semiotics.model.assessment.TextSnippet#getLength()
+	 * @see #getTextSnippet()
 	 * @generated
 	 */
-	EAttribute getSnippet_Length();
+	EAttribute getTextSnippet_Length();
+
+	/**
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.TextSnippet#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.TextSnippet#getText()
+	 * @see #getTextSnippet()
+	 * @generated
+	 */
+	EAttribute getTextSnippet_Text();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.FileType <em>File Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>File Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.FileType
+	 * @generated
+	 */
+	EClass getFileType();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.File <em>File</em>}'.
@@ -3201,15 +7642,24 @@ public interface AssessmentPackage extends EPackage {
 	EAttribute getFile_FullPath();
 
 	/**
-	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.File#getContents <em>Contents</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.FileGroup <em>File Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Contents</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.File#getContents()
-	 * @see #getFile()
+	 * @return the meta object for class '<em>File Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.FileGroup
 	 * @generated
 	 */
-	EAttribute getFile_Contents();
+	EClass getFileGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.RequestType <em>Request Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Request Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.RequestType
+	 * @generated
+	 */
+	EClass getRequestType();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Request <em>Request</em>}'.
@@ -3233,6 +7683,26 @@ public interface AssessmentPackage extends EPackage {
 	EReference getRequest_Response();
 
 	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.RequestGroup <em>Request Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Request Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.RequestGroup
+	 * @generated
+	 */
+	EClass getRequestGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ResponseType <em>Response Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Response Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.ResponseType
+	 * @generated
+	 */
+	EClass getResponseType();
+
+	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Response <em>Response</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3254,6 +7724,26 @@ public interface AssessmentPackage extends EPackage {
 	EReference getResponse_Request();
 
 	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ResponseGroup <em>Response Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Response Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.ResponseGroup
+	 * @generated
+	 */
+	EClass getResponseGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.FlowType <em>Flow Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Flow Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.FlowType
+	 * @generated
+	 */
+	EClass getFlowType();
+
+	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Flow <em>Flow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3264,57 +7754,26 @@ public interface AssessmentPackage extends EPackage {
 	EClass getFlow();
 
 	/**
-	 * Returns the meta object for the container reference '{@link us.coastalhacking.semiotics.model.assessment.Flow#getFlowFrom <em>Flow From</em>}'.
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.Flow#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Flow From</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Flow#getFlowFrom()
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Flow#getValue()
 	 * @see #getFlow()
 	 * @generated
 	 */
-	EReference getFlow_FlowFrom();
+	EAttribute getFlow_Value();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link us.coastalhacking.semiotics.model.assessment.Flow#getFlowTo <em>Flow To</em>}'.
+	 * Returns the meta object for the containment reference '{@link us.coastalhacking.semiotics.model.assessment.Flow#getFlows <em>Flows</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Flow To</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Flow#getFlowTo()
+	 * @return the meta object for the containment reference '<em>Flows</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Flow#getFlows()
 	 * @see #getFlow()
 	 * @generated
 	 */
-	EReference getFlow_FlowTo();
-
-	/**
-	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.FlowSource <em>Flow Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Flow Source</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.FlowSource
-	 * @generated
-	 */
-	EClass getFlowSource();
-
-	/**
-	 * Returns the meta object for the container reference '{@link us.coastalhacking.semiotics.model.assessment.FlowSource#getFlowGroup <em>Flow Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Flow Group</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.FlowSource#getFlowGroup()
-	 * @see #getFlowSource()
-	 * @generated
-	 */
-	EReference getFlowSource_FlowGroup();
-
-	/**
-	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.FlowSink <em>Flow Sink</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Flow Sink</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.FlowSink
-	 * @generated
-	 */
-	EClass getFlowSink();
+	EReference getFlow_Flows();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.FlowGroup <em>Flow Group</em>}'.
@@ -3327,15 +7786,57 @@ public interface AssessmentPackage extends EPackage {
 	EClass getFlowGroup();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link us.coastalhacking.semiotics.model.assessment.FlowGroup#getFlowSources <em>Flow Sources</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.FlowNode <em>Flow Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Flow Sources</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.FlowGroup#getFlowSources()
-	 * @see #getFlowGroup()
+	 * @return the meta object for class '<em>Flow Node</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.FlowNode
 	 * @generated
 	 */
-	EReference getFlowGroup_FlowSources();
+	EClass getFlowNode();
+
+	/**
+	 * Returns the meta object for the container reference '{@link us.coastalhacking.semiotics.model.assessment.FlowNode#getFlowFrom <em>Flow From</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Flow From</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.FlowNode#getFlowFrom()
+	 * @see #getFlowNode()
+	 * @generated
+	 */
+	EReference getFlowNode_FlowFrom();
+
+	/**
+	 * Returns the meta object for the container reference '{@link us.coastalhacking.semiotics.model.assessment.FlowNode#getFlowRoot <em>Flow Root</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Flow Root</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.FlowNode#getFlowRoot()
+	 * @see #getFlowNode()
+	 * @generated
+	 */
+	EReference getFlowNode_FlowRoot();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link us.coastalhacking.semiotics.model.assessment.FlowNode#getFlowTo <em>Flow To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Flow To</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.FlowNode#getFlowTo()
+	 * @see #getFlowNode()
+	 * @generated
+	 */
+	EReference getFlowNode_FlowTo();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.DataFlowType <em>Data Flow Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Flow Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.DataFlowType
+	 * @generated
+	 */
+	EClass getDataFlowType();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.DataFlow <em>Data Flow</em>}'.
@@ -3348,56 +7849,35 @@ public interface AssessmentPackage extends EPackage {
 	EClass getDataFlow();
 
 	/**
-	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.DataFlowSource <em>Data Flow Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Data Flow Source</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.DataFlowSource
-	 * @generated
-	 */
-	EClass getDataFlowSource();
-
-	/**
-	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.DataFlowSource#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.DataFlowSource#getValue()
-	 * @see #getDataFlowSource()
-	 * @generated
-	 */
-	EAttribute getDataFlowSource_Value();
-
-	/**
-	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.DataFlowSource#getSourceType <em>Source Type</em>}'.
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.DataFlow#getSourceType <em>Source Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Source Type</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.DataFlowSource#getSourceType()
-	 * @see #getDataFlowSource()
+	 * @see us.coastalhacking.semiotics.model.assessment.DataFlow#getSourceType()
+	 * @see #getDataFlow()
 	 * @generated
 	 */
-	EAttribute getDataFlowSource_SourceType();
+	EAttribute getDataFlow_SourceType();
 
 	/**
-	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.DataFlowSink <em>Data Flow Sink</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.DataFlowNode <em>Data Flow Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Data Flow Sink</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.DataFlowSink
+	 * @return the meta object for class '<em>Data Flow Node</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.DataFlowNode
 	 * @generated
 	 */
-	EClass getDataFlowSink();
+	EClass getDataFlowNode();
 
 	/**
-	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.FlowConstraint <em>Flow Constraint</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.DataFlowGroup <em>Data Flow Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Flow Constraint</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.FlowConstraint
+	 * @return the meta object for class '<em>Data Flow Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.DataFlowGroup
 	 * @generated
 	 */
-	EClass getFlowConstraint();
+	EClass getDataFlowGroup();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.DataFlowConstraint <em>Data Flow Constraint</em>}'.
@@ -3526,6 +8006,16 @@ public interface AssessmentPackage extends EPackage {
 	EAttribute getCastedTo_Type();
 
 	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ControlFlowType <em>Control Flow Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Control Flow Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.ControlFlowType
+	 * @generated
+	 */
+	EClass getControlFlowType();
+
+	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ControlFlow <em>Control Flow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3536,35 +8026,44 @@ public interface AssessmentPackage extends EPackage {
 	EClass getControlFlow();
 
 	/**
-	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.ControlFlow#getDescription <em>Description</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ControlFlowNode <em>Control Flow Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.ControlFlow#getDescription()
-	 * @see #getControlFlow()
+	 * @return the meta object for class '<em>Control Flow Node</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.ControlFlowNode
 	 * @generated
 	 */
-	EAttribute getControlFlow_Description();
+	EClass getControlFlowNode();
 
 	/**
-	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ControlFlowSource <em>Control Flow Source</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ControlFlowGroup <em>Control Flow Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Control Flow Source</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.ControlFlowSource
+	 * @return the meta object for class '<em>Control Flow Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.ControlFlowGroup
 	 * @generated
 	 */
-	EClass getControlFlowSource();
+	EClass getControlFlowGroup();
 
 	/**
-	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ControlFlowSink <em>Control Flow Sink</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.AssessmentType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Control Flow Sink</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.ControlFlowSink
+	 * @return the meta object for class '<em>Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentType
 	 * @generated
 	 */
-	EClass getControlFlowSink();
+	EClass getAssessmentType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Assessable <em>Assessable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Assessable</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Assessable
+	 * @generated
+	 */
+	EClass getAssessable();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Assessment <em>Assessment</em>}'.
@@ -3577,17 +8076,6 @@ public interface AssessmentPackage extends EPackage {
 	EClass getAssessment();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link us.coastalhacking.semiotics.model.assessment.Assessment#getApplicationGroups <em>Application Groups</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Application Groups</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Assessment#getApplicationGroups()
-	 * @see #getAssessment()
-	 * @generated
-	 */
-	EReference getAssessment_ApplicationGroups();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link us.coastalhacking.semiotics.model.assessment.Assessment#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3597,6 +8085,46 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAssessment_Properties();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.AssessmentGroup <em>Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentGroup
+	 * @generated
+	 */
+	EClass getAssessmentGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ApplicationAssessmentType <em>Application Assessment Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Application Assessment Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationAssessmentType
+	 * @generated
+	 */
+	EClass getApplicationAssessmentType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ApplicationAssessment <em>Application Assessment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Application Assessment</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationAssessment
+	 * @generated
+	 */
+	EClass getApplicationAssessment();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ApplicationAssessmentGroup <em>Application Assessment Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Application Assessment Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationAssessmentGroup
+	 * @generated
+	 */
+	EClass getApplicationAssessmentGroup();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Property <em>Property</em>}'.
@@ -3631,36 +8159,24 @@ public interface AssessmentPackage extends EPackage {
 	EAttribute getProperty_Value();
 
 	/**
-	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ApplicationGroup <em>Application Group</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ApplicationType <em>Application Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Application Group</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationGroup
+	 * @return the meta object for class '<em>Application Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationType
 	 * @generated
 	 */
-	EClass getApplicationGroup();
+	EClass getApplicationType();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link us.coastalhacking.semiotics.model.assessment.ApplicationGroup#getApplications <em>Applications</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Applicational <em>Applicational</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Applications</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationGroup#getApplications()
-	 * @see #getApplicationGroup()
+	 * @return the meta object for class '<em>Applicational</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Applicational
 	 * @generated
 	 */
-	EReference getApplicationGroup_Applications();
-
-	/**
-	 * Returns the meta object for the container reference '{@link us.coastalhacking.semiotics.model.assessment.ApplicationGroup#getAssessment <em>Assessment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Assessment</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationGroup#getAssessment()
-	 * @see #getApplicationGroup()
-	 * @generated
-	 */
-	EReference getApplicationGroup_Assessment();
+	EClass getApplicational();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Application <em>Application</em>}'.
@@ -3673,48 +8189,76 @@ public interface AssessmentPackage extends EPackage {
 	EClass getApplication();
 
 	/**
-	 * Returns the meta object for the container reference '{@link us.coastalhacking.semiotics.model.assessment.Application#getApplicationGroup <em>Application Group</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.ApplicationGroup <em>Application Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Application Group</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Application#getApplicationGroup()
-	 * @see #getApplication()
+	 * @return the meta object for class '<em>Application Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.ApplicationGroup
 	 * @generated
 	 */
-	EReference getApplication_ApplicationGroup();
+	EClass getApplicationGroup();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link us.coastalhacking.semiotics.model.assessment.Application#getFlowGroups <em>Flow Groups</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.WebApplicationType <em>Web Application Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Flow Groups</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Application#getFlowGroups()
-	 * @see #getApplication()
+	 * @return the meta object for class '<em>Web Application Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.WebApplicationType
 	 * @generated
 	 */
-	EReference getApplication_FlowGroups();
+	EClass getWebApplicationType();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link us.coastalhacking.semiotics.model.assessment.Application#getControlGroups <em>Control Groups</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.WebApplication <em>Web Application</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Control Groups</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Application#getControlGroups()
-	 * @see #getApplication()
+	 * @return the meta object for class '<em>Web Application</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.WebApplication
 	 * @generated
 	 */
-	EReference getApplication_ControlGroups();
+	EClass getWebApplication();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link us.coastalhacking.semiotics.model.assessment.Application#getDataGroups <em>Data Groups</em>}'.
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.WebApplication#getInternalURL <em>Internal URL</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Data Groups</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Application#getDataGroups()
-	 * @see #getApplication()
+	 * @return the meta object for the attribute '<em>Internal URL</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.WebApplication#getInternalURL()
+	 * @see #getWebApplication()
 	 * @generated
 	 */
-	EReference getApplication_DataGroups();
+	EAttribute getWebApplication_InternalURL();
+
+	/**
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.WebApplication#getExternalURL <em>External URL</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>External URL</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.WebApplication#getExternalURL()
+	 * @see #getWebApplication()
+	 * @generated
+	 */
+	EAttribute getWebApplication_ExternalURL();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.WebApplicationGroup <em>Web Application Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Web Application Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.WebApplicationGroup
+	 * @generated
+	 */
+	EClass getWebApplicationGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.SearchType <em>Search Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Search Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.SearchType
+	 * @generated
+	 */
+	EClass getSearchType();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.SearchGroup <em>Search Group</em>}'.
@@ -3725,28 +8269,6 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSearchGroup();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link us.coastalhacking.semiotics.model.assessment.SearchGroup#getSearches <em>Searches</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Searches</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.SearchGroup#getSearches()
-	 * @see #getSearchGroup()
-	 * @generated
-	 */
-	EReference getSearchGroup_Searches();
-
-	/**
-	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.SearchGroup#getSearchResultDescription <em>Search Result Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Search Result Description</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.SearchGroup#getSearchResultDescription()
-	 * @see #getSearchGroup()
-	 * @generated
-	 */
-	EAttribute getSearchGroup_SearchResultDescription();
 
 	/**
 	 * Returns the meta object for the reference list '{@link us.coastalhacking.semiotics.model.assessment.SearchGroup#getSearchResultCWEs <em>Search Result CW Es</em>}'.
@@ -3768,17 +8290,6 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSearch();
-
-	/**
-	 * Returns the meta object for the container reference '{@link us.coastalhacking.semiotics.model.assessment.Search#getSearchGroup <em>Search Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Search Group</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.Search#getSearchGroup()
-	 * @see #getSearch()
-	 * @generated
-	 */
-	EReference getSearch_SearchGroup();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link us.coastalhacking.semiotics.model.assessment.Search#getPattern <em>Pattern</em>}'.
@@ -3811,6 +8322,36 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSearchPattern_Pattern();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.JavaSearchType <em>Java Search Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Java Search Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.JavaSearchType
+	 * @generated
+	 */
+	EClass getJavaSearchType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.JavaSearch <em>Java Search</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Java Search</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.JavaSearch
+	 * @generated
+	 */
+	EClass getJavaSearch();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.JavaSearchGroup <em>Java Search Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Java Search Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.JavaSearchGroup
+	 * @generated
+	 */
+	EClass getJavaSearchGroup();
 
 	/**
 	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.JavaSearchPattern <em>Java Search Pattern</em>}'.
@@ -3878,14 +8419,189 @@ public interface AssessmentPackage extends EPackage {
 	EAttribute getJavaSearchPattern_CaseSensitivity();
 
 	/**
-	 * Returns the meta object for enum '{@link us.coastalhacking.semiotics.model.assessment.DataSourceType <em>Data Source Type</em>}'.
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.TaskType <em>Task Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Data Source Type</em>'.
-	 * @see us.coastalhacking.semiotics.model.assessment.DataSourceType
+	 * @return the meta object for class '<em>Task Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.TaskType
 	 * @generated
 	 */
-	EEnum getDataSourceType();
+	EClass getTaskType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.TaskGroup <em>Task Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Task Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.TaskGroup
+	 * @generated
+	 */
+	EClass getTaskGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Task <em>Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Task</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Task
+	 * @generated
+	 */
+	EClass getTask();
+
+	/**
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.Task#getTaskStatus <em>Task Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Task Status</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Task#getTaskStatus()
+	 * @see #getTask()
+	 * @generated
+	 */
+	EAttribute getTask_TaskStatus();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.LocalTaskType <em>Local Task Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Local Task Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.LocalTaskType
+	 * @generated
+	 */
+	EClass getLocalTaskType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.LocalTaskGroup <em>Local Task Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Local Task Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.LocalTaskGroup
+	 * @generated
+	 */
+	EClass getLocalTaskGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.LocalTask <em>Local Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Local Task</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.LocalTask
+	 * @generated
+	 */
+	EClass getLocalTask();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.FindingType <em>Finding Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Finding Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.FindingType
+	 * @generated
+	 */
+	EClass getFindingType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.FindingGroup <em>Finding Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Finding Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.FindingGroup
+	 * @generated
+	 */
+	EClass getFindingGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.Finding <em>Finding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Finding</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Finding
+	 * @generated
+	 */
+	EClass getFinding();
+
+	/**
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.Finding#getDetails <em>Details</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Details</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Finding#getDetails()
+	 * @see #getFinding()
+	 * @generated
+	 */
+	EAttribute getFinding_Details();
+
+	/**
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.Finding#getRemediation <em>Remediation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Remediation</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Finding#getRemediation()
+	 * @see #getFinding()
+	 * @generated
+	 */
+	EAttribute getFinding_Remediation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.Finding#getReproducer <em>Reproducer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reproducer</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Finding#getReproducer()
+	 * @see #getFinding()
+	 * @generated
+	 */
+	EAttribute getFinding_Reproducer();
+
+	/**
+	 * Returns the meta object for the attribute '{@link us.coastalhacking.semiotics.model.assessment.Finding#getReferences <em>References</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>References</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.Finding#getReferences()
+	 * @see #getFinding()
+	 * @generated
+	 */
+	EAttribute getFinding_References();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.LocalFindingType <em>Local Finding Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Local Finding Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.LocalFindingType
+	 * @generated
+	 */
+	EClass getLocalFindingType();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.LocalFindingGroup <em>Local Finding Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Local Finding Group</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.LocalFindingGroup
+	 * @generated
+	 */
+	EClass getLocalFindingGroup();
+
+	/**
+	 * Returns the meta object for class '{@link us.coastalhacking.semiotics.model.assessment.LocalFinding <em>Local Finding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Local Finding</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.LocalFinding
+	 * @generated
+	 */
+	EClass getLocalFinding();
+
+	/**
+	 * Returns the meta object for enum '{@link us.coastalhacking.semiotics.model.assessment.DataTaintType <em>Data Taint Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Data Taint Type</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.DataTaintType
+	 * @generated
+	 */
+	EEnum getDataTaintType();
 
 	/**
 	 * Returns the meta object for enum '{@link us.coastalhacking.semiotics.model.assessment.MatcherRegex <em>Matcher Regex</em>}'.
@@ -3948,6 +8664,16 @@ public interface AssessmentPackage extends EPackage {
 	EEnum getJavaMatchCaseSensitivity();
 
 	/**
+	 * Returns the meta object for enum '{@link us.coastalhacking.semiotics.model.assessment.TaskStatus <em>Task Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Task Status</em>'.
+	 * @see us.coastalhacking.semiotics.model.assessment.TaskStatus
+	 * @generated
+	 */
+	EEnum getTaskStatus();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3989,14 +8715,32 @@ public interface AssessmentPackage extends EPackage {
 		EAttribute NAMEABLE__NAME = eINSTANCE.getNameable_Name();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Reviewable <em>Reviewable</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Describable <em>Describable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.Reviewable
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getReviewable()
+		 * @see us.coastalhacking.semiotics.model.assessment.Describable
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDescribable()
 		 * @generated
 		 */
-		EClass REVIEWABLE = eINSTANCE.getReviewable();
+		EClass DESCRIBABLE = eINSTANCE.getDescribable();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DESCRIBABLE__DESCRIPTION = eINSTANCE.getDescribable_Description();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Examinable <em>Examinable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.Examinable
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getExaminable()
+		 * @generated
+		 */
+		EClass EXAMINABLE = eINSTANCE.getExaminable();
 
 		/**
 		 * The meta object literal for the '<em><b>Evidence</b></em>' reference list feature.
@@ -4004,7 +8748,7 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REVIEWABLE__EVIDENCE = eINSTANCE.getReviewable_Evidence();
+		EReference EXAMINABLE__EVIDENCE = eINSTANCE.getExaminable_Evidence();
 
 		/**
 		 * The meta object literal for the '<em><b>Traces</b></em>' reference list feature.
@@ -4012,7 +8756,7 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REVIEWABLE__TRACES = eINSTANCE.getReviewable_Traces();
+		EReference EXAMINABLE__TRACES = eINSTANCE.getExaminable_Traces();
 
 		/**
 		 * The meta object literal for the '<em><b>Searches</b></em>' reference list feature.
@@ -4020,7 +8764,23 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REVIEWABLE__SEARCHES = eINSTANCE.getReviewable_Searches();
+		EReference EXAMINABLE__SEARCHES = eINSTANCE.getExaminable_Searches();
+
+		/**
+		 * The meta object literal for the '<em><b>Tasks</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXAMINABLE__TASKS = eINSTANCE.getExaminable_Tasks();
+
+		/**
+		 * The meta object literal for the '<em><b>Findings</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXAMINABLE__FINDINGS = eINSTANCE.getExaminable_Findings();
 
 		/**
 		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Provable <em>Provable</em>}' class.
@@ -4033,12 +8793,12 @@ public interface AssessmentPackage extends EPackage {
 		EClass PROVABLE = eINSTANCE.getProvable();
 
 		/**
-		 * The meta object literal for the '<em><b>Reviewers</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Examinees</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROVABLE__REVIEWERS = eINSTANCE.getProvable_Reviewers();
+		EReference PROVABLE__EXAMINEES = eINSTANCE.getProvable_Examinees();
 
 		/**
 		 * The meta object literal for the '<em><b>Traces</b></em>' reference list feature.
@@ -4067,12 +8827,12 @@ public interface AssessmentPackage extends EPackage {
 		EReference TRACEABLE__EVIDENCE = eINSTANCE.getTraceable_Evidence();
 
 		/**
-		 * The meta object literal for the '<em><b>Reviewers</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Examinees</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRACEABLE__REVIEWERS = eINSTANCE.getTraceable_Reviewers();
+		EReference TRACEABLE__EXAMINEES = eINSTANCE.getTraceable_Examinees();
 
 		/**
 		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Searchable <em>Searchable</em>}' class.
@@ -4085,48 +8845,154 @@ public interface AssessmentPackage extends EPackage {
 		EClass SEARCHABLE = eINSTANCE.getSearchable();
 
 		/**
-		 * The meta object literal for the '<em><b>Reviewers</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Examinees</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SEARCHABLE__REVIEWERS = eINSTANCE.getSearchable_Reviewers();
+		EReference SEARCHABLE__EXAMINEES = eINSTANCE.getSearchable_Examinees();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ControlGroupImpl <em>Control Group</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Taskable <em>Taskable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.ControlGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.Taskable
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTaskable()
+		 * @generated
+		 */
+		EClass TASKABLE = eINSTANCE.getTaskable();
+
+		/**
+		 * The meta object literal for the '<em><b>Examinees</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASKABLE__EXAMINEES = eINSTANCE.getTaskable_Examinees();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Findable <em>Findable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.Findable
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFindable()
+		 * @generated
+		 */
+		EClass FINDABLE = eINSTANCE.getFindable();
+
+		/**
+		 * The meta object literal for the '<em><b>Examinees</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FINDABLE__EXAMINEES = eINSTANCE.getFindable_Examinees();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Groupable <em>Groupable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.Groupable
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getGroupable()
+		 * @generated
+		 */
+		EClass GROUPABLE = eINSTANCE.getGroupable();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Membered <em>Membered</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.Membered
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getMembered()
+		 * @generated
+		 */
+		EClass MEMBERED = eINSTANCE.getMembered();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Group <em>Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.Group
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getGroup()
+		 * @generated
+		 */
+		EClass GROUP = eINSTANCE.getGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Members</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GROUP__MEMBERS = eINSTANCE.getGroup_Members();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Member <em>Member</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.Member
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getMember()
+		 * @generated
+		 */
+		EClass MEMBER = eINSTANCE.getMember();
+
+		/**
+		 * The meta object literal for the '<em><b>Group</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MEMBER__GROUP = eINSTANCE.getMember_Group();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.GroupableMembered <em>Groupable Membered</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.GroupableMembered
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getGroupableMembered()
+		 * @generated
+		 */
+		EClass GROUPABLE_MEMBERED = eINSTANCE.getGroupableMembered();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.MemberedGroupable <em>Membered Groupable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.MemberedGroupable
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getMemberedGroupable()
+		 * @generated
+		 */
+		EClass MEMBERED_GROUPABLE = eINSTANCE.getMemberedGroupable();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.ControlType <em>Control Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.ControlType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlType()
+		 * @generated
+		 */
+		EClass CONTROL_TYPE = eINSTANCE.getControlType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.ControlGroup <em>Control Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.ControlGroup
 		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlGroup()
 		 * @generated
 		 */
 		EClass CONTROL_GROUP = eINSTANCE.getControlGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>Controls</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Control <em>Control</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTROL_GROUP__CONTROLS = eINSTANCE.getControlGroup_Controls();
-
-		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ControlImpl <em>Control</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.ControlImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.Control
 		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControl()
 		 * @generated
 		 */
 		EClass CONTROL = eINSTANCE.getControl();
-
-		/**
-		 * The meta object literal for the '<em><b>Control Group</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTROL__CONTROL_GROUP = eINSTANCE.getControl_ControlGroup();
 
 		/**
 		 * The meta object literal for the '<em><b>Cwes</b></em>' reference list feature.
@@ -4205,10 +9071,306 @@ public interface AssessmentPackage extends EPackage {
 		EReference CWE__CONTROLS = eINSTANCE.getCWE_Controls();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataImpl <em>Data</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.AuthenticationControlType <em>Authentication Control Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.DataImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.AuthenticationControlType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAuthenticationControlType()
+		 * @generated
+		 */
+		EClass AUTHENTICATION_CONTROL_TYPE = eINSTANCE.getAuthenticationControlType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.AuthenticationGroupImpl <em>Authentication Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AuthenticationGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAuthenticationGroup()
+		 * @generated
+		 */
+		EClass AUTHENTICATION_GROUP = eINSTANCE.getAuthenticationGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.AuthenticationImpl <em>Authentication</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AuthenticationImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAuthentication()
+		 * @generated
+		 */
+		EClass AUTHENTICATION = eINSTANCE.getAuthentication();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.AuthorizationControlType <em>Authorization Control Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.AuthorizationControlType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAuthorizationControlType()
+		 * @generated
+		 */
+		EClass AUTHORIZATION_CONTROL_TYPE = eINSTANCE.getAuthorizationControlType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.AuthorizationGroupImpl <em>Authorization Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AuthorizationGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAuthorizationGroup()
+		 * @generated
+		 */
+		EClass AUTHORIZATION_GROUP = eINSTANCE.getAuthorizationGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.AuthorizationImpl <em>Authorization</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AuthorizationImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAuthorization()
+		 * @generated
+		 */
+		EClass AUTHORIZATION = eINSTANCE.getAuthorization();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.AccountControlType <em>Account Control Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.AccountControlType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAccountControlType()
+		 * @generated
+		 */
+		EClass ACCOUNT_CONTROL_TYPE = eINSTANCE.getAccountControlType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.AccountGroupImpl <em>Account Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AccountGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAccountGroup()
+		 * @generated
+		 */
+		EClass ACCOUNT_GROUP = eINSTANCE.getAccountGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.AccountImpl <em>Account</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AccountImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAccount()
+		 * @generated
+		 */
+		EClass ACCOUNT = eINSTANCE.getAccount();
+
+		/**
+		 * The meta object literal for the '<em><b>Username</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACCOUNT__USERNAME = eINSTANCE.getAccount_Username();
+
+		/**
+		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACCOUNT__PASSWORD = eINSTANCE.getAccount_Password();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.CryptographyControlType <em>Cryptography Control Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.CryptographyControlType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getCryptographyControlType()
+		 * @generated
+		 */
+		EClass CRYPTOGRAPHY_CONTROL_TYPE = eINSTANCE.getCryptographyControlType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.CryptographyGroupImpl <em>Cryptography Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.CryptographyGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getCryptographyGroup()
+		 * @generated
+		 */
+		EClass CRYPTOGRAPHY_GROUP = eINSTANCE.getCryptographyGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.CryptographyImpl <em>Cryptography</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.CryptographyImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getCryptography()
+		 * @generated
+		 */
+		EClass CRYPTOGRAPHY = eINSTANCE.getCryptography();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.OutputEncodingControlType <em>Output Encoding Control Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.OutputEncodingControlType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getOutputEncodingControlType()
+		 * @generated
+		 */
+		EClass OUTPUT_ENCODING_CONTROL_TYPE = eINSTANCE.getOutputEncodingControlType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.OutputEncodingGroupImpl <em>Output Encoding Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.OutputEncodingGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getOutputEncodingGroup()
+		 * @generated
+		 */
+		EClass OUTPUT_ENCODING_GROUP = eINSTANCE.getOutputEncodingGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.OutputEncodingImpl <em>Output Encoding</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.OutputEncodingImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getOutputEncoding()
+		 * @generated
+		 */
+		EClass OUTPUT_ENCODING = eINSTANCE.getOutputEncoding();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.GenericControlType <em>Generic Control Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.GenericControlType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getGenericControlType()
+		 * @generated
+		 */
+		EClass GENERIC_CONTROL_TYPE = eINSTANCE.getGenericControlType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.GenericControlImpl <em>Generic Control</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.GenericControlImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getGenericControl()
+		 * @generated
+		 */
+		EClass GENERIC_CONTROL = eINSTANCE.getGenericControl();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.GenericControlGroupImpl <em>Generic Control Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.GenericControlGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getGenericControlGroup()
+		 * @generated
+		 */
+		EClass GENERIC_CONTROL_GROUP = eINSTANCE.getGenericControlGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.SurfaceAreaType <em>Surface Area Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.SurfaceAreaType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSurfaceAreaType()
+		 * @generated
+		 */
+		EClass SURFACE_AREA_TYPE = eINSTANCE.getSurfaceAreaType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.SurfaceAreaGroup <em>Surface Area Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.SurfaceAreaGroup
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSurfaceAreaGroup()
+		 * @generated
+		 */
+		EClass SURFACE_AREA_GROUP = eINSTANCE.getSurfaceAreaGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.SurfaceArea <em>Surface Area</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.SurfaceArea
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSurfaceArea()
+		 * @generated
+		 */
+		EClass SURFACE_AREA = eINSTANCE.getSurfaceArea();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.NetworkIngressType <em>Network Ingress Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.NetworkIngressType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getNetworkIngressType()
+		 * @generated
+		 */
+		EClass NETWORK_INGRESS_TYPE = eINSTANCE.getNetworkIngressType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.NetworkIngressImpl <em>Network Ingress</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.NetworkIngressImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getNetworkIngress()
+		 * @generated
+		 */
+		EClass NETWORK_INGRESS = eINSTANCE.getNetworkIngress();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.NetworkIngressGroupImpl <em>Network Ingress Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.NetworkIngressGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getNetworkIngressGroup()
+		 * @generated
+		 */
+		EClass NETWORK_INGRESS_GROUP = eINSTANCE.getNetworkIngressGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.NetworkEgressType <em>Network Egress Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.NetworkEgressType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getNetworkEgressType()
+		 * @generated
+		 */
+		EClass NETWORK_EGRESS_TYPE = eINSTANCE.getNetworkEgressType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.NetworkEgressImpl <em>Network Egress</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.NetworkEgressImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getNetworkEgress()
+		 * @generated
+		 */
+		EClass NETWORK_EGRESS = eINSTANCE.getNetworkEgress();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.NetworkEgressGroupImpl <em>Network Egress Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.NetworkEgressGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getNetworkEgressGroup()
+		 * @generated
+		 */
+		EClass NETWORK_EGRESS_GROUP = eINSTANCE.getNetworkEgressGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.DataType <em>Data Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.DataType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataType()
+		 * @generated
+		 */
+		EClass DATA_TYPE = eINSTANCE.getDataType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Data <em>Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.Data
 		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getData()
 		 * @generated
 		 */
@@ -4223,36 +9385,38 @@ public interface AssessmentPackage extends EPackage {
 		EReference DATA__SNIPPETS = eINSTANCE.getData_Snippets();
 
 		/**
-		 * The meta object literal for the '<em><b>Data Group</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Data</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA__DATA_GROUP = eINSTANCE.getData_DataGroup();
+		EAttribute DATA__DATA = eINSTANCE.getData_Data();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataGroupImpl <em>Data Group</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.DataGroup <em>Data Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.DataGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.DataGroup
 		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataGroup()
 		 * @generated
 		 */
 		EClass DATA_GROUP = eINSTANCE.getDataGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>Data</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.SnippetType <em>Snippet Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.SnippetType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSnippetType()
 		 * @generated
 		 */
-		EReference DATA_GROUP__DATA = eINSTANCE.getDataGroup_Data();
+		EClass SNIPPET_TYPE = eINSTANCE.getSnippetType();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.SnippetImpl <em>Snippet</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Snippet <em>Snippet</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.SnippetImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.Snippet
 		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSnippet()
 		 * @generated
 		 */
@@ -4267,20 +9431,32 @@ public interface AssessmentPackage extends EPackage {
 		EReference SNIPPET__DATA = eINSTANCE.getSnippet_Data();
 
 		/**
-		 * The meta object literal for the '<em><b>Row</b></em>' attribute feature.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.TextSnippetType <em>Text Snippet Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.TextSnippetType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTextSnippetType()
 		 * @generated
 		 */
-		EAttribute SNIPPET__ROW = eINSTANCE.getSnippet_Row();
+		EClass TEXT_SNIPPET_TYPE = eINSTANCE.getTextSnippetType();
 
 		/**
-		 * The meta object literal for the '<em><b>Column</b></em>' attribute feature.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.TextSnippetImpl <em>Text Snippet</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.TextSnippetImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTextSnippet()
+		 * @generated
+		 */
+		EClass TEXT_SNIPPET = eINSTANCE.getTextSnippet();
+
+		/**
+		 * The meta object literal for the '<em><b>Offset</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SNIPPET__COLUMN = eINSTANCE.getSnippet_Column();
+		EAttribute TEXT_SNIPPET__OFFSET = eINSTANCE.getTextSnippet_Offset();
 
 		/**
 		 * The meta object literal for the '<em><b>Length</b></em>' attribute feature.
@@ -4288,7 +9464,25 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SNIPPET__LENGTH = eINSTANCE.getSnippet_Length();
+		EAttribute TEXT_SNIPPET__LENGTH = eINSTANCE.getTextSnippet_Length();
+
+		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_SNIPPET__TEXT = eINSTANCE.getTextSnippet_Text();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FileTypeImpl <em>File Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.FileTypeImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFileType()
+		 * @generated
+		 */
+		EClass FILE_TYPE = eINSTANCE.getFileType();
 
 		/**
 		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FileImpl <em>File</em>}' class.
@@ -4309,12 +9503,24 @@ public interface AssessmentPackage extends EPackage {
 		EAttribute FILE__FULL_PATH = eINSTANCE.getFile_FullPath();
 
 		/**
-		 * The meta object literal for the '<em><b>Contents</b></em>' attribute feature.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FileGroupImpl <em>File Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.FileGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFileGroup()
 		 * @generated
 		 */
-		EAttribute FILE__CONTENTS = eINSTANCE.getFile_Contents();
+		EClass FILE_GROUP = eINSTANCE.getFileGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.RequestTypeImpl <em>Request Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.RequestTypeImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getRequestType()
+		 * @generated
+		 */
+		EClass REQUEST_TYPE = eINSTANCE.getRequestType();
 
 		/**
 		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.RequestImpl <em>Request</em>}' class.
@@ -4335,6 +9541,26 @@ public interface AssessmentPackage extends EPackage {
 		EReference REQUEST__RESPONSE = eINSTANCE.getRequest_Response();
 
 		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.RequestGroupImpl <em>Request Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.RequestGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getRequestGroup()
+		 * @generated
+		 */
+		EClass REQUEST_GROUP = eINSTANCE.getRequestGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ResponseTypeImpl <em>Response Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.ResponseTypeImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getResponseType()
+		 * @generated
+		 */
+		EClass RESPONSE_TYPE = eINSTANCE.getResponseType();
+
+		/**
 		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ResponseImpl <em>Response</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4353,14 +9579,70 @@ public interface AssessmentPackage extends EPackage {
 		EReference RESPONSE__REQUEST = eINSTANCE.getResponse_Request();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FlowImpl <em>Flow</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ResponseGroupImpl <em>Response Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.FlowImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.ResponseGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getResponseGroup()
+		 * @generated
+		 */
+		EClass RESPONSE_GROUP = eINSTANCE.getResponseGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.FlowType <em>Flow Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.FlowType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlowType()
+		 * @generated
+		 */
+		EClass FLOW_TYPE = eINSTANCE.getFlowType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Flow <em>Flow</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.Flow
 		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlow()
 		 * @generated
 		 */
 		EClass FLOW = eINSTANCE.getFlow();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FLOW__VALUE = eINSTANCE.getFlow_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Flows</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FLOW__FLOWS = eINSTANCE.getFlow_Flows();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.FlowGroup <em>Flow Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.FlowGroup
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlowGroup()
+		 * @generated
+		 */
+		EClass FLOW_GROUP = eINSTANCE.getFlowGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.FlowNode <em>Flow Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.FlowNode
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlowNode()
+		 * @generated
+		 */
+		EClass FLOW_NODE = eINSTANCE.getFlowNode();
 
 		/**
 		 * The meta object literal for the '<em><b>Flow From</b></em>' container reference feature.
@@ -4368,7 +9650,15 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FLOW__FLOW_FROM = eINSTANCE.getFlow_FlowFrom();
+		EReference FLOW_NODE__FLOW_FROM = eINSTANCE.getFlowNode_FlowFrom();
+
+		/**
+		 * The meta object literal for the '<em><b>Flow Root</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FLOW_NODE__FLOW_ROOT = eINSTANCE.getFlowNode_FlowRoot();
 
 		/**
 		 * The meta object literal for the '<em><b>Flow To</b></em>' containment reference list feature.
@@ -4376,53 +9666,17 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FLOW__FLOW_TO = eINSTANCE.getFlow_FlowTo();
+		EReference FLOW_NODE__FLOW_TO = eINSTANCE.getFlowNode_FlowTo();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FlowSourceImpl <em>Flow Source</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.DataFlowType <em>Data Flow Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.FlowSourceImpl
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlowSource()
+		 * @see us.coastalhacking.semiotics.model.assessment.DataFlowType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataFlowType()
 		 * @generated
 		 */
-		EClass FLOW_SOURCE = eINSTANCE.getFlowSource();
-
-		/**
-		 * The meta object literal for the '<em><b>Flow Group</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FLOW_SOURCE__FLOW_GROUP = eINSTANCE.getFlowSource_FlowGroup();
-
-		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FlowSinkImpl <em>Flow Sink</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.FlowSinkImpl
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlowSink()
-		 * @generated
-		 */
-		EClass FLOW_SINK = eINSTANCE.getFlowSink();
-
-		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FlowGroupImpl <em>Flow Group</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.FlowGroupImpl
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlowGroup()
-		 * @generated
-		 */
-		EClass FLOW_GROUP = eINSTANCE.getFlowGroup();
-
-		/**
-		 * The meta object literal for the '<em><b>Flow Sources</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FLOW_GROUP__FLOW_SOURCES = eINSTANCE.getFlowGroup_FlowSources();
+		EClass DATA_FLOW_TYPE = eINSTANCE.getDataFlowType();
 
 		/**
 		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataFlowImpl <em>Data Flow</em>}' class.
@@ -4435,56 +9689,38 @@ public interface AssessmentPackage extends EPackage {
 		EClass DATA_FLOW = eINSTANCE.getDataFlow();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataFlowSourceImpl <em>Data Flow Source</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.DataFlowSourceImpl
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataFlowSource()
-		 * @generated
-		 */
-		EClass DATA_FLOW_SOURCE = eINSTANCE.getDataFlowSource();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DATA_FLOW_SOURCE__VALUE = eINSTANCE.getDataFlowSource_Value();
-
-		/**
 		 * The meta object literal for the '<em><b>Source Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA_FLOW_SOURCE__SOURCE_TYPE = eINSTANCE.getDataFlowSource_SourceType();
+		EAttribute DATA_FLOW__SOURCE_TYPE = eINSTANCE.getDataFlow_SourceType();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataFlowSinkImpl <em>Data Flow Sink</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataFlowNodeImpl <em>Data Flow Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.DataFlowSinkImpl
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataFlowSink()
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.DataFlowNodeImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataFlowNode()
 		 * @generated
 		 */
-		EClass DATA_FLOW_SINK = eINSTANCE.getDataFlowSink();
+		EClass DATA_FLOW_NODE = eINSTANCE.getDataFlowNode();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.FlowConstraintImpl <em>Flow Constraint</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataFlowGroupImpl <em>Data Flow Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.FlowConstraintImpl
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFlowConstraint()
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.DataFlowGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataFlowGroup()
 		 * @generated
 		 */
-		EClass FLOW_CONSTRAINT = eINSTANCE.getFlowConstraint();
+		EClass DATA_FLOW_GROUP = eINSTANCE.getDataFlowGroup();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.DataFlowConstraintImpl <em>Data Flow Constraint</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.DataFlowConstraint <em>Data Flow Constraint</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.DataFlowConstraintImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.DataFlowConstraint
 		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataFlowConstraint()
 		 * @generated
 		 */
@@ -4589,6 +9825,16 @@ public interface AssessmentPackage extends EPackage {
 		EAttribute CASTED_TO__TYPE = eINSTANCE.getCastedTo_Type();
 
 		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.ControlFlowType <em>Control Flow Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.ControlFlowType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlFlowType()
+		 * @generated
+		 */
+		EClass CONTROL_FLOW_TYPE = eINSTANCE.getControlFlowType();
+
+		/**
 		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ControlFlowImpl <em>Control Flow</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4599,50 +9845,54 @@ public interface AssessmentPackage extends EPackage {
 		EClass CONTROL_FLOW = eINSTANCE.getControlFlow();
 
 		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ControlFlowNodeImpl <em>Control Flow Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.ControlFlowNodeImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlFlowNode()
 		 * @generated
 		 */
-		EAttribute CONTROL_FLOW__DESCRIPTION = eINSTANCE.getControlFlow_Description();
+		EClass CONTROL_FLOW_NODE = eINSTANCE.getControlFlowNode();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ControlFlowSourceImpl <em>Control Flow Source</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ControlFlowGroupImpl <em>Control Flow Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.ControlFlowSourceImpl
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlFlowSource()
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.ControlFlowGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlFlowGroup()
 		 * @generated
 		 */
-		EClass CONTROL_FLOW_SOURCE = eINSTANCE.getControlFlowSource();
+		EClass CONTROL_FLOW_GROUP = eINSTANCE.getControlFlowGroup();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ControlFlowSinkImpl <em>Control Flow Sink</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.AssessmentType <em>Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.ControlFlowSinkImpl
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getControlFlowSink()
+		 * @see us.coastalhacking.semiotics.model.assessment.AssessmentType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAssessmentType()
 		 * @generated
 		 */
-		EClass CONTROL_FLOW_SINK = eINSTANCE.getControlFlowSink();
+		EClass ASSESSMENT_TYPE = eINSTANCE.getAssessmentType();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.AssessmentImpl <em>Assessment</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Assessable <em>Assessable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.Assessable
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAssessable()
+		 * @generated
+		 */
+		EClass ASSESSABLE = eINSTANCE.getAssessable();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Assessment <em>Assessment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.Assessment
 		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAssessment()
 		 * @generated
 		 */
 		EClass ASSESSMENT = eINSTANCE.getAssessment();
-
-		/**
-		 * The meta object literal for the '<em><b>Application Groups</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASSESSMENT__APPLICATION_GROUPS = eINSTANCE.getAssessment_ApplicationGroups();
 
 		/**
 		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
@@ -4651,6 +9901,46 @@ public interface AssessmentPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ASSESSMENT__PROPERTIES = eINSTANCE.getAssessment_Properties();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.AssessmentGroup <em>Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.AssessmentGroup
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getAssessmentGroup()
+		 * @generated
+		 */
+		EClass ASSESSMENT_GROUP = eINSTANCE.getAssessmentGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.ApplicationAssessmentType <em>Application Assessment Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.ApplicationAssessmentType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplicationAssessmentType()
+		 * @generated
+		 */
+		EClass APPLICATION_ASSESSMENT_TYPE = eINSTANCE.getApplicationAssessmentType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ApplicationAssessmentImpl <em>Application Assessment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.ApplicationAssessmentImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplicationAssessment()
+		 * @generated
+		 */
+		EClass APPLICATION_ASSESSMENT = eINSTANCE.getApplicationAssessment();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ApplicationAssessmentGroupImpl <em>Application Assessment Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.ApplicationAssessmentGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplicationAssessmentGroup()
+		 * @generated
+		 */
+		EClass APPLICATION_ASSESSMENT_GROUP = eINSTANCE.getApplicationAssessmentGroup();
 
 		/**
 		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.PropertyImpl <em>Property</em>}' class.
@@ -4679,98 +9969,110 @@ public interface AssessmentPackage extends EPackage {
 		EAttribute PROPERTY__VALUE = eINSTANCE.getProperty_Value();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ApplicationGroupImpl <em>Application Group</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.ApplicationType <em>Application Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.ApplicationGroupImpl
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplicationGroup()
+		 * @see us.coastalhacking.semiotics.model.assessment.ApplicationType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplicationType()
 		 * @generated
 		 */
-		EClass APPLICATION_GROUP = eINSTANCE.getApplicationGroup();
+		EClass APPLICATION_TYPE = eINSTANCE.getApplicationType();
 
 		/**
-		 * The meta object literal for the '<em><b>Applications</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Applicational <em>Applicational</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.Applicational
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplicational()
 		 * @generated
 		 */
-		EReference APPLICATION_GROUP__APPLICATIONS = eINSTANCE.getApplicationGroup_Applications();
+		EClass APPLICATIONAL = eINSTANCE.getApplicational();
 
 		/**
-		 * The meta object literal for the '<em><b>Assessment</b></em>' container reference feature.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Application <em>Application</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APPLICATION_GROUP__ASSESSMENT = eINSTANCE.getApplicationGroup_Assessment();
-
-		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.ApplicationImpl <em>Application</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.ApplicationImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.Application
 		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplication()
 		 * @generated
 		 */
 		EClass APPLICATION = eINSTANCE.getApplication();
 
 		/**
-		 * The meta object literal for the '<em><b>Application Group</b></em>' container reference feature.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.ApplicationGroup <em>Application Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.ApplicationGroup
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplicationGroup()
+		 * @generated
+		 */
+		EClass APPLICATION_GROUP = eINSTANCE.getApplicationGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.WebApplicationType <em>Web Application Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.WebApplicationType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getWebApplicationType()
+		 * @generated
+		 */
+		EClass WEB_APPLICATION_TYPE = eINSTANCE.getWebApplicationType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.WebApplicationImpl <em>Web Application</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.WebApplicationImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getWebApplication()
+		 * @generated
+		 */
+		EClass WEB_APPLICATION = eINSTANCE.getWebApplication();
+
+		/**
+		 * The meta object literal for the '<em><b>Internal URL</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference APPLICATION__APPLICATION_GROUP = eINSTANCE.getApplication_ApplicationGroup();
+		EAttribute WEB_APPLICATION__INTERNAL_URL = eINSTANCE.getWebApplication_InternalURL();
 
 		/**
-		 * The meta object literal for the '<em><b>Flow Groups</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>External URL</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference APPLICATION__FLOW_GROUPS = eINSTANCE.getApplication_FlowGroups();
+		EAttribute WEB_APPLICATION__EXTERNAL_URL = eINSTANCE.getWebApplication_ExternalURL();
 
 		/**
-		 * The meta object literal for the '<em><b>Control Groups</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.WebApplicationGroupImpl <em>Web Application Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.WebApplicationGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getWebApplicationGroup()
 		 * @generated
 		 */
-		EReference APPLICATION__CONTROL_GROUPS = eINSTANCE.getApplication_ControlGroups();
+		EClass WEB_APPLICATION_GROUP = eINSTANCE.getWebApplicationGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>Data Groups</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.SearchType <em>Search Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.SearchType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSearchType()
 		 * @generated
 		 */
-		EReference APPLICATION__DATA_GROUPS = eINSTANCE.getApplication_DataGroups();
+		EClass SEARCH_TYPE = eINSTANCE.getSearchType();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.SearchGroupImpl <em>Search Group</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.SearchGroup <em>Search Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.SearchGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.SearchGroup
 		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSearchGroup()
 		 * @generated
 		 */
 		EClass SEARCH_GROUP = eINSTANCE.getSearchGroup();
-
-		/**
-		 * The meta object literal for the '<em><b>Searches</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SEARCH_GROUP__SEARCHES = eINSTANCE.getSearchGroup_Searches();
-
-		/**
-		 * The meta object literal for the '<em><b>Search Result Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SEARCH_GROUP__SEARCH_RESULT_DESCRIPTION = eINSTANCE.getSearchGroup_SearchResultDescription();
 
 		/**
 		 * The meta object literal for the '<em><b>Search Result CW Es</b></em>' reference list feature.
@@ -4781,22 +10083,14 @@ public interface AssessmentPackage extends EPackage {
 		EReference SEARCH_GROUP__SEARCH_RESULT_CW_ES = eINSTANCE.getSearchGroup_SearchResultCWEs();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.SearchImpl <em>Search</em>}' class.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Search <em>Search</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.SearchImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.Search
 		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getSearch()
 		 * @generated
 		 */
 		EClass SEARCH = eINSTANCE.getSearch();
-
-		/**
-		 * The meta object literal for the '<em><b>Search Group</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SEARCH__SEARCH_GROUP = eINSTANCE.getSearch_SearchGroup();
 
 		/**
 		 * The meta object literal for the '<em><b>Pattern</b></em>' containment reference feature.
@@ -4823,6 +10117,36 @@ public interface AssessmentPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SEARCH_PATTERN__PATTERN = eINSTANCE.getSearchPattern_Pattern();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.JavaSearchType <em>Java Search Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.JavaSearchType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getJavaSearchType()
+		 * @generated
+		 */
+		EClass JAVA_SEARCH_TYPE = eINSTANCE.getJavaSearchType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.JavaSearchImpl <em>Java Search</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.JavaSearchImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getJavaSearch()
+		 * @generated
+		 */
+		EClass JAVA_SEARCH = eINSTANCE.getJavaSearch();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.JavaSearchGroupImpl <em>Java Search Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.JavaSearchGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getJavaSearchGroup()
+		 * @generated
+		 */
+		EClass JAVA_SEARCH_GROUP = eINSTANCE.getJavaSearchGroup();
 
 		/**
 		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.JavaSearchPatternImpl <em>Java Search Pattern</em>}' class.
@@ -4875,14 +10199,174 @@ public interface AssessmentPackage extends EPackage {
 		EAttribute JAVA_SEARCH_PATTERN__CASE_SENSITIVITY = eINSTANCE.getJavaSearchPattern_CaseSensitivity();
 
 		/**
-		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.DataSourceType <em>Data Source Type</em>}' enum.
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.TaskType <em>Task Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see us.coastalhacking.semiotics.model.assessment.DataSourceType
-		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataSourceType()
+		 * @see us.coastalhacking.semiotics.model.assessment.TaskType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTaskType()
 		 * @generated
 		 */
-		EEnum DATA_SOURCE_TYPE = eINSTANCE.getDataSourceType();
+		EClass TASK_TYPE = eINSTANCE.getTaskType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.TaskGroup <em>Task Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.TaskGroup
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTaskGroup()
+		 * @generated
+		 */
+		EClass TASK_GROUP = eINSTANCE.getTaskGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Task <em>Task</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.Task
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTask()
+		 * @generated
+		 */
+		EClass TASK = eINSTANCE.getTask();
+
+		/**
+		 * The meta object literal for the '<em><b>Task Status</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TASK__TASK_STATUS = eINSTANCE.getTask_TaskStatus();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.LocalTaskType <em>Local Task Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.LocalTaskType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getLocalTaskType()
+		 * @generated
+		 */
+		EClass LOCAL_TASK_TYPE = eINSTANCE.getLocalTaskType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.LocalTaskGroupImpl <em>Local Task Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.LocalTaskGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getLocalTaskGroup()
+		 * @generated
+		 */
+		EClass LOCAL_TASK_GROUP = eINSTANCE.getLocalTaskGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.LocalTaskImpl <em>Local Task</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.LocalTaskImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getLocalTask()
+		 * @generated
+		 */
+		EClass LOCAL_TASK = eINSTANCE.getLocalTask();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.FindingType <em>Finding Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.FindingType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFindingType()
+		 * @generated
+		 */
+		EClass FINDING_TYPE = eINSTANCE.getFindingType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.FindingGroup <em>Finding Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.FindingGroup
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFindingGroup()
+		 * @generated
+		 */
+		EClass FINDING_GROUP = eINSTANCE.getFindingGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.Finding <em>Finding</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.Finding
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getFinding()
+		 * @generated
+		 */
+		EClass FINDING = eINSTANCE.getFinding();
+
+		/**
+		 * The meta object literal for the '<em><b>Details</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FINDING__DETAILS = eINSTANCE.getFinding_Details();
+
+		/**
+		 * The meta object literal for the '<em><b>Remediation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FINDING__REMEDIATION = eINSTANCE.getFinding_Remediation();
+
+		/**
+		 * The meta object literal for the '<em><b>Reproducer</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FINDING__REPRODUCER = eINSTANCE.getFinding_Reproducer();
+
+		/**
+		 * The meta object literal for the '<em><b>References</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FINDING__REFERENCES = eINSTANCE.getFinding_References();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.LocalFindingType <em>Local Finding Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.LocalFindingType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getLocalFindingType()
+		 * @generated
+		 */
+		EClass LOCAL_FINDING_TYPE = eINSTANCE.getLocalFindingType();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.LocalFindingGroupImpl <em>Local Finding Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.LocalFindingGroupImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getLocalFindingGroup()
+		 * @generated
+		 */
+		EClass LOCAL_FINDING_GROUP = eINSTANCE.getLocalFindingGroup();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.impl.LocalFindingImpl <em>Local Finding</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.LocalFindingImpl
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getLocalFinding()
+		 * @generated
+		 */
+		EClass LOCAL_FINDING = eINSTANCE.getLocalFinding();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.DataTaintType <em>Data Taint Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.DataTaintType
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getDataTaintType()
+		 * @generated
+		 */
+		EEnum DATA_TAINT_TYPE = eINSTANCE.getDataTaintType();
 
 		/**
 		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.MatcherRegex <em>Matcher Regex</em>}' enum.
@@ -4943,6 +10427,16 @@ public interface AssessmentPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum JAVA_MATCH_CASE_SENSITIVITY = eINSTANCE.getJavaMatchCaseSensitivity();
+
+		/**
+		 * The meta object literal for the '{@link us.coastalhacking.semiotics.model.assessment.TaskStatus <em>Task Status</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see us.coastalhacking.semiotics.model.assessment.TaskStatus
+		 * @see us.coastalhacking.semiotics.model.assessment.impl.AssessmentPackageImpl#getTaskStatus()
+		 * @generated
+		 */
+		EEnum TASK_STATUS = eINSTANCE.getTaskStatus();
 
 	}
 

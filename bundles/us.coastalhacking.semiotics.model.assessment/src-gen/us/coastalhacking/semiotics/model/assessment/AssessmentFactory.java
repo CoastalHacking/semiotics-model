@@ -27,24 +27,6 @@ public interface AssessmentFactory extends EFactory {
 	AssessmentFactory eINSTANCE = us.coastalhacking.semiotics.model.assessment.impl.AssessmentFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Control Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Control Group</em>'.
-	 * @generated
-	 */
-	ControlGroup createControlGroup();
-
-	/**
-	 * Returns a new object of class '<em>Control</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Control</em>'.
-	 * @generated
-	 */
-	Control createControl();
-
-	/**
 	 * Returns a new object of class '<em>CWE Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,31 +45,166 @@ public interface AssessmentFactory extends EFactory {
 	CWE createCWE();
 
 	/**
-	 * Returns a new object of class '<em>Data</em>'.
+	 * Returns a new object of class '<em>Authentication Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Data</em>'.
+	 * @return a new object of class '<em>Authentication Group</em>'.
 	 * @generated
 	 */
-	Data createData();
+	AuthenticationGroup createAuthenticationGroup();
 
 	/**
-	 * Returns a new object of class '<em>Data Group</em>'.
+	 * Returns a new object of class '<em>Authentication</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Data Group</em>'.
+	 * @return a new object of class '<em>Authentication</em>'.
 	 * @generated
 	 */
-	DataGroup createDataGroup();
+	Authentication createAuthentication();
 
 	/**
-	 * Returns a new object of class '<em>Snippet</em>'.
+	 * Returns a new object of class '<em>Authorization Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Snippet</em>'.
+	 * @return a new object of class '<em>Authorization Group</em>'.
 	 * @generated
 	 */
-	Snippet createSnippet();
+	AuthorizationGroup createAuthorizationGroup();
+
+	/**
+	 * Returns a new object of class '<em>Authorization</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Authorization</em>'.
+	 * @generated
+	 */
+	Authorization createAuthorization();
+
+	/**
+	 * Returns a new object of class '<em>Account Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Account Group</em>'.
+	 * @generated
+	 */
+	AccountGroup createAccountGroup();
+
+	/**
+	 * Returns a new object of class '<em>Account</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Account</em>'.
+	 * @generated
+	 */
+	Account createAccount();
+
+	/**
+	 * Returns a new object of class '<em>Cryptography Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cryptography Group</em>'.
+	 * @generated
+	 */
+	CryptographyGroup createCryptographyGroup();
+
+	/**
+	 * Returns a new object of class '<em>Cryptography</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cryptography</em>'.
+	 * @generated
+	 */
+	Cryptography createCryptography();
+
+	/**
+	 * Returns a new object of class '<em>Output Encoding Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Output Encoding Group</em>'.
+	 * @generated
+	 */
+	OutputEncodingGroup createOutputEncodingGroup();
+
+	/**
+	 * Returns a new object of class '<em>Output Encoding</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Output Encoding</em>'.
+	 * @generated
+	 */
+	OutputEncoding createOutputEncoding();
+
+	/**
+	 * Returns a new object of class '<em>Generic Control</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Generic Control</em>'.
+	 * @generated
+	 */
+	GenericControl createGenericControl();
+
+	/**
+	 * Returns a new object of class '<em>Generic Control Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Generic Control Group</em>'.
+	 * @generated
+	 */
+	GenericControlGroup createGenericControlGroup();
+
+	/**
+	 * Returns a new object of class '<em>Network Ingress</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Network Ingress</em>'.
+	 * @generated
+	 */
+	NetworkIngress createNetworkIngress();
+
+	/**
+	 * Returns a new object of class '<em>Network Ingress Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Network Ingress Group</em>'.
+	 * @generated
+	 */
+	NetworkIngressGroup createNetworkIngressGroup();
+
+	/**
+	 * Returns a new object of class '<em>Network Egress</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Network Egress</em>'.
+	 * @generated
+	 */
+	NetworkEgress createNetworkEgress();
+
+	/**
+	 * Returns a new object of class '<em>Network Egress Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Network Egress Group</em>'.
+	 * @generated
+	 */
+	NetworkEgressGroup createNetworkEgressGroup();
+
+	/**
+	 * Returns a new object of class '<em>Text Snippet</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Text Snippet</em>'.
+	 * @generated
+	 */
+	TextSnippet createTextSnippet();
+
+	/**
+	 * Returns a new object of class '<em>File Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>File Type</em>'.
+	 * @generated
+	 */
+	FileType createFileType();
 
 	/**
 	 * Returns a new object of class '<em>File</em>'.
@@ -99,6 +216,24 @@ public interface AssessmentFactory extends EFactory {
 	File createFile();
 
 	/**
+	 * Returns a new object of class '<em>File Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>File Group</em>'.
+	 * @generated
+	 */
+	FileGroup createFileGroup();
+
+	/**
+	 * Returns a new object of class '<em>Request Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Request Type</em>'.
+	 * @generated
+	 */
+	RequestType createRequestType();
+
+	/**
 	 * Returns a new object of class '<em>Request</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,6 +241,24 @@ public interface AssessmentFactory extends EFactory {
 	 * @generated
 	 */
 	Request createRequest();
+
+	/**
+	 * Returns a new object of class '<em>Request Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Request Group</em>'.
+	 * @generated
+	 */
+	RequestGroup createRequestGroup();
+
+	/**
+	 * Returns a new object of class '<em>Response Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Response Type</em>'.
+	 * @generated
+	 */
+	ResponseType createResponseType();
 
 	/**
 	 * Returns a new object of class '<em>Response</em>'.
@@ -117,40 +270,13 @@ public interface AssessmentFactory extends EFactory {
 	Response createResponse();
 
 	/**
-	 * Returns a new object of class '<em>Flow</em>'.
+	 * Returns a new object of class '<em>Response Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Flow</em>'.
+	 * @return a new object of class '<em>Response Group</em>'.
 	 * @generated
 	 */
-	Flow createFlow();
-
-	/**
-	 * Returns a new object of class '<em>Flow Source</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Flow Source</em>'.
-	 * @generated
-	 */
-	FlowSource createFlowSource();
-
-	/**
-	 * Returns a new object of class '<em>Flow Sink</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Flow Sink</em>'.
-	 * @generated
-	 */
-	FlowSink createFlowSink();
-
-	/**
-	 * Returns a new object of class '<em>Flow Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Flow Group</em>'.
-	 * @generated
-	 */
-	FlowGroup createFlowGroup();
+	ResponseGroup createResponseGroup();
 
 	/**
 	 * Returns a new object of class '<em>Data Flow</em>'.
@@ -162,31 +288,22 @@ public interface AssessmentFactory extends EFactory {
 	DataFlow createDataFlow();
 
 	/**
-	 * Returns a new object of class '<em>Data Flow Source</em>'.
+	 * Returns a new object of class '<em>Data Flow Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Data Flow Source</em>'.
+	 * @return a new object of class '<em>Data Flow Node</em>'.
 	 * @generated
 	 */
-	DataFlowSource createDataFlowSource();
+	DataFlowNode createDataFlowNode();
 
 	/**
-	 * Returns a new object of class '<em>Data Flow Sink</em>'.
+	 * Returns a new object of class '<em>Data Flow Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Data Flow Sink</em>'.
+	 * @return a new object of class '<em>Data Flow Group</em>'.
 	 * @generated
 	 */
-	DataFlowSink createDataFlowSink();
-
-	/**
-	 * Returns a new object of class '<em>Flow Constraint</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Flow Constraint</em>'.
-	 * @generated
-	 */
-	FlowConstraint createFlowConstraint();
+	DataFlowGroup createDataFlowGroup();
 
 	/**
 	 * Returns a new object of class '<em>Ends With</em>'.
@@ -243,31 +360,40 @@ public interface AssessmentFactory extends EFactory {
 	ControlFlow createControlFlow();
 
 	/**
-	 * Returns a new object of class '<em>Control Flow Source</em>'.
+	 * Returns a new object of class '<em>Control Flow Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Control Flow Source</em>'.
+	 * @return a new object of class '<em>Control Flow Node</em>'.
 	 * @generated
 	 */
-	ControlFlowSource createControlFlowSource();
+	ControlFlowNode createControlFlowNode();
 
 	/**
-	 * Returns a new object of class '<em>Control Flow Sink</em>'.
+	 * Returns a new object of class '<em>Control Flow Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Control Flow Sink</em>'.
+	 * @return a new object of class '<em>Control Flow Group</em>'.
 	 * @generated
 	 */
-	ControlFlowSink createControlFlowSink();
+	ControlFlowGroup createControlFlowGroup();
 
 	/**
-	 * Returns a new object of class '<em>Assessment</em>'.
+	 * Returns a new object of class '<em>Application Assessment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Assessment</em>'.
+	 * @return a new object of class '<em>Application Assessment</em>'.
 	 * @generated
 	 */
-	Assessment createAssessment();
+	ApplicationAssessment createApplicationAssessment();
+
+	/**
+	 * Returns a new object of class '<em>Application Assessment Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Application Assessment Group</em>'.
+	 * @generated
+	 */
+	ApplicationAssessmentGroup createApplicationAssessmentGroup();
 
 	/**
 	 * Returns a new object of class '<em>Property</em>'.
@@ -279,40 +405,40 @@ public interface AssessmentFactory extends EFactory {
 	Property createProperty();
 
 	/**
-	 * Returns a new object of class '<em>Application Group</em>'.
+	 * Returns a new object of class '<em>Web Application</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Application Group</em>'.
+	 * @return a new object of class '<em>Web Application</em>'.
 	 * @generated
 	 */
-	ApplicationGroup createApplicationGroup();
+	WebApplication createWebApplication();
 
 	/**
-	 * Returns a new object of class '<em>Application</em>'.
+	 * Returns a new object of class '<em>Web Application Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Application</em>'.
+	 * @return a new object of class '<em>Web Application Group</em>'.
 	 * @generated
 	 */
-	Application createApplication();
+	WebApplicationGroup createWebApplicationGroup();
 
 	/**
-	 * Returns a new object of class '<em>Search Group</em>'.
+	 * Returns a new object of class '<em>Java Search</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Search Group</em>'.
+	 * @return a new object of class '<em>Java Search</em>'.
 	 * @generated
 	 */
-	SearchGroup createSearchGroup();
+	JavaSearch createJavaSearch();
 
 	/**
-	 * Returns a new object of class '<em>Search</em>'.
+	 * Returns a new object of class '<em>Java Search Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Search</em>'.
+	 * @return a new object of class '<em>Java Search Group</em>'.
 	 * @generated
 	 */
-	Search createSearch();
+	JavaSearchGroup createJavaSearchGroup();
 
 	/**
 	 * Returns a new object of class '<em>Java Search Pattern</em>'.
@@ -322,6 +448,42 @@ public interface AssessmentFactory extends EFactory {
 	 * @generated
 	 */
 	JavaSearchPattern createJavaSearchPattern();
+
+	/**
+	 * Returns a new object of class '<em>Local Task Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Local Task Group</em>'.
+	 * @generated
+	 */
+	LocalTaskGroup createLocalTaskGroup();
+
+	/**
+	 * Returns a new object of class '<em>Local Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Local Task</em>'.
+	 * @generated
+	 */
+	LocalTask createLocalTask();
+
+	/**
+	 * Returns a new object of class '<em>Local Finding Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Local Finding Group</em>'.
+	 * @generated
+	 */
+	LocalFindingGroup createLocalFindingGroup();
+
+	/**
+	 * Returns a new object of class '<em>Local Finding</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Local Finding</em>'.
+	 * @generated
+	 */
+	LocalFinding createLocalFinding();
 
 	/**
 	 * Returns the package supported by this factory.

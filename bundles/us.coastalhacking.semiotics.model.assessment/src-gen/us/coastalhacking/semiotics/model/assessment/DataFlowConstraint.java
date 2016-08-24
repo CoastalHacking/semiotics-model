@@ -15,8 +15,8 @@ package us.coastalhacking.semiotics.model.assessment;
  *
  *
  * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getDataFlowConstraint()
- * @model abstract="true"
+ * @model interface="true" abstract="true"
  * @generated
  */
-public interface DataFlowConstraint extends DataFlow, FlowConstraint {
+public interface DataFlowConstraint extends DataFlowType {
 } // DataFlowConstraint

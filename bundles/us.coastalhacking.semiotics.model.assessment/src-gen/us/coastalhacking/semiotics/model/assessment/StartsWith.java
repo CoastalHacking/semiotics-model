@@ -24,7 +24,7 @@ package us.coastalhacking.semiotics.model.assessment;
  * @model
  * @generated
  */
-public interface StartsWith extends DataFlowConstraint {
+public interface StartsWith extends FlowNode<DataFlowConstraint> {
 	/**
 	 * Returns the value of the '<em><b>Prefix</b></em>' attribute.
 	 * <!-- begin-user-doc -->

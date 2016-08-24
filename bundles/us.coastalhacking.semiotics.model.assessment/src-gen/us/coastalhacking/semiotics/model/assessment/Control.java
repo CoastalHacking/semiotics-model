@@ -18,43 +18,14 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link us.coastalhacking.semiotics.model.assessment.Control#getControlGroup <em>Control Group</em>}</li>
  *   <li>{@link us.coastalhacking.semiotics.model.assessment.Control#getCwes <em>Cwes</em>}</li>
  * </ul>
  *
  * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getControl()
- * @model
+ * @model interface="true" abstract="true"
  * @generated
  */
-public interface Control extends Reviewable {
-	/**
-	 * Returns the value of the '<em><b>Control Group</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link us.coastalhacking.semiotics.model.assessment.ControlGroup#getControls <em>Controls</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Control Group</em>' container reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Control Group</em>' container reference.
-	 * @see #setControlGroup(ControlGroup)
-	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getControl_ControlGroup()
-	 * @see us.coastalhacking.semiotics.model.assessment.ControlGroup#getControls
-	 * @model opposite="controls" transient="false"
-	 * @generated
-	 */
-	ControlGroup getControlGroup();
-
-	/**
-	 * Sets the value of the '{@link us.coastalhacking.semiotics.model.assessment.Control#getControlGroup <em>Control Group</em>}' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Control Group</em>' container reference.
-	 * @see #getControlGroup()
-	 * @generated
-	 */
-	void setControlGroup(ControlGroup value);
-
+public interface Control<T extends ControlType> extends Member<T>, Examinable, Describable {
 	/**
 	 * Returns the value of the '<em><b>Cwes</b></em>' reference list.
 	 * The list contents are of type {@link us.coastalhacking.semiotics.model.assessment.CWE}.

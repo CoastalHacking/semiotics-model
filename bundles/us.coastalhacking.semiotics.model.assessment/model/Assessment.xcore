@@ -13,24 +13,42 @@ interface Nameable
 }
 
 /**
- * Something suitable for further examination or analysis
+ * Something that can be described
  */
-interface Reviewable extends Nameable
+interface Describable
+{
+    @GenModel(propertyMultiLine="true") String description
+}
+
+/**
+ * Something suitable for further review, examination, or analysis
+ */
+interface Examinable extends Nameable
 {
 	/**
 	 * Evidence identifying why this element should be reviewed
 	 */
-	refers Provable[] evidence opposite reviewers
+	refers Provable[] evidence opposite examinees
 
 	/**
 	 * Traces identifying attributes or information related to this element 
 	 */
-	refers Traceable[] traces opposite reviewers
+	refers Traceable[] traces opposite examinees
 	
 	/**
 	 * Searches related to this element
 	 */
-	refers Searchable[] searches opposite reviewers
+	refers Searchable[] searches opposite examinees
+	
+	/**
+	 * Tasks related to this element
+	 */
+	refers Taskable[] tasks opposite examinees
+	
+	/** 
+	 * Reports related to this element
+	 */
+	refers Findable[] findings opposite examinees
 }
 
 /**
@@ -38,33 +56,101 @@ interface Reviewable extends Nameable
  */
 interface Provable extends Nameable
 {
-	refers Reviewable[] reviewers opposite evidence
+	refers Examinable[] examinees opposite evidence
 	refers Traceable[] traces opposite evidence
 }
 
 /**
- * Something that associates, connects, or relates evidence to reviewers  
+ * Something that associates, connects, or relates evidence to examinees
  */
 interface Traceable extends Nameable
 {
 	refers Provable[] evidence opposite traces
-	refers Reviewable[] reviewers opposite traces
+	refers Examinable[] examinees opposite traces
 }
 
+/** 
+ * Something that can be searched
+ */
 interface Searchable extends Nameable
 {
-	refers Reviewable reviewers opposite searches
+	refers Examinable examinees opposite searches
 }
+
+/**
+ * Something that can be tasked
+ */
+interface Taskable extends Nameable
+{
+    refers Examinable[] examinees opposite tasks
+}
+
+/**
+ * Something that can be reported upon
+ */
+interface Findable extends Nameable
+{
+    refers Examinable[] examinees opposite findings
+}
+
+/**
+ * An element type that can be a group or member of a group
+ */
+interface Groupable
+{
+}
+
+/**
+ * A groupable element type that is also a member
+ */
+interface Membered extends Groupable
+{
+}
+
+/**
+ * An element which contains other elements
+ */
+interface Group<T extends Groupable> extends Nameable
+{
+    contains Member<T>[] members opposite group
+}
+
+
+/**
+ * An element contained in a group
+ */
+interface Member<T extends Groupable> extends Nameable
+{
+    container Group<T> group opposite members
+}
+
+/** 
+ * An element primarily identifying as a group that is also a member of some other group 
+ */
+interface GroupableMembered<G extends Groupable, M extends Membered> extends Group<G>, Member<M>
+{
+}
+
+/** 
+ * An element primarily identifying as a member, of some group, that also contains sub-groups 
+ */
+
+interface MemberedGroupable<G extends Groupable, M extends Membered> extends Member<G>, Group<M>
+{
+}
+
 
 // CONTROL
-class ControlGroup extends Nameable
+interface ControlType extends Groupable
 {
-	contains Control[] controls opposite controlGroup
 }
 
-class Control extends Reviewable
+interface ControlGroup<T extends ControlType> extends GroupableMembered<T, Applicational>
 {
-	container ControlGroup controlGroup opposite controls
+}
+
+interface Control<T extends ControlType> extends Member<T>, Examinable, Describable
+{
 	refers CWE[] cwes opposite controls
 }
 
@@ -79,74 +165,237 @@ class CWE
 	int ^id
 	String title
 	String url
-	refers Control[] controls opposite cwes
+	refers Control<? extends ControlType>[] controls opposite cwes
+}
+
+interface AuthenticationControlType extends ControlType
+{
+}
+
+class AuthenticationGroup extends ControlGroup<AuthenticationControlType>
+{
+}
+
+class Authentication extends Control<AuthenticationControlType>
+{
+}
+
+interface AuthorizationControlType extends ControlType
+{
+}
+
+class AuthorizationGroup extends ControlGroup<AuthorizationControlType>
+{
+}
+
+class Authorization extends Control<AuthorizationControlType>
+{
+}
+
+interface AccountControlType extends ControlType
+{
+}
+
+class AccountGroup extends ControlGroup<AccountControlType>
+{
+}
+
+class Account extends Control<AccountControlType>
+{
+    String username
+    String password
+}
+
+interface CryptographyControlType extends ControlType
+{
+}
+
+class CryptographyGroup extends ControlGroup<CryptographyControlType>
+{
+}
+
+class Cryptography extends Control<CryptographyControlType>
+{
+}
+
+interface OutputEncodingControlType extends ControlType
+{
+}
+
+class OutputEncodingGroup extends ControlGroup<OutputEncodingControlType>
+{
+}
+
+class OutputEncoding extends Control<OutputEncodingControlType>
+{
+}
+
+interface GenericControlType extends ControlType
+{
+}
+
+class GenericControl extends Control<GenericControlType>
+{
+}
+
+class GenericControlGroup extends ControlGroup<GenericControlType>
+{
+}
+
+// SURFACE AREA
+interface SurfaceAreaType extends Groupable
+{
+}
+
+interface SurfaceAreaGroup<T extends SurfaceAreaType> extends GroupableMembered<T, Applicational>
+{
+}
+
+interface SurfaceArea<T extends SurfaceAreaType> extends Member<T>, Examinable
+{
+}
+
+interface NetworkIngressType extends SurfaceAreaType
+{
+}
+
+class NetworkIngress extends SurfaceArea<NetworkIngressType>
+{
+}
+
+class NetworkIngressGroup extends SurfaceAreaGroup<NetworkIngressType>
+{
+}
+
+interface NetworkEgressType extends SurfaceAreaType
+{
+}
+
+class NetworkEgress extends SurfaceArea<NetworkEgressType>
+{
+}
+
+class NetworkEgressGroup extends SurfaceAreaGroup<NetworkEgressType>
+{
 }
 
 // DATA
-class Data extends Nameable
+interface DataType extends Groupable
 {
-	contains Snippet[] snippets opposite data
-	container DataGroup dataGroup opposite data
 }
 
-class DataGroup extends Nameable
+interface Data<T extends DataType> extends Member<T>, Provable
 {
-	contains Data[] data opposite dataGroup
+	contains Snippet<? extends SnippetType>[] snippets opposite data
+    @GenModel(propertyMultiLine="true") String data
 }
 
-class Snippet extends Provable
+interface DataGroup<T extends DataType> extends GroupableMembered<T, Applicational>
 {
-	container Data data opposite snippets
-	int row
-	int column
-	int length
 }
 
-class File extends Data
+interface SnippetType
+{
+}
+
+interface Snippet<T extends SnippetType> extends Provable
+{
+	container Data<? extends DataType> data opposite snippets
+}
+
+interface TextSnippetType extends SnippetType
+{
+}
+
+class TextSnippet extends Snippet<TextSnippetType>
+{
+    int offset
+    int length
+    String text
+}
+
+class FileType extends DataType
+{
+}
+
+class File extends Data<FileType>
 {
 	String fullPath
- @GenModel(propertyMultiLine="true")
-	String contents
 }
 
-class Request extends Data
+class FileGroup extends DataGroup<FileType>
+{
+}
+
+
+class RequestType extends DataType
+{
+}
+
+class Request extends Data<RequestType>
 {
 	refers Response[0..1] response opposite request
 }
 
-class Response extends Data
+class RequestGroup extends DataGroup<RequestType>
+{
+}
+
+
+class ResponseType extends DataType
+{
+}
+
+class Response extends Data<ResponseType>
 {
 	refers Request[0..1] request opposite response
 }
 
+class ResponseGroup extends DataGroup<ResponseType>
+{
+}
+
+
 // FLOW
-
-class Flow extends Traceable
-{
-	container Flow flowFrom opposite flowTo
-	contains Flow[] flowTo opposite flowFrom 
-}
-
-class FlowSource extends Flow
-{
-	container FlowGroup flowGroup opposite flowSources
-}
-
-class FlowSink extends Flow
+interface FlowType extends Groupable
 {
 }
 
-class FlowGroup extends Nameable
+interface Flow<T extends FlowType> extends Member<T>, Traceable
 {
-	contains FlowSource[] flowSources opposite flowGroup
+    @GenModel(propertyMultiLine="true") String value
+    contains FlowNode<? extends FlowType> flows opposite flowRoot
 }
 
-
-class DataFlow extends Flow
+interface FlowGroup<T extends FlowType> extends GroupableMembered<T, Applicational>
 {
 }
 
-enum DataSourceType
+interface FlowNode<T extends FlowType> extends Traceable
+{
+    container FlowNode<? extends FlowType> flowFrom opposite flowTo
+    container Flow<? extends FlowType> flowRoot opposite flows
+    contains FlowNode<? extends FlowType>[] flowTo opposite flowFrom
+}
+
+interface DataFlowType extends FlowType
+{
+}
+
+class DataFlow extends Flow<DataFlowType>
+{
+    DataTaintType sourceType
+}
+
+class DataFlowNode extends FlowNode<DataFlowType>
+{
+}
+
+class DataFlowGroup extends FlowGroup<DataFlowType>
+{
+}
+
+enum DataTaintType
 {
 	HTTP
 	HTTPS
@@ -156,35 +405,21 @@ enum DataSourceType
 	OTHER
 }
 
-class DataFlowSource extends DataFlow, FlowSource
-{	
-	String value
-	DataSourceType sourceType
-}
-
-class DataFlowSink extends DataFlow, FlowSink
-{	
-}
-
-class FlowConstraint
+interface DataFlowConstraint extends DataFlowType
 {
 }
 
-abstract class DataFlowConstraint extends DataFlow, FlowConstraint
-{
-}
-
-class EndsWith extends DataFlowConstraint
+class EndsWith extends FlowNode<DataFlowConstraint>
 {
 	String suffix
 }
 
-class StartsWith extends DataFlowConstraint
+class StartsWith extends FlowNode<DataFlowConstraint>
 {
 	String prefix
 }
 
-class Matches extends DataFlowConstraint
+class Matches extends FlowNode<DataFlowConstraint>
 {
 	String pattern
 	MatcherRegex regexType
@@ -196,35 +431,61 @@ enum MatcherRegex
 	OTHER
 }
 
-class Contains extends DataFlowConstraint
+class Contains extends FlowNode<DataFlowConstraint>
 {
 	String contents
 }
 
-class CastedTo extends DataFlowConstraint
+class CastedTo extends FlowNode<DataFlowConstraint>
 {
 	String ^type
 }
 
-class ControlFlow extends Flow
+
+interface ControlFlowType extends FlowType
 {
-	String description
 }
 
-class ControlFlowSource extends ControlFlow, FlowSource
-{ 	
+class ControlFlow extends Flow<ControlFlowType>
+{
 }
 
-class ControlFlowSink extends ControlFlow, FlowSink
+class ControlFlowNode extends FlowNode<ControlFlowType>
+{
+}
+
+class ControlFlowGroup extends FlowGroup<ControlFlowType>
 {
 }
 
 // ASSESSMENT
-
-class Assessment
+interface AssessmentType extends Groupable
 {
-	contains ApplicationGroup[] applicationGroups opposite assessment
+}
+
+interface Assessable extends Membered
+{
+}
+
+interface Assessment<T extends AssessmentType> extends MemberedGroupable<T, Assessable>
+{
 	contains Property[] properties
+}
+
+interface AssessmentGroup<T extends AssessmentType> extends Group<T>
+{
+}
+
+interface ApplicationAssessmentType extends AssessmentType
+{
+}
+
+class ApplicationAssessment extends Assessment<ApplicationAssessmentType>
+{
+}
+
+class ApplicationAssessmentGroup extends AssessmentGroup<ApplicationAssessmentType>
+{
 }
 
 class Property
@@ -233,41 +494,70 @@ class Property
 	String value
 }
 
-class ApplicationGroup extends Nameable
+// APPLICATION
+interface ApplicationType extends Groupable
 {
-	contains Application[] applications opposite applicationGroup
-	container Assessment assessment opposite applicationGroups
 }
 
-class Application extends Nameable
+interface Applicational extends Membered
 {
-	container ApplicationGroup applicationGroup opposite applications
-	contains FlowGroup[] flowGroups
-	contains ControlGroup[] controlGroups
-	contains DataGroup[] dataGroups
+}
+
+interface Application<T extends ApplicationType> extends MemberedGroupable<T, Applicational>
+{
+}
+
+interface ApplicationGroup<T extends ApplicationType> extends GroupableMembered<T, Assessable>
+{
+}
+
+interface WebApplicationType extends ApplicationType
+{
+}
+
+class WebApplication extends Application<WebApplicationType>
+{
+    String internalURL
+    String externalURL
+}
+
+class WebApplicationGroup extends ApplicationGroup<WebApplicationType>
+{
 }
 
 // SEARCH
-
-class SearchGroup extends Nameable
+interface SearchType extends Groupable
 {
-	contains Search[] searches opposite searchGroup
-	String searchResultDescription
+}
+
+interface SearchGroup<T extends SearchType> extends GroupableMembered<T, Applicational>, Describable
+{
 	refers CWE[] searchResultCWEs
 }
 
-class Search extends Searchable
+interface Search<T extends SearchType> extends Member<T>, Searchable
 {
-	container SearchGroup searchGroup opposite searches
-	contains SearchPattern pattern
+	contains SearchPattern<T> pattern
 }
 
-interface SearchPattern
+interface SearchPattern<T extends SearchType>
 {
-	String pattern
+    String pattern
 }
 
-class JavaSearchPattern extends SearchPattern
+interface JavaSearchType extends SearchType
+{
+}
+
+class JavaSearch extends Search<JavaSearchType>
+{
+}
+
+class JavaSearchGroup extends SearchGroup<JavaSearchType>
+{
+}
+
+class JavaSearchPattern extends SearchPattern<JavaSearchType>
 {
 	JavaSearchPatternType patternType
 	JavaSearchFor searchFor
@@ -311,3 +601,65 @@ enum JavaMatchCaseSensitivity
 	CaseSensitive
 }
 
+// TASKS
+interface TaskType extends Groupable
+{
+}
+
+interface TaskGroup<T extends TaskType> extends GroupableMembered<T, Assessable>
+{
+}
+
+interface Task<T extends TaskType> extends Member<T>, Taskable, Describable
+{
+    TaskStatus taskStatus
+}
+
+enum TaskStatus
+{
+    Todo,
+    InProgress,
+    Completed,
+    Skipped
+}
+
+interface LocalTaskType extends TaskType
+{
+}
+
+class LocalTaskGroup extends TaskGroup<LocalTaskType>
+{
+}
+
+class LocalTask extends Task<LocalTaskType>
+{
+}
+
+// FINDINGS
+interface FindingType extends Groupable
+{
+}
+
+interface FindingGroup<T extends FindingType> extends GroupableMembered<T, Assessable>
+{
+}
+
+interface Finding<T extends FindingType> extends Member<T>, Findable, Describable
+{
+    @GenModel(propertyMultiLine="true") String details
+    @GenModel(propertyMultiLine="true") String remediation
+    @GenModel(propertyMultiLine="true") String reproducer
+    @GenModel(propertyMultiLine="true") String references
+}
+
+interface LocalFindingType extends FindingType
+{
+}
+
+class LocalFindingGroup extends FindingGroup<LocalFindingType>
+{
+}
+
+class LocalFinding extends Finding<LocalFindingType>
+{
+}

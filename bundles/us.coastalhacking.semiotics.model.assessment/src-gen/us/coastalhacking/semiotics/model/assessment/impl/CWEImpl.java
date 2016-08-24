@@ -28,6 +28,7 @@ import us.coastalhacking.semiotics.model.assessment.AssessmentPackage;
 import us.coastalhacking.semiotics.model.assessment.CWE;
 import us.coastalhacking.semiotics.model.assessment.CWEGroup;
 import us.coastalhacking.semiotics.model.assessment.Control;
+import us.coastalhacking.semiotics.model.assessment.ControlType;
 
 /**
  * <!-- begin-user-doc -->
@@ -115,7 +116,7 @@ public class CWEImpl extends MinimalEObjectImpl.Container implements CWE {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Control> controls;
+	protected EList<Control<? extends ControlType>> controls;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -255,9 +256,9 @@ public class CWEImpl extends MinimalEObjectImpl.Container implements CWE {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Control> getControls() {
+	public EList<Control<? extends ControlType>> getControls() {
 		if (controls == null) {
-			controls = new EObjectWithInverseResolvingEList.ManyInverse<Control>(Control.class, this, AssessmentPackage.CWE__CONTROLS, AssessmentPackage.CONTROL__CWES);
+			controls = new EObjectWithInverseResolvingEList.ManyInverse<Control<? extends ControlType>>(Control.class, this, AssessmentPackage.CWE__CONTROLS, AssessmentPackage.CONTROL__CWES);
 		}
 		return controls;
 	}
@@ -357,7 +358,7 @@ public class CWEImpl extends MinimalEObjectImpl.Container implements CWE {
 				return;
 			case AssessmentPackage.CWE__CONTROLS:
 				getControls().clear();
-				getControls().addAll((Collection<? extends Control>)newValue);
+				getControls().addAll((Collection<? extends Control<? extends ControlType>>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

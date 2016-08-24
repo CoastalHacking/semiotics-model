@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link us.coastalhacking.semiotics.model.assessment.Provable#getReviewers <em>Reviewers</em>}</li>
+ *   <li>{@link us.coastalhacking.semiotics.model.assessment.Provable#getExaminees <em>Examinees</em>}</li>
  *   <li>{@link us.coastalhacking.semiotics.model.assessment.Provable#getTraces <em>Traces</em>}</li>
  * </ul>
  *
@@ -33,22 +33,22 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Provable extends Nameable {
 	/**
-	 * Returns the value of the '<em><b>Reviewers</b></em>' reference list.
-	 * The list contents are of type {@link us.coastalhacking.semiotics.model.assessment.Reviewable}.
-	 * It is bidirectional and its opposite is '{@link us.coastalhacking.semiotics.model.assessment.Reviewable#getEvidence <em>Evidence</em>}'.
+	 * Returns the value of the '<em><b>Examinees</b></em>' reference list.
+	 * The list contents are of type {@link us.coastalhacking.semiotics.model.assessment.Examinable}.
+	 * It is bidirectional and its opposite is '{@link us.coastalhacking.semiotics.model.assessment.Examinable#getEvidence <em>Evidence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Reviewers</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Examinees</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reviewers</em>' reference list.
-	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getProvable_Reviewers()
-	 * @see us.coastalhacking.semiotics.model.assessment.Reviewable#getEvidence
+	 * @return the value of the '<em>Examinees</em>' reference list.
+	 * @see us.coastalhacking.semiotics.model.assessment.AssessmentPackage#getProvable_Examinees()
+	 * @see us.coastalhacking.semiotics.model.assessment.Examinable#getEvidence
 	 * @model opposite="evidence"
 	 * @generated
 	 */
-	EList<Reviewable> getReviewers();
+	EList<Examinable> getExaminees();
 
 	/**
 	 * Returns the value of the '<em><b>Traces</b></em>' reference list.
